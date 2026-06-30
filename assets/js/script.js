@@ -150,4 +150,58 @@
     rootMargin: '0px 0px -14% 0px'
   });
 
+
+  // Count-up animation for the Visibility metrics.
+  const countUpEls = document.querySelectorAll('.count-up');
+  if (countUpEls.length) {
+    const formatValue = (value, decimals, format) => {
+      const fixed = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
+      if (format === 'comma') {
+        const parts = fixed.split('.');
+        parts[0] = Number(parts[0]).toLocaleString('en-US');
+        return parts.join('.');
+      }
+      return fixed;
+    };
+
+    const runCount = (el) => {
+      if (el.dataset.counted === 'true') return;
+      el.dataset.counted = 'true';
+
+      const target = parseFloat(el.dataset.count || '0');
+      const decimals = parseInt(el.dataset.decimals || '0', 10);
+      const format = el.dataset.format || '';
+      const duration = 1100;
+      const start = performance.now();
+
+      const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = target * eased;
+        el.textContent = formatValue(value, decimals, format);
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = formatValue(target, decimals, format);
+        }
+      };
+
+      requestAnimationFrame(tick);
+    };
+
+    if ('IntersectionObserver' in window) {
+      const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.querySelectorAll('.count-up').forEach(runCount);
+          countObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.28, rootMargin: '0px 0px -10% 0px' });
+
+      document.querySelectorAll('.visibility-count-card').forEach((card) => countObserver.observe(card));
+    } else {
+      countUpEls.forEach(runCount);
+    }
+  }
+
 })();
