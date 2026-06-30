@@ -1,0 +1,22 @@
+{
+  "name": "NOVI Creative Studio",
+  "short_name": "NOVI",
+  "description": "Marketing-first one-page websites for small businesses.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#061127",
+  "theme_color": "#061127",
+  "icons": [
+    {
+      "src": "assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
