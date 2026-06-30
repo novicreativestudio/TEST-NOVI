@@ -8718,3 +8718,131 @@ body{
     margin-bottom:22px!important;
   }
 }
+
+
+/* ==========================================================
+   SCROLL-TIMED OWNER CARDS + CTA ANIMATION
+   These blocks now animate when their own area enters the viewport,
+   not when the whole First Stage section first appears.
+   ========================================================== */
+
+/* Stop earlier section-level animations from making these finish too early */
+.first-stage-section.in-view .owner-story-card,
+.observed-section.in-view .owner-story-card:nth-child(1),
+.observed-section.in-view .owner-story-card:nth-child(2),
+.observed-section.in-view .owner-story-card:nth-child(3),
+.observed-section.in-view .owner-story-card:nth-child(4),
+.first-stage-section.in-view .already-tried-cta-card,
+.observed-section.in-view .already-tried-cta-card{
+  animation:none!important;
+}
+
+/* Cards wait until the card grid itself is visible */
+.owner-cards-motion:not(.owner-cards-in-view) .owner-story-card{
+  opacity:0!important;
+  transform:translate3d(0,24px,0) scale(.982)!important;
+  filter:blur(2px)!important;
+}
+
+.owner-cards-motion.owner-cards-in-view .owner-story-card:nth-child(1){
+  animation:noviScrollCardSoftIn .72s cubic-bezier(.19,1,.22,1) .02s both!important;
+}
+.owner-cards-motion.owner-cards-in-view .owner-story-card:nth-child(2){
+  animation:noviScrollCardSoftIn .72s cubic-bezier(.19,1,.22,1) .13s both!important;
+}
+.owner-cards-motion.owner-cards-in-view .owner-story-card:nth-child(3){
+  animation:noviScrollCardSoftIn .72s cubic-bezier(.19,1,.22,1) .24s both!important;
+}
+.owner-cards-motion.owner-cards-in-view .owner-story-card:nth-child(4){
+  animation:noviScrollCardSoftIn .72s cubic-bezier(.19,1,.22,1) .35s both!important;
+}
+
+@keyframes noviScrollCardSoftIn{
+  0%{
+    opacity:0;
+    transform:translate3d(0,24px,0) scale(.982);
+    filter:blur(2px);
+  }
+  72%{
+    opacity:1;
+    transform:translate3d(0,-3px,0) scale(1.003);
+    filter:blur(0);
+  }
+  100%{
+    opacity:1;
+    transform:translate3d(0,0,0) scale(1);
+    filter:blur(0);
+  }
+}
+
+/* CTA waits until the CTA card itself is visible */
+.cta-motion-card:not(.cta-card-in-view){
+  opacity:0!important;
+  transform:translate3d(0,26px,0) scale(.985)!important;
+  filter:blur(2px)!important;
+}
+
+.cta-motion-card.cta-card-in-view{
+  animation:noviScrollCtaSoftIn .82s cubic-bezier(.19,1,.22,1) .04s both!important;
+}
+
+.cta-motion-card.cta-card-in-view .already-tried-cta{
+  animation:noviScrollButtonSettle .68s cubic-bezier(.19,1,.22,1) .32s both!important;
+}
+
+.cta-motion-card.cta-card-in-view .already-tried-cta::before{
+  animation:noviSatinSheen 5.4s ease-in-out 1.15s infinite!important;
+}
+
+@keyframes noviScrollCtaSoftIn{
+  0%{
+    opacity:0;
+    transform:translate3d(0,26px,0) scale(.985);
+    filter:blur(2px);
+  }
+  70%{
+    opacity:1;
+    transform:translate3d(0,-3px,0) scale(1.003);
+    filter:blur(0);
+  }
+  100%{
+    opacity:1;
+    transform:translate3d(0,0,0) scale(1);
+    filter:blur(0);
+  }
+}
+
+@keyframes noviScrollButtonSettle{
+  0%{opacity:0;transform:translateY(8px) scale(.985)}
+  100%{opacity:1;transform:translateY(0) scale(1)}
+}
+
+/* Mobile: keep the movement shorter */
+@media (max-width:760px){
+  .owner-cards-motion:not(.owner-cards-in-view) .owner-story-card{
+    transform:translate3d(0,16px,0) scale(.988)!important;
+  }
+
+  .owner-cards-motion.owner-cards-in-view .owner-story-card:nth-child(1){animation-delay:.01s!important}
+  .owner-cards-motion.owner-cards-in-view .owner-story-card:nth-child(2){animation-delay:.09s!important}
+  .owner-cards-motion.owner-cards-in-view .owner-story-card:nth-child(3){animation-delay:.17s!important}
+  .owner-cards-motion.owner-cards-in-view .owner-story-card:nth-child(4){animation-delay:.25s!important}
+
+  .cta-motion-card:not(.cta-card-in-view){
+    transform:translate3d(0,18px,0) scale(.99)!important;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .owner-cards-motion:not(.owner-cards-in-view) .owner-story-card,
+  .owner-cards-motion.owner-cards-in-view .owner-story-card,
+  .cta-motion-card:not(.cta-card-in-view),
+  .cta-motion-card.cta-card-in-view,
+  .cta-motion-card.cta-card-in-view .already-tried-cta,
+  .cta-motion-card.cta-card-in-view .already-tried-cta::before{
+    animation:none!important;
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+  }
+}

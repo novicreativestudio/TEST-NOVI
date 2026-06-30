@@ -117,4 +117,37 @@
     if (graphWrap) graphWrap.classList.add('graph-in-view');
     countNumbers();
   }
+
+  // First Stage card and CTA animations should trigger when each block itself reaches the viewport.
+  const ownerCardsMotion = document.querySelector('.owner-cards-motion');
+  const ctaMotionCard = document.querySelector('.cta-motion-card');
+
+  const observeOnce = (target, className, options) => {
+    if (!target) return;
+    if (!('IntersectionObserver' in window)) {
+      target.classList.add(className);
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        target.classList.add(className);
+        observer.unobserve(target);
+      });
+    }, options);
+
+    observer.observe(target);
+  };
+
+  observeOnce(ownerCardsMotion, 'owner-cards-in-view', {
+    threshold: 0.18,
+    rootMargin: '0px 0px -16% 0px'
+  });
+
+  observeOnce(ctaMotionCard, 'cta-card-in-view', {
+    threshold: 0.20,
+    rootMargin: '0px 0px -14% 0px'
+  });
+
 })();
