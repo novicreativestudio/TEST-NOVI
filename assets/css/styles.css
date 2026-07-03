@@ -12473,3 +12473,442 @@ body{
     padding:18px !important;
   }
 }
+
+/* ========================================================================== 
+   NEW SEGMENTS — Growth Stages + Foundation Comes First
+   Clean scoped implementation. Replaces the broken new segment styles.
+   ========================================================================== */
+
+.novi-stages-section,
+.novi-weakstrong-section{
+  position:relative;
+  overflow:hidden;
+  color:var(--navy, #07142d);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.96), rgba(255,255,255,.32) 36%, transparent 62%),
+    linear-gradient(180deg, #fffaf1 0%, #f8eddc 100%);
+  padding:clamp(82px,7vw,118px) 22px;
+}
+
+.novi-weakstrong-section{
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.98), rgba(255,255,255,.34) 38%, transparent 64%),
+    linear-gradient(180deg, #f9eddb 0%, #fffaf1 100%);
+}
+
+.novi-stages-section::before,
+.novi-weakstrong-section::before{
+  content:"";
+  position:absolute;
+  left:-5%;
+  right:-5%;
+  top:0;
+  height:84px;
+  pointer-events:none;
+  opacity:.58;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 110' preserveAspectRatio='none'%3E%3Cpath d='M0 54 C260 20 450 32 690 48 C930 63 1110 32 1320 25 C1456 20 1548 34 1600 48' fill='none' stroke='%23c89232' stroke-width='1' opacity='.62'/%3E%3Cpath d='M0 78 C260 42 450 58 690 70 C930 82 1110 58 1320 51 C1456 48 1548 58 1600 72' fill='none' stroke='%23d9a245' stroke-width='.7' stroke-dasharray='10 14' opacity='.22'/%3E%3C/svg%3E");
+}
+
+.novi-stages-inner,
+.novi-weakstrong-inner{
+  position:relative;
+  z-index:2;
+  width:min(1360px,100%);
+  margin:0 auto;
+}
+
+.novi-stages-header,
+.novi-weakstrong-header{
+  text-align:center;
+  width:min(980px,100%);
+  margin:0 auto clamp(42px,4vw,62px);
+}
+
+.novi-stages-eyebrow,
+.novi-weakstrong-eyebrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin:0 0 14px;
+  color:#b97821;
+  font-family:var(--display);
+  font-size:clamp(11px,.82vw,13px);
+  font-weight:600;
+  letter-spacing:.31em;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+.novi-stages-eyebrow span,
+.novi-weakstrong-eyebrow span{
+  width:clamp(44px,5vw,94px);
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(200,146,50,.72));
+}
+
+.novi-stages-eyebrow span:last-child,
+.novi-weakstrong-eyebrow span:last-child{
+  background:linear-gradient(90deg,rgba(200,146,50,.72),transparent);
+}
+
+.novi-stages-eyebrow b,
+.novi-weakstrong-eyebrow b{
+  color:#c89232;
+  font-size:13px;
+  font-weight:400;
+}
+
+.novi-stages-header h2,
+.novi-weakstrong-header h2{
+  margin:0;
+  color:#07142d;
+  font-family:var(--serif);
+  font-size:clamp(44px,5.15vw,78px);
+  font-weight:650;
+  line-height:.98;
+  letter-spacing:-.046em;
+  text-wrap:balance;
+  text-shadow:0 14px 32px rgba(7,20,45,.045);
+}
+
+.novi-stages-header h2 em,
+.novi-weakstrong-header h2 em{
+  color:#c89232;
+  font-style:italic;
+  font-weight:650;
+}
+
+.novi-stages-header p,
+.novi-weakstrong-header p{
+  width:min(720px,100%);
+  margin:clamp(18px,1.7vw,24px) auto 0;
+  color:rgba(7,20,45,.76);
+  font-family:var(--serif);
+  font-size:clamp(16px,1.18vw,19.5px);
+  line-height:1.55;
+}
+
+/* Growth stages section */
+.novi-stages-track{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:clamp(14px,1.55vw,24px);
+  align-items:start;
+}
+
+.novi-stages-vine{
+  position:absolute;
+  left:4%;
+  right:4%;
+  top:44px;
+  height:64px;
+  z-index:1;
+  pointer-events:none;
+  overflow:visible;
+}
+
+.novi-stages-vine path{
+  fill:none;
+  stroke:rgba(200,146,50,.48);
+  stroke-width:1.2;
+  stroke-dasharray:2 8;
+  stroke-linecap:round;
+}
+
+.novi-stage-card{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-height:360px;
+  padding:clamp(20px,1.65vw,26px) clamp(12px,1vw,16px) clamp(22px,1.8vw,28px);
+  border:1px solid rgba(200,146,50,.28);
+  border-radius:22px;
+  background:rgba(255,253,248,.70);
+  box-shadow:0 18px 38px rgba(7,20,45,.048), inset 0 1px 0 rgba(255,255,255,.76);
+  text-align:center;
+}
+
+.novi-stage-number{
+  position:absolute;
+  top:-20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:rgba(255,250,241,.96);
+  border:1px solid rgba(200,146,50,.54);
+  box-shadow:0 8px 18px rgba(7,20,45,.08), inset 0 0 0 4px rgba(255,255,255,.55);
+  color:#b97821;
+  font-family:var(--serif);
+  font-size:20px;
+  line-height:1;
+}
+
+.novi-stage-visual{
+  width:clamp(92px,7.8vw,124px);
+  height:clamp(92px,7.8vw,124px);
+  margin:18px auto 18px;
+  border-radius:50%;
+  overflow:hidden;
+  background:#fff8ed;
+  border:1px solid rgba(200,146,50,.26);
+  box-shadow:inset 0 0 0 6px rgba(255,255,255,.58);
+}
+
+.novi-stage-visual img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.novi-stage-card h3{
+  margin:0 0 9px;
+  color:#07142d;
+  font-family:var(--serif);
+  font-size:clamp(17px,1.26vw,20px);
+  font-weight:650;
+  line-height:1.12;
+}
+
+.novi-stage-card p{
+  margin:0;
+  color:rgba(7,20,45,.68);
+  font-family:var(--serif);
+  font-size:clamp(13px,.92vw,14.5px);
+  line-height:1.48;
+}
+
+/* Foundation comes first section */
+.novi-weakstrong-main{
+  display:grid;
+  grid-template-columns:minmax(0,720px) minmax(320px,430px);
+  gap:clamp(42px,4.2vw,70px);
+  align-items:center;
+  justify-content:center;
+  width:min(1230px,100%);
+  margin:0 auto;
+}
+
+.novi-weakstrong-panels{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(22px,2vw,32px);
+  align-items:start;
+}
+
+.novi-ws-panel{
+  position:relative;
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+
+.novi-ws-label{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:0 0 14px;
+  color:#07142d;
+  font-family:var(--display);
+  font-size:clamp(11px,.82vw,13px);
+  font-weight:600;
+  letter-spacing:.32em;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+.novi-ws-label::before,
+.novi-ws-label::after{
+  content:"";
+  width:clamp(28px,3vw,58px);
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(200,146,50,.62));
+}
+
+.novi-ws-label::after{
+  background:linear-gradient(90deg,rgba(200,146,50,.62),transparent);
+}
+
+.novi-ws-strong .novi-ws-label{color:#073c33;}
+
+.novi-ws-art-frame{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(200,146,50,.36);
+  border-radius:22px;
+  background:#fff7ec;
+  box-shadow:0 16px 34px rgba(7,20,45,.04), inset 0 1px 0 rgba(255,255,255,.74);
+}
+
+.novi-ws-art-frame img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:720/900;
+  object-fit:cover;
+  object-position:center;
+  border-radius:20px;
+}
+
+.novi-ws-caption{
+  margin:clamp(14px,1.2vw,20px) 0 0;
+  color:#07142d;
+  font-family:var(--serif);
+  font-size:clamp(16.5px,1.2vw,19px);
+  line-height:1.33;
+}
+
+.novi-ws-caption em{
+  display:block;
+  margin-top:2px;
+  color:#c89232;
+  font-style:italic;
+}
+
+.novi-weakstrong-lists{
+  display:flex;
+  flex-direction:column;
+  gap:clamp(22px,2.1vw,32px);
+}
+
+.novi-ws-list-block h3{
+  margin:0 0 14px;
+  color:#b97821;
+  font-family:var(--serif);
+  font-size:clamp(18px,1.32vw,22px);
+  font-weight:600;
+  line-height:1.18;
+}
+
+.novi-ws-list-good h3{color:#0a5448;}
+
+.novi-ws-list-block ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.novi-ws-list-block li{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-height:54px;
+  padding:13px 18px;
+  border:1px solid rgba(200,146,50,.26);
+  border-radius:12px;
+  background:rgba(255,253,248,.62);
+  box-shadow:0 10px 20px rgba(7,20,45,.025), inset 0 1px 0 rgba(255,255,255,.7);
+  color:#07142d;
+  font-family:var(--serif);
+  font-size:clamp(16px,1.08vw,18px);
+  line-height:1.28;
+}
+
+.novi-ws-list-block li span{
+  color:#c89232;
+  font-size:1em;
+  line-height:1;
+  flex:0 0 auto;
+}
+
+.novi-ws-list-good li{
+  border-color:rgba(10,84,72,.22);
+}
+
+.novi-ws-list-good li span{color:#0a5448;}
+
+.novi-weakstrong-closing{
+  width:min(760px,100%);
+  margin:clamp(42px,4vw,62px) auto 0;
+  text-align:center;
+}
+
+.novi-gold-vine-divider{
+  width:min(360px,64vw);
+  height:32px;
+  margin:0 auto 12px;
+  background:url('../images/novi-gold-vine-growth-divider.webp') center / contain no-repeat;
+  opacity:.82;
+}
+
+.novi-weakstrong-closing p{
+  margin:0;
+  color:#07142d;
+  font-family:var(--serif);
+  font-size:clamp(18px,1.38vw,23px);
+  line-height:1.42;
+}
+
+/* Reveal animation */
+.novi-stages-section .reveal-item,
+.novi-weakstrong-section .reveal-item{
+  opacity:0;
+  transform:translateY(24px);
+}
+
+.novi-stages-section.in-view .reveal-item,
+.novi-weakstrong-section.in-view .reveal-item{
+  animation:trustReveal .78s ease forwards;
+}
+
+.novi-stages-section.in-view .novi-stages-track{animation-delay:.12s;}
+.novi-weakstrong-section.in-view .novi-weakstrong-main{animation-delay:.12s;}
+.novi-weakstrong-section.in-view .novi-weakstrong-closing{animation-delay:.24s;}
+
+@media (prefers-reduced-motion:reduce){
+  .novi-stages-section .reveal-item,
+  .novi-weakstrong-section .reveal-item{
+    opacity:1;
+    transform:none;
+    animation:none !important;
+  }
+}
+
+/* Responsive */
+@media(max-width:1180px){
+  .novi-stages-track{grid-template-columns:repeat(3,minmax(0,1fr)); row-gap:44px;}
+  .novi-stages-vine{display:none;}
+  .novi-weakstrong-main{grid-template-columns:1fr; align-items:start;}
+  .novi-weakstrong-lists{width:min(720px,100%); margin:0 auto;}
+}
+
+@media(max-width:760px){
+  .novi-stages-section,
+  .novi-weakstrong-section{padding:64px 16px 76px;}
+  .novi-stages-header,
+  .novi-weakstrong-header{margin-bottom:34px;}
+  .novi-stages-eyebrow,
+  .novi-weakstrong-eyebrow{gap:9px; letter-spacing:.22em; font-size:10.5px;}
+  .novi-stages-eyebrow span,
+  .novi-weakstrong-eyebrow span{width:34px;}
+  .novi-stages-header h2,
+  .novi-weakstrong-header h2{font-size:clamp(34px,9vw,46px); line-height:1.04;}
+  .novi-stages-header p,
+  .novi-weakstrong-header p{font-size:16px; line-height:1.48;}
+  .novi-stages-track{grid-template-columns:1fr 1fr; row-gap:34px;}
+  .novi-weakstrong-panels{grid-template-columns:1fr; gap:34px; width:min(390px,100%); margin:0 auto;}
+  .novi-ws-list-block li{font-size:16px;}
+}
+
+@media(max-width:500px){
+  .novi-stages-track{grid-template-columns:1fr; width:min(330px,100%); margin:0 auto;}
+  .novi-stage-card{min-height:auto;}
+  .novi-weakstrong-header h2{font-size:clamp(32px,10vw,42px);}
+  .novi-ws-label{font-size:10.5px; letter-spacing:.22em;}
+  .novi-ws-caption{font-size:16.5px;}
+  .novi-weakstrong-closing p{font-size:17px;}
+}
