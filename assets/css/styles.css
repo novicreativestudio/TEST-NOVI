@@ -125,6 +125,9 @@ button{font:inherit}
   gap:16px;
   min-width:0;
   color:#08142c;
+  background:transparent;
+  border:0;
+  box-shadow:none;
   opacity:0;
   animation:fadeDown .75s ease-out .1s forwards;
 }
@@ -144,6 +147,9 @@ button{font:inherit}
   justify-content:center;
   line-height:1;
   min-width:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
 }
 .brand-text strong{
   display:block;
@@ -152,6 +158,7 @@ button{font:inherit}
   font-weight:500;
   letter-spacing:clamp(.18em,1.14vw,.32em);
   color:#071327;
+  background:transparent;
   transform:translateX(.08em);
 }
 .brand-text small{
@@ -162,6 +169,7 @@ button{font:inherit}
   font-weight:500;
   letter-spacing:clamp(.14em,.78vw,.26em);
   color:#a7762d;
+  background:transparent;
   text-transform:uppercase;
   transform:translateX(.12em);
 }
@@ -1094,6 +1102,19 @@ body{
   .brand{
     gap:12px;
     align-items:center;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+    padding:0;
+  }
+
+  .brand,
+  .brand-text,
+  .brand-text strong,
+  .brand-text small{
+    background:transparent !important;
+    background-color:transparent !important;
+    box-shadow:none !important;
   }
 
   .brand-mark{
@@ -12911,4 +12932,40 @@ body{
   .novi-ws-label{font-size:10.5px; letter-spacing:.22em;}
   .novi-ws-caption{font-size:16.5px;}
   .novi-weakstrong-closing p{font-size:17px;}
+}
+
+/* ==========================================================
+   FINAL FIX: mobile logo must not render as a white card.
+   The old mobile performance guard accidentally included
+   .brand in a shadow group, which made the transparent logo
+   area look like a white image/background on mobile.
+   ========================================================== */
+@media (max-width: 720px) {
+  .site-header .brand,
+  .site-header .brand:link,
+  .site-header .brand:visited,
+  .site-header .brand:hover,
+  .site-header .brand:focus,
+  .site-header .brand:active {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    outline: 0;
+    filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .site-header .brand *,
+  .site-header .brand-text,
+  .site-header .brand-text strong,
+  .site-header .brand-text small,
+  .site-header .brand-mark {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    filter: none !important;
+  }
 }
