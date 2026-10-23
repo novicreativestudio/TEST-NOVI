@@ -1,0 +1,207 @@
+/* NOVI Creative Studio — Responsive Enhancement Layer
+   Load AFTER assets/css/styles.css.
+   Intent: preserve the art direction while strengthening responsive behavior.
+   Breakpoints: 480 / 768 / 1024 / 1440px.
+   Loaded after original styles.css; source assets are included.
+*/
+
+:root {
+  --novi-content-max: 1200px;
+  --novi-gutter: clamp(16px, 4vw, 64px);
+  --novi-section-space: clamp(48px, 7vw, 104px);
+  --novi-copy-measure: 68ch;
+}
+
+/* Base safety: don't force the document wider than the viewport. */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { min-width: 0; margin: 0; }
+main, section, article, header, footer, nav, div { min-width: 0; }
+img, picture, video, canvas, svg { max-width: 100%; }
+img, video { height: auto; }
+img { vertical-align: middle; }
+svg { flex-shrink: 0; }
+:where(h1,h2,h3,h4,p,li,figcaption,blockquote,a,small,strong,em) {
+  overflow-wrap: break-word;
+}
+:where(p,li) { hyphens: auto; }
+:where(a,button,input,textarea,select) { -webkit-tap-highlight-color: transparent; }
+:where(button,input,textarea,select) { font: inherit; }
+:where(a,button,input,textarea,select,summary):focus-visible {
+  outline: 3px solid #c59649;
+  outline-offset: 3px;
+}
+:where(a,button) { touch-action: manipulation; }
+:where(button,[role="button"]) { cursor: pointer; }
+:where(input,textarea,select) { max-width: 100%; }
+:where(textarea) { resize: vertical; }
+:where([id]) { scroll-margin-top: 100px; }
+
+/* Resilient content widths. Only control the established section wrappers. */
+:where(
+  .trust-inner, .familiar-inner, .first-stage-frame, .novi-advice-inner,
+  .novi-stages-inner, .novi-weakstrong-inner, .visibility-inner,
+  .process-inner, .faq-inner, .included-inner, .final-cta-inner,
+  .site-footer-inner, .services-copy
+) {
+  width: min(100% - 2 * var(--novi-gutter), var(--novi-content-max));
+  margin-inline: auto;
+}
+
+/* Scale long editorial headings without arbitrary fixed widths. */
+:where(.novi-ref-heading-v163, .final-cta-inner h2) {
+  font-size: clamp(1.85rem, 2.2vw + 1rem, 3.75rem);
+  line-height: 1.12;
+  text-wrap: balance;
+  max-width: 100%;
+}
+:where(.novi-ref-heading-v163, .final-cta-inner h2) :where(span,em,strong) {
+  max-width: 100%;
+}
+:where(.trust-intro-copy, .trust-note, .novi-pieces-lede, .familiar-clarity,
+       .novi-signal-lede, .v249-story-intro, .final-cta-inner > p) {
+  max-width: var(--novi-copy-measure);
+}
+
+/* Image-heavy component safeguards. */
+:where(.v249-story-illustration, .novi-stage-visual img, .novi-ws-art-frame img,
+       .trust-band-art img, .familiar-band-art img) {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+:where(.trust-band-art, .familiar-band-art, .hero-picture) { display: block; max-width: 100%; }
+:where(.hero-picture img) { display: block; width: 100%; }
+:where(.v249-story-item, .novi-stage-card, .trust-card, .service-card,
+       .novi-signal-card, .promise-card, .faq-grid article, .included-grid article) {
+  min-width: 0;
+}
+:where(.trust-tools, .trust-tool-list, .trust-legend) { max-width: 100%; }
+:where(.tool-badge, .trust-legend) { overflow-wrap: anywhere; }
+
+/* Desktop and tablet cards should shrink instead of overflowing. */
+@media (max-width: 1023.98px) {
+  .service-cards, .trust-grid, .novi-signal-board,
+  .novi-weakstrong-panels, .novi-weakstrong-lists, .visibility-compare-grid,
+  .included-grid, .faq-grid, .process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .novi-stages-track { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .v249-story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .site-header { gap: clamp(10px, 2vw, 24px); }
+}
+
+/* Phone-first composition: one clear reading column. */
+@media (max-width: 767.98px) {
+  :root { --novi-gutter: clamp(16px, 5vw, 28px); }
+  html { scroll-padding-top: 72px; }
+  :where([id]) { scroll-margin-top: 80px; }
+
+  /* The existing mobile menu JS remains responsible for toggling .site-nav. */
+  .site-header { max-width: 100%; padding-inline: var(--novi-gutter); }
+  .brand { min-width: 0; }
+  .brand-text { min-width: 0; }
+  .mobile-menu { min-width: 44px; min-height: 44px; }
+  .site-nav a { min-height: 44px; }
+
+  .service-cards, .trust-grid, .novi-signal-board,
+  .novi-weakstrong-panels, .novi-weakstrong-lists, .visibility-compare-grid,
+  .included-grid, .faq-grid, .process-steps,
+  .v249-story-grid, .novi-stages-track, .promise-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(16px, 4vw, 24px);
+    max-width: 100%;
+  }
+  .novi-stages-vine, .nofear-flow-connector { display: none; }
+  .desktop-only { display: none; }
+
+  .v249-story-item { min-width: 0; }
+  .v249-story-illustration { width: min(100%, 360px); height: auto; margin-inline: auto; }
+  .v249-story-copy { min-width: 0; }
+  .v249-story-copy h4 { text-wrap: balance; }
+  .novi-stage-visual img { max-height: 260px; margin-inline: auto; }
+  .novi-ws-art-frame img { max-height: 360px; margin-inline: auto; }
+  .metric-row { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+  .metric-row > div { min-width: 0; }
+  .trust-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .trust-tool-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .tool-badge { max-width: 100%; }
+  .final-cta-actions { display: flex; flex-wrap: wrap; gap: 16px; }
+  .final-cta-button { min-height: 48px; }
+  .site-footer-inner { gap: 24px; }
+
+  /* Keep decorative waves clipped to their own regions, not the document. */
+  :where(.hero-visual, .services-section, .trust-top-wave, .familiar-top-band,
+         .novi-story-divider) { max-width: 100%; overflow: clip; }
+  :where(.hero-green-wave, .services-cream-wave, .novi-story-divider svg) { max-width: none; }
+}
+
+@media (max-width: 479.98px) {
+  :root { --novi-gutter: 16px; }
+  :where(.novi-ref-heading-v163, .final-cta-inner h2) {
+    font-size: clamp(1.65rem, 7.6vw, 2.3rem);
+    line-height: 1.16;
+  }
+  .top-ribbon p { font-size: clamp(.59rem, 2.2vw, .72rem); line-height: 1.35; text-align: center; }
+  .hero-copy h1 { font-size: clamp(1.3rem, 5.7vw, 2rem); line-height: 1.13; }
+  .hero-copy .hero-line { max-width: 100%; }
+  .trust-proof-panel { max-width: 100%; }
+  .proof-value { max-width: 100%; }
+  .metric-row { grid-template-columns: minmax(0, 1fr); }
+  .novi-stage-visual img { max-height: 210px; }
+  .v249-story-illustration { max-height: 280px; }
+  .final-cta-actions > a { max-width: 100%; }
+  .segment-start-ribbon, .segment-label, .novi-added-eyebrow { max-width: 100%; }
+  .segment-start-ribbon__text { overflow-wrap: anywhere; }
+}
+
+/* Landscape phones: don't depend on viewport height for copy. */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-visual { min-height: 0; }
+  .hero-copy { max-height: none; }
+}
+
+/* iOS safe-area support for edge-adjacent content. */
+@supports (padding: max(0px)) {
+  .site-header, .site-footer-inner {
+    padding-left: max(var(--novi-gutter), env(safe-area-inset-left));
+    padding-right: max(var(--novi-gutter), env(safe-area-inset-right));
+  }
+}
+
+/* User preference: don't force smooth motion and entrance animations. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-item { opacity: 1 !important; transform: none !important; }
+}
+
+/* High contrast / forced color modes. */
+@media (forced-colors: active) {
+  :where(a,button):focus-visible { outline-color: Highlight; }
+  :where(.nav-cta,.final-cta-button) { border: 1px solid ButtonText; }
+}
+
+/* Compatibility: avoid accidental inline overflow at zoomed and narrow widths. */
+@media (max-width: 767.98px) {
+  .trust-proof-panel, .trust-tools, .v249-story-canvas,
+  .v249-reflection-flow, .novi-weakstrong-main,
+  .novi-advice-inner, .novi-stages-track { min-width: 0; max-width: 100%; }
+  .trust-proof-card, .v249-reflection-card, .v249-outcome,
+  .novi-ws-panel, .visibility-count-card { min-width: 0; }
+  .v249-story-copy h4, .novi-stage-card h3, .novi-ws-list-block h3,
+  .trust-card h3 { overflow-wrap: anywhere; }
+  .site-nav { max-width: 100%; }
+}
+@media (max-width: 359.98px) {
+  .site-header { gap: 8px; }
+  .brand-mark { flex-shrink: 0; }
+  .tool-badge { min-width: 0; }
+  .hero-copy h1 { font-size: clamp(1.15rem, 5.3vw, 1.55rem); }
+}

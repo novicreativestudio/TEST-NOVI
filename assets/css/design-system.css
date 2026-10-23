@@ -1,0 +1,182 @@
+/* NOVI | Design System v1 — load AFTER styles.css and responsive.css.
+   HTML hooks: novi-segment, novi-surface--*, novi-type--h1..h4, novi-transition--*.
+   Purpose: standardize semantics and reusable rhythm WITHOUT erasing art-directed
+   ribbons, hero imagery, surface textures and intentional highlighted words.
+   Change values here rather than adding new vNNN CSS overrides. */
+
+:root {
+  /* Shared typography; Cormorant for headings, Cinzel for ornamental labels. */
+  --novi-font-editorial: var(--serif, 'Cormorant Garamond', Georgia, serif);
+  --novi-font-label: var(--display, 'Cinzel', Georgia, serif);
+  --novi-type-h1: clamp(2.25rem, 1.35rem + 2.35vw, 3.625rem);
+  --novi-type-h2: clamp(2rem, 1.20rem + 2.35vw, 3.625rem);
+  --novi-type-h3: clamp(1.35rem, 1.07rem + .88vw, 1.875rem);
+  --novi-type-h4: clamp(1.10rem, 1.00rem + .45vw, 1.40rem);
+  --novi-leading-h1: 1.06;
+  --novi-leading-h2: 1.11;
+  --novi-leading-h3: 1.24;
+  --novi-leading-h4: 1.30;
+  --novi-heading-measure: 1040px;
+  --novi-copy-measure: 68ch;
+  /* Original brand palette; values refer to styles.css variables. */
+  --novi-surface-ivory: var(--novi-ivory, #fffaf2);
+  --novi-surface-warm: var(--novi-warm, #fbf6ed);
+  --novi-surface-rose: var(--novi-soft-rose, #fdf1ef);
+  --novi-surface-deep: var(--novi-green, #063e34);
+  --novi-accent-gold: var(--novi-gold, #c89232);
+  --novi-accent-green: var(--novi-green, #073c33);
+  --novi-gutter: clamp(16px, 4vw, 64px);
+  --novi-gap-sm: clamp(12px, 1.6vw, 20px);
+  --novi-gap-md: clamp(22px, 3.4vw, 48px);
+  --novi-gap-lg: clamp(40px, 6vw, 88px);
+}
+
+/* Hierarchy: H1 once for hero; H2 per section; H3 for subsection/card;
+   H4 for stories and list details.  A heading level is not a color preset. */
+:where(.novi-type) {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+:where(.novi-type--h1) { font-family: var(--novi-font-editorial); line-height: var(--novi-leading-h1); }
+:where(.novi-type--h2) { font-family: var(--novi-font-editorial); line-height: var(--novi-leading-h2); }
+:where(.novi-type--h3) { font-family: var(--novi-font-editorial); line-height: var(--novi-leading-h3); }
+:where(.novi-type--h4) { font-family: var(--novi-font-editorial); line-height: var(--novi-leading-h4); }
+
+/* Standard section titles, applied to ALL live section H2, including headings
+   previously missing .novi-ref-heading-v163.  More-specific *intentional* site
+   headlines retain their special treatments (e.g., trust title). */
+main .novi-segment h2.novi-type--h2:not(.novi-visually-hidden) {
+  font-family: var(--novi-font-editorial) !important;
+  font-size: var(--novi-type-h2) !important;
+  font-weight: 500 !important;
+  line-height: var(--novi-leading-h2) !important;
+  letter-spacing: -.024em !important;
+  text-wrap: balance;
+  max-inline-size: min(100%, var(--novi-heading-measure));
+}
+main .novi-segment h3.novi-type--h3 {
+  font-family: var(--novi-font-editorial);
+  font-size: var(--novi-type-h3);
+  line-height: var(--novi-leading-h3);
+  font-weight: 600;
+  letter-spacing: -.015em;
+  text-wrap: balance;
+}
+main .novi-segment h4.novi-type--h4 {
+  font-family: var(--novi-font-editorial);
+  font-size: var(--novi-type-h4);
+  line-height: var(--novi-leading-h4);
+  font-weight: 600;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+
+/* The four service titles were corrected from H2 to H3 in the HTML.
+   Restore their previous art-directed scale without recreating false H2s. */
+main .service-card h3.novi-type--h3 {
+  margin: 0 0 11px;
+  color: #07142d;
+  font-family: var(--novi-font-editorial);
+  font-size: clamp(1.30rem, 1.10rem + .6vw, 1.70rem);
+  line-height: 1.09;
+  font-weight: 500;
+}
+
+/* Section system: type = reading rhythm, surface = color temperature.
+   Existing bg-* gradient compositions remain authoritative. */
+.novi-segment { --novi-segment-space: var(--novi-gap-lg); min-inline-size: 0; }
+.novi-segment--editorial { --novi-segment-space: clamp(56px, 6vw, 104px); }
+.novi-segment--compact { --novi-segment-space: clamp(44px, 5vw, 80px); }
+.novi-segment--bridge { --novi-segment-space: clamp(48px, 5.4vw, 88px); }
+.novi-segment--feature { --novi-segment-space: clamp(56px, 6vw, 108px); }
+.novi-segment--hero, .novi-segment--services { --novi-segment-space: 0; }
+/* Bridge accent controls ornaments and labels; never recolors core text. */
+.novi-segment--editorial { --novi-segment-accent: var(--novi-accent-gold); }
+.novi-segment--compact { --novi-segment-accent: var(--novi-accent-green); }
+.novi-segment--bridge { --novi-segment-accent: var(--novi-accent-gold); }
+.novi-segment--feature { --novi-segment-accent: var(--novi-accent-gold); }
+.novi-surface--ivory { --novi-surface-base: var(--novi-surface-ivory); }
+.novi-surface--warm { --novi-surface-base: var(--novi-surface-warm); }
+.novi-surface--rose { --novi-surface-base: var(--novi-surface-rose); }
+.novi-surface--deep { --novi-surface-base: var(--novi-surface-deep); }
+
+/* Keep section surface gradients rather than replacing them with flat colors.
+   A new custom section can reuse --novi-segment-space; legacy custom padding
+   is not destroyed for the complicated ribbon/overlap sections. */
+.novi-segment :where(h2.novi-type--h2, h3.novi-type--h3, h4.novi-type--h4) { min-width: 0; }
+.novi-segment :where(p, li) { overflow-wrap: break-word; }
+.novi-segment :where(img, picture, svg) { max-inline-size: 100%; }
+.novi-segment :where(.reveal-item) { min-width: 0; }
+
+/* Consistent boundaries: wave vs full-width ribbon.
+   No synthetic border or extra curve is inserted when a section has none. */
+.novi-transition { position: relative; inline-size: 100%; max-inline-size: 100%; isolation: isolate; }
+.novi-transition--wave { pointer-events: none; overflow: clip; }
+.novi-transition--wave svg { display: block; width: 100%; height: 100%; }
+.novi-transition--ribbon { max-inline-size: 100%; }
+.novi-transition--ribbon picture { display: block; max-inline-size: 100%; }
+.novi-transition--ribbon picture img { display: block; width: 100%; }
+
+/* Accessible heading that creates H2 ownership for the Services card grid.
+   Do not use display:none here — screen readers must encounter the title. */
+.novi-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* 404: follows the same font system, without the marketing-page layouts. */
+.not-found-page h1.novi-type--h1 { font-family: var(--novi-font-editorial); line-height: var(--novi-leading-h1); }
+
+@media (max-width: 767.98px) {
+  :root {
+    --novi-type-h2: clamp(1.875rem, 1.32rem + 2.4vw, 2.45rem);
+    --novi-type-h3: clamp(1.30rem, 1.06rem + .95vw, 1.55rem);
+    --novi-type-h4: clamp(1.07rem, .98rem + .45vw, 1.22rem);
+    --novi-gutter: clamp(16px, 5vw, 28px);
+  }
+  /* Source CSS includes a few exceptional no-wrap headlines; allow zoom and
+     320px phones to reflow while keeping their gold italic emphasis. */
+  .novi-segment .novi-type--h2 :where(em, strong, span) { max-width: 100%; }
+  #trust-title.novi-type--h2 em,
+  .trust-section.novi-heading-system-v163 #trust-title.novi-ref-heading-v163 em {
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+  }
+  main .novi-segment h2.novi-type--h2:not(.novi-visually-hidden) {
+    line-height: 1.15 !important;
+  }
+  main .service-card h3.novi-type--h3 { font-size: clamp(1.20rem, 3.9vw, 1.45rem); }
+  .novi-transition--wave { max-width: 100vw; }
+}
+
+@media (max-width: 359.98px) {
+  :root { --novi-type-h2: 1.875rem; --novi-type-h3: 1.25rem; }
+  .novi-segment .novi-type { overflow-wrap: anywhere; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .novi-transition { scroll-behavior: auto; }
+}
+
+/* v1 viewport audit refinement: the trust italic exceeded its heading box at
+   768/1440px because an old !important white-space:nowrap was still active.
+   Allow controlled wrapping without affecting the highlighted gold treatment. */
+.trust-section.novi-heading-system-v163 #trust-title.novi-ref-heading-v163 em {
+  max-width: 100% !important;
+  white-space: normal !important;
+  font-size: clamp(2.625rem, 4.15vw, 4.20rem) !important;
+}
+/* The desktop hero has two mandatory text lines; at 768px the legacy nowrap
+   exceeded its actual copy box. Avoid clipping the second line. */
+@media (min-width: 768px) and (max-width: 900px) {
+  .hero-visual .hero-copy .hero-line { white-space: normal; }
+}

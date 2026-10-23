@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" fill="none">
+  <defs>
+    <radialGradient id="shadow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(90 108) rotate(90) scale(26 38)">
+      <stop offset="0" stop-color="#0A1730" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#0A1730" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldRim" x1="40" y1="34" x2="140" y2="136" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF1B9"/>
+      <stop offset="0.2" stop-color="#E4B85A"/>
+      <stop offset="0.38" stop-color="#AD711A"/>
+      <stop offset="0.58" stop-color="#F7D989"/>
+      <stop offset="0.78" stop-color="#BA7D25"/>
+      <stop offset="1" stop-color="#F2D484"/>
+    </linearGradient>
+    <linearGradient id="goldInner" x1="54" y1="46" x2="126" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF8E1"/>
+      <stop offset="0.35" stop-color="#D2A14B"/>
+      <stop offset="0.7" stop-color="#F4D489"/>
+      <stop offset="1" stop-color="#B1751E"/>
+    </linearGradient>
+    <radialGradient id="ivory" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(75 50) rotate(55) scale(84)">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.62" stop-color="#FFF8EA"/>
+      <stop offset="1" stop-color="#F0DCB7"/>
+    </radialGradient>
+    <linearGradient id="qGold" x1="90" y1="50" x2="90" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C88E31"/>
+      <stop offset="0.5" stop-color="#A76A18"/>
+      <stop offset="1" stop-color="#D7A748"/>
+    </linearGradient>
+    <filter id="drop" x="18" y="18" width="144" height="144" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#07142D" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="90" cy="110" rx="36" ry="12" fill="url(#shadow)"/>
+
+  <g filter="url(#drop)">
+    <circle cx="90" cy="78" r="48" fill="url(#goldRim)"/>
+    <circle cx="90" cy="78" r="44.2" fill="url(#goldInner)"/>
+    <circle cx="90" cy="78" r="38.2" fill="url(#ivory)"/>
+    <circle cx="90" cy="78" r="36.8" stroke="#FFFFFF" stroke-opacity="0.62" stroke-width="2"/>
+    <circle cx="90" cy="78" r="43.2" stroke="#8C5A15" stroke-opacity="0.22" stroke-width="1.1"/>
+    <path d="M60 58C67 43 79 36 93 36C106 36 118 42 124 55" stroke="#FFF8E6" stroke-opacity="0.56" stroke-width="3.2" stroke-linecap="round"/>
+    <ellipse cx="79" cy="53" rx="10" ry="5" fill="#FFFFFF" opacity="0.42"/>
+  </g>
+
+  <text x="90" y="89" text-anchor="middle" dominant-baseline="middle" fill="url(#qGold)" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="400">?</text>
+</svg>

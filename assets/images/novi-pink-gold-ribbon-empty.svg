@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 300" role="img" aria-label="">
+  <defs>
+    <linearGradient id="pinkBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e99ab0"/>
+      <stop offset="0.18" stop-color="#dc7896"/>
+      <stop offset="0.52" stop-color="#cf5f83"/>
+      <stop offset="0.82" stop-color="#bf4f78"/>
+      <stop offset="1" stop-color="#aa426b"/>
+    </linearGradient>
+    <linearGradient id="pinkDeep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8f315d"/>
+      <stop offset="0.45" stop-color="#c85c82"/>
+      <stop offset="1" stop-color="#ef9fb3"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7e5418"/>
+      <stop offset="0.08" stop-color="#e3bc62"/>
+      <stop offset="0.18" stop-color="#fff2b0"/>
+      <stop offset="0.32" stop-color="#b9862d"/>
+      <stop offset="0.5" stop-color="#fff4b7"/>
+      <stop offset="0.68" stop-color="#b9862d"/>
+      <stop offset="0.83" stop-color="#fff2b0"/>
+      <stop offset="0.94" stop-color="#d6a64d"/>
+      <stop offset="1" stop-color="#7e5418"/>
+    </linearGradient>
+    <linearGradient id="softGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9a6a24" stop-opacity=".45"/>
+      <stop offset="0.5" stop-color="#fff1a8" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#9a6a24" stop-opacity=".45"/>
+    </linearGradient>
+    <radialGradient id="light" cx="50%" cy="50%" r="52%">
+      <stop offset="0" stop-color="#fff7cc" stop-opacity=".95"/>
+      <stop offset="0.18" stop-color="#f6cf70" stop-opacity=".65"/>
+      <stop offset="0.5" stop-color="#f6cf70" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#f6cf70" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-10%" y="-60%" width="120%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0.95  0 1 0 0 0.72  0 0 1 0 0.25  0 0 0 .62 0" result="goldBlur"/>
+      <feMerge>
+        <feMergeNode in="goldBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow" x="-5%" y="-40%" width="110%" height="190%">
+      <feDropShadow dx="0" dy="13" stdDeviation="13" flood-color="#5b1f35" flood-opacity=".18"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#fff2b5" flood-opacity=".3"/>
+    </filter>
+  </defs>
+
+  <!-- side flowing panels -->
+  <path d="M0,86 C115,24 210,55 302,92 C222,126 109,163 0,220 Z" fill="url(#pinkDeep)" opacity=".96" filter="url(#shadow)"/>
+  <path d="M2400,86 C2285,24 2190,55 2098,92 C2178,126 2291,163 2400,220 Z" fill="url(#pinkDeep)" opacity=".96" filter="url(#shadow)"/>
+
+  <!-- main ribbon body -->
+  <path d="M235,93
+           C330,48 450,60 575,66
+           L1812,66
+           C1945,59 2050,48 2165,93
+           C2102,124 2076,152 2165,207
+           C2050,252 1945,241 1812,234
+           L575,234
+           C450,240 330,252 235,207
+           C298,170 298,130 235,93 Z"
+        fill="url(#pinkBody)" stroke="url(#goldStroke)" stroke-width="8" filter="url(#shadow)"/>
+
+  <!-- inner velvet depth -->
+  <path d="M310,113
+           C420,84 520,91 620,96
+           L1780,96
+           C1888,91 1990,84 2090,113
+           C2043,139 2043,161 2090,187
+           C1990,216 1888,209 1780,204
+           L620,204
+           C520,209 420,216 310,187
+           C354,159 354,141 310,113 Z"
+        fill="#cf6388" opacity=".38"/>
+
+  <!-- top and bottom gold lips -->
+  <path d="M52,60 C190,18 310,67 446,71 L1960,71 C2110,67 2220,20 2348,58"
+        fill="none" stroke="url(#goldStroke)" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M52,240 C190,282 310,233 446,229 L1960,229 C2110,233 2220,280 2348,242"
+        fill="none" stroke="url(#goldStroke)" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>
+
+  <!-- elegant crossing lines on both ends -->
+  <g fill="none" stroke-linecap="round" opacity=".96">
+    <path d="M25,202 C160,160 258,126 368,74" stroke="url(#goldStroke)" stroke-width="6"/>
+    <path d="M80,218 C210,176 304,140 420,92" stroke="#fff3bc" stroke-width="2.6" opacity=".82"/>
+    <path d="M24,104 C160,138 260,168 386,226" stroke="#f1cc75" stroke-width="2.7" opacity=".72"/>
+    <path d="M2375,202 C2240,160 2142,126 2032,74" stroke="url(#goldStroke)" stroke-width="6"/>
+    <path d="M2320,218 C2190,176 2096,140 1980,92" stroke="#fff3bc" stroke-width="2.6" opacity=".82"/>
+    <path d="M2376,104 C2240,138 2140,168 2014,226" stroke="#f1cc75" stroke-width="2.7" opacity=".72"/>
+  </g>
+
+  <!-- subtle center shine, no text -->
+  <ellipse cx="1200" cy="66" rx="94" ry="18" fill="url(#light)" opacity=".95"/>
+  <ellipse cx="1200" cy="234" rx="88" ry="17" fill="url(#light)" opacity=".72"/>
+  <path d="M355,145 H2045" stroke="url(#softGold)" stroke-width="1.3" opacity=".34"/>
+</svg>
