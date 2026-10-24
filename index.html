@@ -27,9 +27,8 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="assets/css/styles.css?v=v272-band-asset-rules" rel="stylesheet">
-<link href="assets/css/responsive.css?v=novi-responsive-20261023" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/design-system.css?v=novi-design-system-v1">
+<link href="assets/css/styles.css?v=novi-clean-20261023" rel="stylesheet"/>
+<link href="assets/css/site-system.css?v=novi-ribbon-unified-v8" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -81,14 +80,14 @@
   ]
 }
   </script>
-</link></head>
+</head>
 <body>
 <a class="skip-link" href="#services">Skip to content</a>
 <div aria-label="Brand message" class="top-ribbon">
 <p>PROFESSIONAL WEBSITE PAGES FOR TRUST AND INQUIRIES</p>
 <span aria-hidden="true" class="ribbon-drop"></span>
 </div>
-<header class="site-header">
+<header class="site-header" id="top">
 <a aria-label="NOVI Creative Studio home" class="brand" href="#">
 <img alt="" aria-hidden="true" class="brand-mark" decoding="async" height="64" src="assets/images/novi-creative-studio-logo-mark.webp?v=webp82" width="64"/>
 <span aria-hidden="true" class="brand-text">
@@ -132,8 +131,8 @@
 <path class="hero-gold-dash" d="M0 138 C170 126 330 114 500 104 C635 96 742 100 848 116 C956 132 1068 150 1188 156 C1366 164 1515 148 1600 128"></path>
 </svg>
 </section>
-<section class="services-section novi-segment novi-segment--custom novi-segment--services" id="services" aria-labelledby="services-title">
-<h2 id="services-title" class="novi-visually-hidden novi-type novi-type--h2">Our Services</h2>
+<section aria-labelledby="services-title" class="services-section novi-segment novi-segment--custom novi-segment--services" id="services">
+<h2 class="novi-visually-hidden novi-type novi-type--h2" id="services-title">Our Services</h2>
 <div aria-hidden="true" class="services-pink-sweep"></div>
 <div class="services-copy">
 <div aria-hidden="true" class="tiny-star">✦</div>
@@ -181,20 +180,26 @@
 </section>
 <!-- v114 story order: trust/differentiation moved earlier; lower proof/about moved later. Visual sections preserved. -->
 <section aria-labelledby="trust-title" class="trust-section segment-type-a bg-warm-cream novi-heading-system-v163 novi-segment novi-segment--editorial novi-surface--warm" id="trust">
-<div class="trust-top-wave trust-reference-image-band novi-transition novi-transition--ribbon">
-  <picture class="trust-band-art" aria-hidden="true">
-    <source media="(max-width: 760px)" srcset="assets/images/novi-why-you-can-trust-navy-gold-ribbon-mobile.webp">
-    <img src="assets/images/novi-why-you-can-trust-navy-gold-ribbon-desktop.webp" alt="" width="2048" height="263" loading="lazy" decoding="async">
-  </picture>
-  <p class="trust-ribbon-label" aria-label="Why you can trust NOVI">
-    <span class="trust-ribbon-star" aria-hidden="true">✦</span>
-    <span class="trust-ribbon-text">WHY YOU CAN TRUST NOVI</span>
-    <span class="trust-ribbon-star" aria-hidden="true">✦</span>
-  </p>
+<div class="novi-ribbon novi-ribbon--wave novi-ribbon--navy novi-ribbon--trust">
+<svg aria-hidden="true" class="novi-ribbon__wave" focusable="false" preserveaspectratio="none" viewbox="0 0 1600 180">
+<defs><lineargradient id="novi-ribbon-1-ribbon-metal" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff4c5"></stop><stop offset=".25" stop-color="#d9ad55"></stop><stop offset=".55" stop-color="#8c5b21"></stop><stop offset=".76" stop-color="#f9df94"></stop><stop offset="1" stop-color="#c18a38"></stop></lineargradient><lineargradient id="novi-ribbon-1-ribbon-sheen" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".15"></stop><stop offset=".5" stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#000" stop-opacity=".12"></stop></lineargradient></defs>
+<path class="novi-ribbon__outer" d="M0 12 C100 23 140 77 250 65 C324 53 355 48 440 48 L1160 48 C1245 48 1276 53 1350 65 C1460 77 1500 23 1600 12 L1600 168 C1500 157 1460 103 1350 115 C1276 127 1245 132 1160 132 L440 132 C355 132 324 127 250 115 C140 103 100 157 0 168 Z" fill="url(#novi-ribbon-1-ribbon-metal)"></path>
+<path class="novi-ribbon__face" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z"></path>
+<path class="novi-ribbon__sheen" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z" fill="url(#novi-ribbon-1-ribbon-sheen)"></path>
+<path class="novi-ribbon__inner-line" d="M0 36 C100 47 143 98 250 84 C326 72 358 69 440 69 L1160 69 C1242 69 1274 72 1350 84 C1457 98 1500 47 1600 36"></path>
+<path class="novi-ribbon__inner-line" d="M0 144 C100 133 143 82 250 96 C326 108 358 111 440 111 L1160 111 C1242 111 1274 108 1350 96 C1457 82 1500 133 1600 144"></path>
+<path class="novi-ribbon__flourish" d="M0 102 C122 122 155 52 267 69 M1600 102 C1478 122 1445 52 1333 69"></path>
+<path class="novi-ribbon__flourish" d="M0 77 C106 66 180 136 279 114 M1600 77 C1494 66 1420 136 1321 114"></path>
+</svg>
+<p class="novi-ribbon__label">
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+<span class="novi-ribbon__text">WHY YOU CAN TRUST NOVI</span>
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+</p>
 </div>
 <div class="trust-inner">
 <div class="trust-heading-block reveal-item">
-<h2 id="trust-title" class="novi-ref-heading-v163 novi-type novi-type--h2"><span class="trust-title-line trust-title-line-1">Built by a marketer who understands</span><span class="trust-title-line trust-title-line-2"><em>the pressure behind small business marketing.</em></span></h2>
+<h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="trust-title"><span class="trust-title-line trust-title-line-1">Built by a marketer who understands</span><span class="trust-title-line trust-title-line-2"><em>the pressure behind small business marketing.</em></span></h2>
 <div aria-label="Why NOVI is trustworthy" class="trust-readable-copy">
 <p class="trust-intro-copy">I have worked across the full marketing flow: strategy, ads, landing pages, customer acquisition, analysis, and improvement. NOVI was created for small business owners who have already been trying, but still need a clearer foundation before spending more time or money.</p>
 <p class="trust-note">This is not an AI template or decoration-only website. It is a careful one-page foundation built with strategy, structure, and honest expectations.</p>
@@ -273,115 +278,101 @@
 </div>
 <!-- Removed trust-bottom-wave per design feedback -->
 </section>
-
-
-
-
-
-
-<div class="familiar-top-band familiar-reference-image-band novi-transition novi-transition--ribbon" aria-hidden="false">
-  <picture class="familiar-band-art" aria-hidden="true">
-    <source media="(max-width: 760px)" srcset="assets/images/novi-does-this-feel-familiar-deep-green-gold-ribbon-mobile.webp">
-    <img src="assets/images/novi-does-this-feel-familiar-deep-green-gold-ribbon-desktop.webp" alt="" width="2048" height="263" loading="lazy" decoding="async">
-  </picture>
-  <p class="familiar-ribbon-label" aria-label="Does this feel familiar?">
-    <span class="familiar-ribbon-star" aria-hidden="true">✦</span>
-    <span class="familiar-ribbon-text">Does this feel familiar?</span>
-    <span class="familiar-ribbon-star" aria-hidden="true">✦</span>
-  </p>
+<div class="novi-ribbon novi-ribbon--wave novi-ribbon--green novi-ribbon--familiar">
+<svg aria-hidden="true" class="novi-ribbon__wave" focusable="false" preserveaspectratio="none" viewbox="0 0 1600 180">
+<defs><lineargradient id="novi-ribbon-2-ribbon-metal" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff4c5"></stop><stop offset=".25" stop-color="#d9ad55"></stop><stop offset=".55" stop-color="#8c5b21"></stop><stop offset=".76" stop-color="#f9df94"></stop><stop offset="1" stop-color="#c18a38"></stop></lineargradient><lineargradient id="novi-ribbon-2-ribbon-sheen" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".15"></stop><stop offset=".5" stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#000" stop-opacity=".12"></stop></lineargradient></defs>
+<path class="novi-ribbon__outer" d="M0 12 C100 23 140 77 250 65 C324 53 355 48 440 48 L1160 48 C1245 48 1276 53 1350 65 C1460 77 1500 23 1600 12 L1600 168 C1500 157 1460 103 1350 115 C1276 127 1245 132 1160 132 L440 132 C355 132 324 127 250 115 C140 103 100 157 0 168 Z" fill="url(#novi-ribbon-2-ribbon-metal)"></path>
+<path class="novi-ribbon__face" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z"></path>
+<path class="novi-ribbon__sheen" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z" fill="url(#novi-ribbon-2-ribbon-sheen)"></path>
+<path class="novi-ribbon__inner-line" d="M0 36 C100 47 143 98 250 84 C326 72 358 69 440 69 L1160 69 C1242 69 1274 72 1350 84 C1457 98 1500 47 1600 36"></path>
+<path class="novi-ribbon__inner-line" d="M0 144 C100 133 143 82 250 96 C326 108 358 111 440 111 L1160 111 C1242 111 1274 108 1350 96 C1457 82 1500 133 1600 144"></path>
+<path class="novi-ribbon__flourish" d="M0 102 C122 122 155 52 267 69 M1600 102 C1478 122 1445 52 1333 69"></path>
+<path class="novi-ribbon__flourish" d="M0 77 C106 66 180 136 279 114 M1600 77 C1494 66 1420 136 1321 114"></path>
+</svg>
+<p class="novi-ribbon__label">
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+<span class="novi-ribbon__text">DOES THIS FEEL FAMILIAR?</span>
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+</p>
 </div>
-
 <section aria-labelledby="first-stage-title" class="first-stage-section observed-section novi-pieces-section segment-type-a bg-soft-rose novi-heading-system-v163 familiar-polish-section v238-uploaded-illustration-flow v240-people-only-no-card v241-fe-layout-html-css v242-illustration-swap v249-fe-inspired-relayout novi-segment novi-segment--editorial novi-surface--rose" id="first-stage">
-  <div class="first-stage-frame novi-pieces-frame familiar-polish-frame v238-frame">
-    <header class="first-stage-header novi-pieces-header familiar-polish-header">
-      <h2 id="first-stage-title" class="novi-ref-heading-v163 familiar-polish-title familiar-heading-uploaded-design novi-type novi-type--h2">
-        <span class="familiar-heading-line familiar-heading-line--first">You have already tried.</span>
-        <span class="familiar-heading-line familiar-heading-line--second"><em>But you still need a website</em></span>
-        <span class="familiar-heading-line familiar-heading-line--third">you feel <strong>confident</strong> sharing.</span>
-      </h2>
-      <p class="novi-pieces-lede familiar-polish-lede">
+<div class="first-stage-frame novi-pieces-frame familiar-polish-frame v238-frame">
+<header class="first-stage-header novi-pieces-header familiar-polish-header">
+<h2 class="novi-ref-heading-v163 familiar-polish-title familiar-heading-uploaded-design novi-type novi-type--h2" id="first-stage-title">
+<span class="familiar-heading-line familiar-heading-line--first">You have already tried.</span>
+<span class="familiar-heading-line familiar-heading-line--second"><em>But you still need a website</em></span>
+<span class="familiar-heading-line familiar-heading-line--third">you feel <strong>confident</strong> sharing.</span>
+</h2>
+<p class="novi-pieces-lede familiar-polish-lede">
         This is not for someone who has done nothing. It is for small business owners who have already been trying to show up online, but still do not have one clear place that feels like their business.
       </p>
-    </header>
-
-    <div class="v249-story-canvas" aria-labelledby="familiar-story-title">
-      <div class="v249-story-heading-wrap">
-        <h3 id="familiar-story-title" class="familiar-polish-kicker novi-type novi-type--h3">You may have already tried</h3>
-        <p class="v249-story-intro">These are the kinds of thoughts many owners quietly carry before they finally want one clear page that truly feels like their business.</p>
-      </div>
-
-      <div class="v249-story-grid" aria-label="Things small business owners may have already tried">
-        <article class="v249-story-item v249-story-item--copy-top v249-story-item--flyer">
-          <div class="v249-story-copy">
-            <h4 class="novi-type novi-type--h4">I made a flyer, but it still does not say enough.</h4>
-            <p>The pieces are there. The message still feels hard to explain in one clear place.</p>
-          </div>
-          <img class="v249-story-illustration" src="assets/images/novi-small-business-flyer-brochure-exact-faceless-transparent.webp" alt="Illustration of a business owner holding a brochure and thinking" width="828" height="900" loading="lazy" decoding="async">
-        </article>
-
-        <article class="v249-story-item v249-story-item--copy-bottom v249-story-item--social">
-          <img class="v249-story-illustration" src="assets/images/novi-small-business-social-media-exact-faceless-transparent.webp" alt="Illustration of a business owner thinking while looking at social media on a phone" width="852" height="900" loading="lazy" decoding="async">
-          <div class="v249-story-copy">
-            <h4 class="novi-type novi-type--h4">I post when I can, but it still feels scattered.</h4>
-            <p>There are updates, photos, and ideas, but no calm home for the full story.</p>
-          </div>
-        </article>
-
-        <article class="v249-story-item v249-story-item--copy-top v249-story-item--gbp">
-          <div class="v249-story-copy">
-            <h4 class="novi-type novi-type--h4">People can find me, but do they understand me?</h4>
-            <p>Your business is visible, but your offer, care, and value still need a clearer shape.</p>
-          </div>
-          <img class="v249-story-illustration" src="assets/images/novi-google-business-profile-exact-faceless-transparent.webp" alt="Illustration of a business owner thinking at a laptop while looking at Google Business Profile visibility" width="900" height="771" loading="lazy" decoding="async">
-        </article>
-
-        <article class="v249-story-item v249-story-item--copy-bottom v249-story-item--template">
-          <img class="v249-story-illustration" src="assets/images/novi-website-template-exact-faceless-transparent.webp" alt="Illustration of a business owner thinking at a laptop after trying a website template" width="900" height="860" loading="lazy" decoding="async">
-          <div class="v249-story-copy">
-            <h4 class="novi-type novi-type--h4">I tried a template, but it does not feel like my business.</h4>
-            <p>The page exists, but the words, flow, and feeling do not fully match what you do.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <div class="v249-reflection-flow" aria-label="How NOVI helps after you have already tried">
-      <section class="v249-reflection-card novi-segment novi-segment--custom" aria-labelledby="confidence-card-title">
-        <div class="v249-reflection-main">
-          <div class="v249-reflection-head">
-            <p class="v249-reflection-eyebrow">When it still feels overwhelming</p>
-            <h3 id="confidence-card-title" class="v258-confidence-one-line novi-type novi-type--h3">
-  <span class="v258-confidence-one-line__text">Still not confident sharing your website?</span>
+</header>
+<div aria-labelledby="familiar-story-title" class="v249-story-canvas">
+<div class="v249-story-heading-wrap">
+<h3 class="familiar-polish-kicker novi-type novi-type--h3" id="familiar-story-title">You may have already tried</h3>
+<p class="v249-story-intro">These are the kinds of thoughts many owners quietly carry before they finally want one clear page that truly feels like their business.</p>
+</div>
+<div aria-label="Things small business owners may have already tried" class="v249-story-grid">
+<article class="v249-story-item v249-story-item--copy-top v249-story-item--flyer">
+<div class="v249-story-copy">
+<h4 class="novi-type novi-type--h4">I made a flyer, but it still does not say enough.</h4>
+<p>The pieces are there. The message still feels hard to explain in one clear place.</p>
+</div>
+<img alt="Illustration of a business owner holding a brochure and thinking" class="v249-story-illustration" decoding="async" height="900" loading="lazy" src="assets/images/novi-small-business-flyer-brochure-exact-faceless-transparent.webp" width="828"/>
+</article>
+<article class="v249-story-item v249-story-item--copy-bottom v249-story-item--social">
+<img alt="Illustration of a business owner thinking while looking at social media on a phone" class="v249-story-illustration" decoding="async" height="900" loading="lazy" src="assets/images/novi-small-business-social-media-exact-faceless-transparent.webp" width="852"/>
+<div class="v249-story-copy">
+<h4 class="novi-type novi-type--h4">I post when I can, but it still feels scattered.</h4>
+<p>There are updates, photos, and ideas, but no calm home for the full story.</p>
+</div>
+</article>
+<article class="v249-story-item v249-story-item--copy-top v249-story-item--gbp">
+<div class="v249-story-copy">
+<h4 class="novi-type novi-type--h4">People can find me, but do they understand me?</h4>
+<p>Your business is visible, but your offer, care, and value still need a clearer shape.</p>
+</div>
+<img alt="Illustration of a business owner thinking at a laptop while looking at Google Business Profile visibility" class="v249-story-illustration" decoding="async" height="771" loading="lazy" src="assets/images/novi-google-business-profile-exact-faceless-transparent.webp" width="900"/>
+</article>
+<article class="v249-story-item v249-story-item--copy-bottom v249-story-item--template">
+<img alt="Illustration of a business owner thinking at a laptop after trying a website template" class="v249-story-illustration" decoding="async" height="860" loading="lazy" src="assets/images/novi-website-template-exact-faceless-transparent.webp" width="900"/>
+<div class="v249-story-copy">
+<h4 class="novi-type novi-type--h4">I tried a template, but it does not feel like my business.</h4>
+<p>The page exists, but the words, flow, and feeling do not fully match what you do.</p>
+</div>
+</article>
+</div>
+</div>
+<div aria-label="How NOVI helps after you have already tried" class="v249-reflection-flow">
+<section aria-labelledby="confidence-card-title" class="v249-reflection-card novi-segment novi-segment--custom">
+<div class="v249-reflection-main">
+<div class="v249-reflection-head">
+<p class="v249-reflection-eyebrow">When it still feels overwhelming</p>
+<h3 class="v258-confidence-one-line novi-type novi-type--h3" id="confidence-card-title">
+<span class="v258-confidence-one-line__text">Still not confident sharing your website?</span>
 </h3>
-            <p class="v249-reflection-support">That usually means the pieces exist, but they still need one calm place to come together.</p>
-          </div>
-          <div class="v249-reflection-body">
-            <p>Not because you have not worked hard. The online world can feel overwhelming: too many tools, too many opinions, too many sales messages, and prices that are hard to understand.</p>
-            <p>NOVI helps turn your words, photos, services, and business basics into one calm, clear page where people can understand you, trust you, and take the next step.</p>
-          </div>
-        </div>
-        <div class="v249-reflection-note" role="note" aria-label="Materials you can bring">
-          <p><strong>No big meeting needed.</strong> Expensive professional materials are not required. Existing photos, logos, notes, ideas, and business basics are all welcome. If you already have polished materials you want to use, those are welcome too.</p>
-        </div>
-      </section>
-
-      <section class="v249-outcome novi-segment novi-segment--custom" aria-labelledby="not-behind-title">
-        <h3 id="not-behind-title" class="novi-type novi-type--h3">You are not behind.</h3>
-        <p>You already have pieces. You just need one calm place that helps people understand you, trust you, and take the next step.</p>
-        <ul aria-label="What NOVI helps create">
-          <li><span aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 12h28v19H18l-8 7z"/><path d="M17 19h14M17 25h10"/></svg></span><strong>Clear message</strong><small>People quickly understand what you offer.</small></li>
-          <li><span aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="19" y="8" width="10" height="8" rx="1"/><rect x="7" y="31" width="10" height="8" rx="1"/><rect x="19" y="31" width="10" height="8" rx="1"/><rect x="31" y="31" width="10" height="8" rx="1"/><path d="M24 16v9M12 25h24M12 25v6M24 25v6M36 25v6"/></svg></span><strong>Calm structure</strong><small>Your words, services, and trust signals finally connect.</small></li>
-          <li><span aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="m16 24 6 6 11-13"/></svg></span><strong>Easy next step</strong><small>Visitors know how to contact you or move forward.</small></li>
-        </ul>
-      </section>
-    </div>  </div>
+<p class="v249-reflection-support">That usually means the pieces exist, but they still need one calm place to come together.</p>
+</div>
+<div class="v249-reflection-body">
+<p>Not because you have not worked hard. The online world can feel overwhelming: too many tools, too many opinions, too many sales messages, and prices that are hard to understand.</p>
+<p>NOVI helps turn your words, photos, services, and business basics into one calm, clear page where people can understand you, trust you, and take the next step.</p>
+</div>
+</div>
+<div aria-label="Materials you can bring" class="v249-reflection-note" role="note">
+<p><strong>No big meeting needed.</strong> Expensive professional materials are not required. Existing photos, logos, notes, ideas, and business basics are all welcome. If you already have polished materials you want to use, those are welcome too.</p>
+</div>
 </section>
-
-
-
-
-
-
+<section aria-labelledby="not-behind-title" class="v249-outcome novi-segment novi-segment--custom">
+<h3 class="novi-type novi-type--h3" id="not-behind-title">You are not behind.</h3>
+<p>You already have pieces. You just need one calm place that helps people understand you, trust you, and take the next step.</p>
+<ul aria-label="What NOVI helps create">
+<li><span aria-hidden="true"><svg viewbox="0 0 48 48"><path d="M10 12h28v19H18l-8 7z"></path><path d="M17 19h14M17 25h10"></path></svg></span><strong>Clear message</strong><small>People quickly understand what you offer.</small></li>
+<li><span aria-hidden="true"><svg viewbox="0 0 48 48"><rect height="8" rx="1" width="10" x="19" y="8"></rect><rect height="8" rx="1" width="10" x="7" y="31"></rect><rect height="8" rx="1" width="10" x="19" y="31"></rect><rect height="8" rx="1" width="10" x="31" y="31"></rect><path d="M24 16v9M12 25h24M12 25v6M24 25v6M36 25v6"></path></svg></span><strong>Calm structure</strong><small>Your words, services, and trust signals finally connect.</small></li>
+<li><span aria-hidden="true"><svg viewbox="0 0 48 48"><circle cx="24" cy="24" r="17"></circle><path d="m16 24 6 6 11-13"></path></svg></span><strong>Easy next step</strong><small>Visitors know how to contact you or move forward.</small></li>
+</ul>
+</section>
+</div> </div>
+</section>
 <div aria-hidden="true" class="novi-story-divider observed-section novi-transition novi-transition--wave">
 <svg focusable="false" preserveaspectratio="none" viewbox="0 0 1440 120">
 <path class="divider-line-top" d="M0 18 C200 4 360 6 520 18 C720 34 930 30 1120 18 C1260 10 1365 10 1440 18"></path>
@@ -393,22 +384,32 @@
 </div>
 <section aria-labelledby="calm-build-title" class="familiar-section nofear-reference-section observed-section segment-type-b bg-soft-rose novi-heading-system-v163 novi-segment novi-segment--compact novi-surface--rose" id="calm-build">
 <div aria-hidden="true" class="familiar-scroll-sparkles"><span></span><span></span><span></span></div>
+<div class="novi-ribbon novi-ribbon--wave novi-ribbon--pink novi-ribbon--calmer">
+<svg aria-hidden="true" class="novi-ribbon__wave" focusable="false" preserveaspectratio="none" viewbox="0 0 1600 180">
+<defs><lineargradient id="novi-ribbon-3-ribbon-metal" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff4c5"></stop><stop offset=".25" stop-color="#d9ad55"></stop><stop offset=".55" stop-color="#8c5b21"></stop><stop offset=".76" stop-color="#f9df94"></stop><stop offset="1" stop-color="#c18a38"></stop></lineargradient><lineargradient id="novi-ribbon-3-ribbon-sheen" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".15"></stop><stop offset=".5" stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#000" stop-opacity=".12"></stop></lineargradient></defs>
+<path class="novi-ribbon__outer" d="M0 12 C100 23 140 77 250 65 C324 53 355 48 440 48 L1160 48 C1245 48 1276 53 1350 65 C1460 77 1500 23 1600 12 L1600 168 C1500 157 1460 103 1350 115 C1276 127 1245 132 1160 132 L440 132 C355 132 324 127 250 115 C140 103 100 157 0 168 Z" fill="url(#novi-ribbon-3-ribbon-metal)"></path>
+<path class="novi-ribbon__face" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z"></path>
+<path class="novi-ribbon__sheen" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z" fill="url(#novi-ribbon-3-ribbon-sheen)"></path>
+<path class="novi-ribbon__inner-line" d="M0 36 C100 47 143 98 250 84 C326 72 358 69 440 69 L1160 69 C1242 69 1274 72 1350 84 C1457 98 1500 47 1600 36"></path>
+<path class="novi-ribbon__inner-line" d="M0 144 C100 133 143 82 250 96 C326 108 358 111 440 111 L1160 111 C1242 111 1274 108 1350 96 C1457 82 1500 133 1600 144"></path>
+<path class="novi-ribbon__flourish" d="M0 102 C122 122 155 52 267 69 M1600 102 C1478 122 1445 52 1333 69"></path>
+<path class="novi-ribbon__flourish" d="M0 77 C106 66 180 136 279 114 M1600 77 C1494 66 1420 136 1321 114"></path>
+</svg>
+<p class="novi-ribbon__label">
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+<span class="novi-ribbon__text">A CALMER WAY TO BUILD ONLINE</span>
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+</p>
+</div>
 <div class="familiar-inner">
 <div class="familiar-intro reveal-item">
-<div class="calmer-v258-band">
-  <p class="calmer-v258-band__label">
-    <span class="calmer-v258-band__star" aria-hidden="true">✦</span>
-    <span>A CALMER WAY TO BUILD ONLINE</span>
-    <span class="calmer-v258-band__star" aria-hidden="true">✦</span>
-  </p>
-</div>
-<h2 id="calm-build-title" class="novi-ref-heading-v163 novi-type novi-type--h2">You do <span class="novi-em-not calmer-not">NOT</span> need to figure everything out <span class="calmer-first">first.</span></h2>
+<h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="calm-build-title">You do <span class="novi-em-not calmer-not">NOT</span> need to figure everything out <span class="calmer-first">first.</span></h2>
 <p class="familiar-clarity">NOVI helps you understand what matters now, what can wait, and what is optional before you spend more time or money.</p>
 </div>
 <div class="familiar-body">
 <div class="familiar-message reveal-item">
 <h3 class="novi-type novi-type--h3"><span>No fear.</span><span>No jargon.</span><span>No pressure.</span></h3>
-<a class="familiar-tagline" href="#contact"><span class="familiar-tagline__text">Start Your First Step</span><span class="familiar-tagline__arrow" aria-hidden="true">→</span></a>
+<a class="familiar-tagline" href="#contact"><span class="familiar-tagline__text">Start Your First Step</span><span aria-hidden="true" class="familiar-tagline__arrow">→</span></a>
 </div>
 <div aria-hidden="true" class="nofear-flow-connector">
 <svg focusable="false" preserveaspectratio="none" viewbox="0 0 560 240">
@@ -454,13 +455,13 @@
 <div class="novi-advice-inner novi-signal-inner">
 <header class="novi-advice-header novi-signal-header reveal-item">
 <div aria-label="Too many you need this messages" class="novi-advice-eyebrow projection-question-box projection-question-box--luxury">
-  <img class="projection-question-box__badge-image" src="assets/images/novi-question-badge-gold.svg" alt="" width="160" height="160" loading="lazy" decoding="async">
-  <div class="projection-question-box__panel">
-    <span class="projection-question-box__top-star" aria-hidden="true">✦</span>
-    <span class="projection-question-box__star projection-question-box__star--left" aria-hidden="true">✦</span>
-    <p class="projection-question-box__text"><span class="projection-question-box__word">TOO MANY</span> <span class="projection-question-box__word">“YOU NEED THIS”</span> <span class="projection-question-box__word">MESSAGES?</span></p>
-    <span class="projection-question-box__star projection-question-box__star--right" aria-hidden="true">✦</span>
-  </div>
+<img alt="" class="projection-question-box__badge-image" decoding="async" height="160" loading="lazy" src="assets/images/novi-question-badge-gold.svg" width="160"/>
+<div class="projection-question-box__panel">
+<span aria-hidden="true" class="projection-question-box__top-star">✦</span>
+<span aria-hidden="true" class="projection-question-box__star projection-question-box__star--left">✦</span>
+<p class="projection-question-box__text"><span class="projection-question-box__word">TOO MANY</span> <span class="projection-question-box__word">“YOU NEED THIS”</span> <span class="projection-question-box__word">MESSAGES?</span></p>
+<span aria-hidden="true" class="projection-question-box__star projection-question-box__star--right">✦</span>
+</div>
 </div>
 <h2 class="novi-advice-title novi-ref-heading-v163 novi-type novi-type--h2" id="foundation-priority-title">
 <span>Everything can matter.</span>
@@ -524,11 +525,27 @@
 </div>
 </div>
 </section>
-<section aria-labelledby="growth-stages-title" class="novi-stages-section observed-section segment-type-a bg-main-ivory novi-heading-system-v163 novi-segment novi-segment--editorial novi-surface--ivory" id="growth-stages">
+<section aria-labelledby="growth-stages-title" class="novi-stages-section observed-section segment-type-a bg-main-ivory novi-heading-system-v163 novi-segment novi-segment--editorial novi-surface--ivory" id="growth-stages"><div class="novi-ribbon novi-ribbon--wave novi-ribbon--green novi-ribbon--section">
+<svg aria-hidden="true" class="novi-ribbon__wave" focusable="false" preserveaspectratio="none" viewbox="0 0 1600 180">
+<defs><lineargradient id="novi-ribbon-4-ribbon-metal" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff4c5"></stop><stop offset=".25" stop-color="#d9ad55"></stop><stop offset=".55" stop-color="#8c5b21"></stop><stop offset=".76" stop-color="#f9df94"></stop><stop offset="1" stop-color="#c18a38"></stop></lineargradient><lineargradient id="novi-ribbon-4-ribbon-sheen" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".15"></stop><stop offset=".5" stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#000" stop-opacity=".12"></stop></lineargradient></defs>
+<path class="novi-ribbon__outer" d="M0 12 C100 23 140 77 250 65 C324 53 355 48 440 48 L1160 48 C1245 48 1276 53 1350 65 C1460 77 1500 23 1600 12 L1600 168 C1500 157 1460 103 1350 115 C1276 127 1245 132 1160 132 L440 132 C355 132 324 127 250 115 C140 103 100 157 0 168 Z" fill="url(#novi-ribbon-4-ribbon-metal)"></path>
+<path class="novi-ribbon__face" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z"></path>
+<path class="novi-ribbon__sheen" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z" fill="url(#novi-ribbon-4-ribbon-sheen)"></path>
+<path class="novi-ribbon__inner-line" d="M0 36 C100 47 143 98 250 84 C326 72 358 69 440 69 L1160 69 C1242 69 1274 72 1350 84 C1457 98 1500 47 1600 36"></path>
+<path class="novi-ribbon__inner-line" d="M0 144 C100 133 143 82 250 96 C326 108 358 111 440 111 L1160 111 C1242 111 1274 108 1350 96 C1457 82 1500 133 1600 144"></path>
+<path class="novi-ribbon__flourish" d="M0 102 C122 122 155 52 267 69 M1600 102 C1478 122 1445 52 1333 69"></path>
+<path class="novi-ribbon__flourish" d="M0 77 C106 66 180 136 279 114 M1600 77 C1494 66 1420 136 1321 114"></path>
+</svg>
+<p class="novi-ribbon__label">
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+<span class="novi-ribbon__text">THE STAGES OF BUSINESS GROWTH</span>
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+</p>
+</div>
 <div class="novi-stages-inner">
 <header class="novi-stages-header reveal-item">
-<div class="novi-stages-eyebrow segment-start-ribbon segment-inline-label" role="presentation" aria-hidden="true"><span class="segment-start-ribbon__star">✦</span><span class="segment-start-ribbon__text">THE STAGES OF BUSINESS GROWTH</span><span class="segment-start-ribbon__star">✦</span></div>
-<h2 id="growth-stages-title" class="novi-ref-heading-v163 novi-type novi-type--h2">Business growth happens in <em>stages</em>.</h2>
+
+<h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="growth-stages-title">Business growth happens in <em>stages</em>.</h2>
 <p>Real marketing is not just one thing.<br/>It grows step by step, in the right order.</p>
 </header>
 <div aria-label="The six stages of business growth" class="novi-stages-track reveal-item">
@@ -574,11 +591,27 @@
 </div>
 </div>
 </section>
-<section aria-labelledby="foundation-comparison-title" class="novi-weakstrong-section observed-section segment-type-b bg-warm-cream novi-heading-system-v163 novi-segment novi-segment--compact novi-surface--warm" id="foundation-comparison">
+<section aria-labelledby="foundation-comparison-title" class="novi-weakstrong-section observed-section segment-type-b bg-warm-cream novi-heading-system-v163 novi-segment novi-segment--compact novi-surface--warm" id="foundation-comparison"><div class="novi-ribbon novi-ribbon--wave novi-ribbon--navy novi-ribbon--section">
+<svg aria-hidden="true" class="novi-ribbon__wave" focusable="false" preserveaspectratio="none" viewbox="0 0 1600 180">
+<defs><lineargradient id="novi-ribbon-5-ribbon-metal" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff4c5"></stop><stop offset=".25" stop-color="#d9ad55"></stop><stop offset=".55" stop-color="#8c5b21"></stop><stop offset=".76" stop-color="#f9df94"></stop><stop offset="1" stop-color="#c18a38"></stop></lineargradient><lineargradient id="novi-ribbon-5-ribbon-sheen" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".15"></stop><stop offset=".5" stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#000" stop-opacity=".12"></stop></lineargradient></defs>
+<path class="novi-ribbon__outer" d="M0 12 C100 23 140 77 250 65 C324 53 355 48 440 48 L1160 48 C1245 48 1276 53 1350 65 C1460 77 1500 23 1600 12 L1600 168 C1500 157 1460 103 1350 115 C1276 127 1245 132 1160 132 L440 132 C355 132 324 127 250 115 C140 103 100 157 0 168 Z" fill="url(#novi-ribbon-5-ribbon-metal)"></path>
+<path class="novi-ribbon__face" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z"></path>
+<path class="novi-ribbon__sheen" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z" fill="url(#novi-ribbon-5-ribbon-sheen)"></path>
+<path class="novi-ribbon__inner-line" d="M0 36 C100 47 143 98 250 84 C326 72 358 69 440 69 L1160 69 C1242 69 1274 72 1350 84 C1457 98 1500 47 1600 36"></path>
+<path class="novi-ribbon__inner-line" d="M0 144 C100 133 143 82 250 96 C326 108 358 111 440 111 L1160 111 C1242 111 1274 108 1350 96 C1457 82 1500 133 1600 144"></path>
+<path class="novi-ribbon__flourish" d="M0 102 C122 122 155 52 267 69 M1600 102 C1478 122 1445 52 1333 69"></path>
+<path class="novi-ribbon__flourish" d="M0 77 C106 66 180 136 279 114 M1600 77 C1494 66 1420 136 1321 114"></path>
+</svg>
+<p class="novi-ribbon__label">
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+<span class="novi-ribbon__text">WHY THE FOUNDATION COMES FIRST</span>
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+</p>
+</div>
 <div class="novi-weakstrong-inner">
 <header class="novi-weakstrong-header reveal-item">
-<div class="novi-weakstrong-eyebrow segment-start-ribbon segment-inline-label" role="presentation" aria-hidden="true"><span class="segment-start-ribbon__star">✦</span><span class="segment-start-ribbon__text">WHY THE FOUNDATION COMES FIRST</span><span class="segment-start-ribbon__star">✦</span></div>
-<h2 id="foundation-comparison-title" class="novi-ref-heading-v163 novi-type novi-type--h2">If the foundation is weak,<br/>the rest <em>struggles</em> to grow.</h2>
+
+<h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="foundation-comparison-title">If the foundation is weak,<br/>the rest <em>struggles</em> to grow.</h2>
 <p>You can spend time on SEO, ads, social media, or speed.<br/>But without the right foundation, those efforts often become harder, slower, and more expensive.</p>
 </header>
 <div class="novi-weakstrong-main reveal-item">
@@ -632,11 +665,27 @@
 <path class="divider-drop" d="M720 72 C720 84 720 92 720 106"></path>
 </svg>
 </div>
-<section aria-labelledby="visibility-title" class="visibility-section visibility-count-section story-extra-section observed-section segment-type-b bg-main-ivory novi-heading-system-v163 novi-segment novi-segment--compact novi-surface--ivory" id="visibility-trust">
+<section aria-labelledby="visibility-title" class="visibility-section visibility-count-section story-extra-section observed-section segment-type-b bg-main-ivory novi-heading-system-v163 novi-segment novi-segment--compact novi-surface--ivory" id="visibility-trust"><div class="novi-ribbon novi-ribbon--wave novi-ribbon--pink novi-ribbon--section">
+<svg aria-hidden="true" class="novi-ribbon__wave" focusable="false" preserveaspectratio="none" viewbox="0 0 1600 180">
+<defs><lineargradient id="novi-ribbon-6-ribbon-metal" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff4c5"></stop><stop offset=".25" stop-color="#d9ad55"></stop><stop offset=".55" stop-color="#8c5b21"></stop><stop offset=".76" stop-color="#f9df94"></stop><stop offset="1" stop-color="#c18a38"></stop></lineargradient><lineargradient id="novi-ribbon-6-ribbon-sheen" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".15"></stop><stop offset=".5" stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#000" stop-opacity=".12"></stop></lineargradient></defs>
+<path class="novi-ribbon__outer" d="M0 12 C100 23 140 77 250 65 C324 53 355 48 440 48 L1160 48 C1245 48 1276 53 1350 65 C1460 77 1500 23 1600 12 L1600 168 C1500 157 1460 103 1350 115 C1276 127 1245 132 1160 132 L440 132 C355 132 324 127 250 115 C140 103 100 157 0 168 Z" fill="url(#novi-ribbon-6-ribbon-metal)"></path>
+<path class="novi-ribbon__face" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z"></path>
+<path class="novi-ribbon__sheen" d="M0 21 C100 32 140 85 250 73 C324 61 355 57 440 57 L1160 57 C1245 57 1276 61 1350 73 C1460 85 1500 32 1600 21 L1600 159 C1500 148 1460 95 1350 107 C1276 119 1245 123 1160 123 L440 123 C355 123 324 119 250 107 C140 95 100 148 0 159 Z" fill="url(#novi-ribbon-6-ribbon-sheen)"></path>
+<path class="novi-ribbon__inner-line" d="M0 36 C100 47 143 98 250 84 C326 72 358 69 440 69 L1160 69 C1242 69 1274 72 1350 84 C1457 98 1500 47 1600 36"></path>
+<path class="novi-ribbon__inner-line" d="M0 144 C100 133 143 82 250 96 C326 108 358 111 440 111 L1160 111 C1242 111 1274 108 1350 96 C1457 82 1500 133 1600 144"></path>
+<path class="novi-ribbon__flourish" d="M0 102 C122 122 155 52 267 69 M1600 102 C1478 122 1445 52 1333 69"></path>
+<path class="novi-ribbon__flourish" d="M0 77 C106 66 180 136 279 114 M1600 77 C1494 66 1420 136 1321 114"></path>
+</svg>
+<p class="novi-ribbon__label">
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+<span class="novi-ribbon__text">VANITY NUMBERS CAN LOOK IMPRESSIVE</span>
+<span aria-hidden="true" class="novi-ribbon__star">✦</span>
+</p>
+</div>
 <div class="visibility-inner">
 <header class="story-section-heading visibility-count-heading">
-<div class="story-eyebrow segment-start-ribbon segment-inline-label" role="presentation" aria-hidden="true"><span class="segment-start-ribbon__star">✦</span><span class="segment-start-ribbon__text">VANITY NUMBERS CAN LOOK IMPRESSIVE</span><span class="segment-start-ribbon__star">✦</span></div>
-<h2 id="visibility-title" class="novi-ref-heading-v163 novi-type novi-type--h2">Big numbers are not always better numbers.</h2>
+
+<h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="visibility-title">Big numbers are not always better numbers.</h2>
 <p>What matters is not only how many people see your business.<br/>What matters is whether the right people understand your value, trust your business, and take the next step.</p>
 </header>
 <div class="visibility-compare-grid visibility-count-grid">
@@ -722,7 +771,7 @@
 <div class="launch-proof-inner">
 <div class="launch-proof-copy reveal-item">
 <p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> INVISIBLE WORK. VISIBLE PROOF. <b>✦</b><span></span></p>
-<h2 id="launch-proof-title" class="novi-ref-heading-v163 novi-type novi-type--h2">You receive a clear launch check at handoff.</h2>
+<h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="launch-proof-title">You receive a clear launch check at handoff.</h2>
 <p>A beautiful website should also be built carefully behind the scenes. NOVI checks and shares the invisible work, so you can see how your website was built.</p>
 </div>
 <div aria-label="Example launch check scores" class="launch-score-board reveal-item">
@@ -748,7 +797,7 @@
 <div class="included-inner">
 <div class="included-head reveal-item">
 <p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> WHAT YOU ACTUALLY RECEIVE <b>✦</b><span></span></p>
-<h2 id="included-title" class="novi-ref-heading-v163 novi-type novi-type--h2">A brand site with the important basics built in.</h2>
+<h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="included-title">A brand site with the important basics built in.</h2>
 <p>You receive a focused online foundation, not a confusing pile of files.</p>
 </div>
 <div class="included-grid reveal-item">
@@ -765,7 +814,7 @@
 <div class="next-options-inner">
 <div class="next-options-head reveal-item">
 <p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> OPTIONAL NEXT STEPS <b>✦</b><span></span></p>
-<h2 id="next-options-title" class="novi-type novi-type--h2">Add only what makes sense next.</h2>
+<h2 class="novi-type novi-type--h2" id="next-options-title">Add only what makes sense next.</h2>
 </div>
 <div class="next-options-grid reveal-item">
 <article class="next-option-card">
@@ -785,7 +834,7 @@
 <div class="choose-foundation-inner">
 <div class="choose-heading reveal-item">
 <p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> CHOOSE YOUR FOUNDATION <b>✦</b><span></span></p>
-<h2 id="choose-foundation-title" class="novi-ref-heading-v163 novi-type novi-type--h2">Start with the foundation your business actually needs.</h2>
+<h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="choose-foundation-title">Start with the foundation your business actually needs.</h2>
 <p>Choose a clear Brand Site first, or add one focused Offer Page when your business has a specific service, launch, or campaign to highlight.</p>
 </div>
 <div class="choose-card-grid reveal-item">
@@ -798,7 +847,7 @@
 <div class="built-differently-inner">
 <div class="built-differently-heading reveal-item">
 <p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> BUILT DIFFERENTLY FROM THE START <b>✦</b><span></span></p>
-<h2 id="built-differently-title" class="novi-ref-heading-v163 novi-type novi-type--h2">Not a template. Not a patch job.</h2>
+<h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="built-differently-title">Not a template. Not a patch job.</h2>
 <p>NOVI builds lightweight brand sites with purpose, clean structure, and clear messaging. Not platform fixes or generic layouts.</p>
 </div>
 <div class="built-differently-grid reveal-item">
@@ -819,12 +868,12 @@
 </div>
 </section>
 <section aria-labelledby="difference-title" class="difference-section observed-section segment-type-b bg-main-ivory novi-heading-system-v163 novi-segment novi-segment--compact novi-surface--ivory" id="difference">
-<div class="difference-inner"><div class="difference-heading reveal-item"><p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> WHY NOVI FEELS DIFFERENT <b>✦</b><span></span></p><h2 id="difference-title" class="novi-ref-heading-v163 novi-type novi-type--h2">A foundation you can understand and own.</h2><p>NOVI is designed for small businesses that need a clear first step, not confusing pressure, hidden extras, or an ads-first approach.</p></div>
+<div class="difference-inner"><div class="difference-heading reveal-item"><p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> WHY NOVI FEELS DIFFERENT <b>✦</b><span></span></p><h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="difference-title">A foundation you can understand and own.</h2><p>NOVI is designed for small businesses that need a clear first step, not confusing pressure, hidden extras, or an ads-first approach.</p></div>
 <div class="difference-table reveal-item"><div class="diff-row diff-head"><div>Feature</div><div>NOVI</div><div>Typical build</div></div><div class="diff-row"><div>Perfect copy needed</div><div><span class="diff-mark yes">No</span></div><div><span class="diff-mark maybe">Often</span></div></div><div class="diff-row"><div>Copy support</div><div><span class="diff-mark yes">✓</span></div><div><span class="diff-mark maybe">Extra</span></div></div><div class="diff-row"><div>Fit-for-purpose design</div><div><span class="diff-mark yes">✓</span></div><div><span class="diff-mark maybe">Varies</span></div></div><div class="diff-row"><div>Google Business Profile basics</div><div><span class="diff-mark yes">✓</span></div><div><span class="diff-mark no">No</span></div></div><div class="diff-row"><div>SEO / AEO foundation</div><div><span class="diff-mark yes">✓</span></div><div><span class="diff-mark maybe">Varies</span></div></div><div class="diff-row"><div>Lightweight build</div><div><span class="diff-mark yes">✓</span></div><div><span class="diff-mark maybe">Depends</span></div></div><div class="diff-row"><div>Launch check shared</div><div><span class="diff-mark yes">✓</span></div><div><span class="diff-mark maybe">Not always</span></div></div><div class="diff-row"><div>Ads-first pressure</div><div><span class="diff-mark yes">No</span></div><div><span class="diff-mark maybe">Sometimes</span></div></div></div>
 </div>
 </section>
-<section aria-labelledby="process-title" class="process-section observed-section segment-type-a bg-main-ivory novi-heading-system-v163 novi-segment novi-segment--editorial novi-surface--ivory" id="process"><div class="process-inner"><div class="process-heading reveal-item"><p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> PROCESS <b>✦</b><span></span></p><h2 id="process-title" class="novi-ref-heading-v163 novi-type novi-type--h2">A clear process from first form to launch.</h2><p>No surprise pressure. No confusing steps. You know what happens before the full project begins.</p></div><div class="process-steps reveal-item"><article><b>1</b><h3 class="novi-type novi-type--h3">Apply</h3><p>Send the inquiry form so NOVI can understand your business and project fit.</p></article><article><b>2</b><h3 class="novi-type novi-type--h3">Agreement + hearing sheet</h3><p>Share your business details. You do not need perfect copy before starting.</p></article><article><b>3</b><h3 class="novi-type novi-type--h3">Starter fee</h3><p>A small starter fee covers the first-view direction and test-site preview.</p></article><article><b>4</b><h3 class="novi-type novi-type--h3">First-view preview</h3><p>NOVI creates the first-view direction on a test site before the full build.</p></article><article><b>5</b><h3 class="novi-type novi-type--h3">Project deposit</h3><p>If the direction feels right, the full project begins after the project deposit.</p></article><article><b>6</b><h3 class="novi-type novi-type--h3">Full preview</h3><p>Review the full test-site version before final payment and launch.</p></article><article><b>7</b><h3 class="novi-type novi-type--h3">Final payment</h3><p>Once approved, the remaining balance is paid before the site goes live.</p></article><article><b>8</b><h3 class="novi-type novi-type--h3">Launch</h3><p>NOVI publishes the site and shares the basic launch check notes.</p></article></div></div></section>
-<section aria-labelledby="faq-title" class="faq-section observed-section segment-type-ab bg-main-ivory novi-heading-system-v163 novi-segment novi-segment--bridge novi-surface--ivory" id="faq"><div class="faq-inner"><div class="faq-heading reveal-item"><p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> FAQ &amp; CLEAR BOUNDARIES <b>✦</b><span></span></p><h2 id="faq-title" class="novi-ref-heading-v163 novi-type novi-type--h2">Clear boundaries are part of honest service.</h2><p>NOVI explains what is included, what can be added later, and what is outside the project scope.</p></div><div class="faq-grid reveal-item"><article><h3 class="novi-type novi-type--h3">Do you edit existing WordPress, Wix, Squarespace, or Shopify sites?</h3><p>No. NOVI does not edit or fix existing platform-based websites.</p></article><article><h3 class="novi-type novi-type--h3">Do you build e-commerce or Shopify stores?</h3><p>No. NOVI focuses on service-based small businesses and lightweight one-page foundation websites.</p></article><article><h3 class="novi-type novi-type--h3">Is ongoing SEO or advertising included?</h3><p>No. NOVI does not sell ongoing SEO, ad management, or monthly operations as the basic package.</p></article><article><h3 class="novi-type novi-type--h3">Can analysis or A/B testing be added later?</h3><p>Yes. Deeper analysis, reports, and A/B testing can be quoted later when there is enough traffic and a clear goal.</p></article><article><h3 class="novi-type novi-type--h3">Are PageSpeed or SEO scores guaranteed?</h3><p>No ranking or inquiry results are guaranteed. NOVI builds with PageSpeed, accessibility, SEO, and clean structure in mind.</p></article><article><h3 class="novi-type novi-type--h3">Who owns the domain and accounts?</h3><p>The client should own their domain, Google accounts, and business profiles.</p></article></div></div></section>
+<section aria-labelledby="process-title" class="process-section observed-section segment-type-a bg-main-ivory novi-heading-system-v163 novi-segment novi-segment--editorial novi-surface--ivory" id="process"><div class="process-inner"><div class="process-heading reveal-item"><p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> PROCESS <b>✦</b><span></span></p><h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="process-title">A clear process from first form to launch.</h2><p>No surprise pressure. No confusing steps. You know what happens before the full project begins.</p></div><div class="process-steps reveal-item"><article><b>1</b><h3 class="novi-type novi-type--h3">Apply</h3><p>Send the inquiry form so NOVI can understand your business and project fit.</p></article><article><b>2</b><h3 class="novi-type novi-type--h3">Agreement + hearing sheet</h3><p>Share your business details. You do not need perfect copy before starting.</p></article><article><b>3</b><h3 class="novi-type novi-type--h3">Starter fee</h3><p>A small starter fee covers the first-view direction and test-site preview.</p></article><article><b>4</b><h3 class="novi-type novi-type--h3">First-view preview</h3><p>NOVI creates the first-view direction on a test site before the full build.</p></article><article><b>5</b><h3 class="novi-type novi-type--h3">Project deposit</h3><p>If the direction feels right, the full project begins after the project deposit.</p></article><article><b>6</b><h3 class="novi-type novi-type--h3">Full preview</h3><p>Review the full test-site version before final payment and launch.</p></article><article><b>7</b><h3 class="novi-type novi-type--h3">Final payment</h3><p>Once approved, the remaining balance is paid before the site goes live.</p></article><article><b>8</b><h3 class="novi-type novi-type--h3">Launch</h3><p>NOVI publishes the site and shares the basic launch check notes.</p></article></div></div></section>
+<section aria-labelledby="faq-title" class="faq-section observed-section segment-type-ab bg-main-ivory novi-heading-system-v163 novi-segment novi-segment--bridge novi-surface--ivory" id="faq"><div class="faq-inner"><div class="faq-heading reveal-item"><p class="novi-added-eyebrow segment-label novi-ref-label-v163"><span></span><b>✦</b> FAQ &amp; CLEAR BOUNDARIES <b>✦</b><span></span></p><h2 class="novi-ref-heading-v163 novi-type novi-type--h2" id="faq-title">Clear boundaries are part of honest service.</h2><p>NOVI explains what is included, what can be added later, and what is outside the project scope.</p></div><div class="faq-grid reveal-item"><article><h3 class="novi-type novi-type--h3">Do you edit existing WordPress, Wix, Squarespace, or Shopify sites?</h3><p>No. NOVI does not edit or fix existing platform-based websites.</p></article><article><h3 class="novi-type novi-type--h3">Do you build e-commerce or Shopify stores?</h3><p>No. NOVI focuses on service-based small businesses and lightweight one-page foundation websites.</p></article><article><h3 class="novi-type novi-type--h3">Is ongoing SEO or advertising included?</h3><p>No. NOVI does not sell ongoing SEO, ad management, or monthly operations as the basic package.</p></article><article><h3 class="novi-type novi-type--h3">Can analysis or A/B testing be added later?</h3><p>Yes. Deeper analysis, reports, and A/B testing can be quoted later when there is enough traffic and a clear goal.</p></article><article><h3 class="novi-type novi-type--h3">Are PageSpeed or SEO scores guaranteed?</h3><p>No ranking or inquiry results are guaranteed. NOVI builds with PageSpeed, accessibility, SEO, and clean structure in mind.</p></article><article><h3 class="novi-type novi-type--h3">Who owns the domain and accounts?</h3><p>The client should own their domain, Google accounts, and business profiles.</p></article></div></div></section>
 <section aria-labelledby="about-title" class="about-section observed-section segment-type-a bg-warm-cream novi-segment novi-segment--editorial novi-surface--warm" id="about">
 <div aria-hidden="true" class="about-top-frame">
 <svg focusable="false" preserveaspectratio="none" viewbox="0 0 1600 170">
@@ -836,7 +885,7 @@
 <div class="about-inner">
 <div class="about-story reveal-item">
 <p class="about-eyebrow"><span></span><b>✦</b> ABOUT NOVI <b>✦</b><span></span></p>
-<h2 id="about-title" class="novi-type novi-type--h2">Built by a marketer,<br/>not just a designer.</h2>
+<h2 class="novi-type novi-type--h2" id="about-title">Built by a marketer,<br/>not just a designer.</h2>
 <div aria-hidden="true" class="about-divider"><span></span><b>✦</b><span></span></div>
 <div class="about-copy">
 <p class="about-lead">Novi Creative Studio was created to help small businesses build better soil before relying heavily on ads.</p>
@@ -902,7 +951,7 @@
 <div class="brand-meaning-inner">
 <div class="brand-meaning-copy reveal-item">
 <p class="brand-eyebrow"><span></span><b>✦</b><strong class="brand-eyebrow-text"><span class="eyebrow-desktop">THE MEANING BEHIND NOVI’S COLORS</span><span class="eyebrow-mobile">THE MEANING BEHIND<br/>NOVI’S COLORS</span></strong><b>✦</b><span></span></p>
-<h2 id="brand-meaning-title" class="novi-type novi-type--h2">A brand system built with meaning, not decoration.</h2>
+<h2 class="novi-type novi-type--h2" id="brand-meaning-title">A brand system built with meaning, not decoration.</h2>
 <div aria-hidden="true" class="brand-divider"><span></span><b>✦</b><span></span></div>
 <p>Every color in the NOVI brand was chosen with intention. They reflect how we work, what we value, and the experience we create for small business owners.</p>
 <div aria-label="NOVI brand values" class="brand-value-mini-grid">
@@ -960,22 +1009,22 @@
 </svg>
 </div>
 </section>
-<section aria-labelledby="final-cta-title" class="final-cta-section observed-section segment-type-a bg-deep novi-segment novi-segment--editorial novi-surface--deep" id="contact"><div class="final-cta-inner reveal-item"><p class="final-cta-eyebrow"><span></span><b>✦</b> START WITH NOVI <b>✦</b><span></span></p><h2 id="final-cta-title" class="novi-type novi-type--h2">Ready to build a clearer online foundation?</h2><p>You do not need perfect copy, polished materials, or a full marketing plan before starting. Begin with the form, and NOVI will help organize the first step with honesty, clarity, and care.</p><div class="final-cta-actions"><a class="final-cta-button" href="mailto:hello@novicreativestudio.com">Start with NOVI <span>→</span></a><span class="final-cta-note">No fear. No jargon. No pressure.</span></div></div></section>
+<section aria-labelledby="final-cta-title" class="final-cta-section observed-section segment-type-a bg-deep novi-segment novi-segment--editorial novi-surface--deep" id="contact"><div class="final-cta-inner reveal-item"><p class="final-cta-eyebrow"><span></span><b>✦</b> START WITH NOVI <b>✦</b><span></span></p><h2 class="novi-type novi-type--h2" id="final-cta-title">Ready to build a clearer online foundation?</h2><p>You do not need perfect copy, polished materials, or a full marketing plan before starting. Begin with the form, and NOVI will help organize the first step with honesty, clarity, and care.</p><div class="final-cta-actions"><a class="final-cta-button" href="mailto:hello@novicreativestudio.com">Start with NOVI <span>→</span></a><span class="final-cta-note">No fear. No jargon. No pressure.</span></div></div></section>
 <footer aria-label="NOVI Creative Studio footer" class="site-footer">
 <div class="site-footer-inner">
 <div class="footer-brand-block">
 <a aria-label="Back to top" class="footer-brand" href="#top">
-<img alt="" aria-hidden="true" class="footer-brand-img" decoding="async" height="58" loading="lazy" src="assets/images/novi-creative-studio-logo-mark.webp?v=webp82" width="58">
+<img alt="" aria-hidden="true" class="footer-brand-img" decoding="async" height="58" loading="lazy" src="assets/images/novi-creative-studio-logo-mark.webp?v=webp82" width="58"/>
 <span class="footer-brand-text">
 <strong>NOVI</strong>
 <small>Creative Studio</small>
 <em>Small Business Online Foundation Studio</em>
 </span>
-</img></a>
+</a>
 <p>Custom, lightweight brand sites for small service-based businesses that want clarity before more marketing.</p>
 </div>
 <nav aria-label="Footer navigation" class="footer-nav">
-<a href="#fit">Who it is for</a>
+<a href="#first-stage">Who it is for</a>
 <a href="#included">What you receive</a>
 <a href="#launch-check">Launch check</a>
 <a href="#faq">FAQ</a>
@@ -993,6 +1042,6 @@
 </div>
 </footer>
 </main>
-<script defer="" src="assets/js/script.js?v=v108-simple-visibility-polish"></script>
+<script defer="" src="assets/js/script.js?v=novi-clean-20261023"></script>
 </body>
 </html>

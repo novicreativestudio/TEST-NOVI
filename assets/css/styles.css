@@ -14,8 +14,8 @@
   --gold-soft:#e6b759;
   --text:#08142c;
   --shadow:0 15px 35px rgba(6,17,39,.16),0 2px 8px rgba(124,87,37,.22);
-  --serif:'Cormorant Garamond',Georgia,serif;
-  --display:'Cinzel',Georgia,serif;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --display:"Cinzel",Georgia,serif;
 }
 
 *{box-sizing:border-box}
@@ -523,10 +523,10 @@ button{font:inherit}
 }
 .trust-section::before{left:5.2%;top:29%;animation-delay:.6s}
 .trust-section::after{right:7.5%;top:19%;animation-delay:1.8s}
-.trust-top-wave,
+
 .trust-bottom-wave{position:absolute;left:0;width:100%;pointer-events:none;z-index:0}
-.trust-top-wave{top:0;height:clamp(112px,11vw,172px)}
-.trust-top-wave svg,.trust-bottom-wave svg{display:block;width:100%;height:100%}
+
+.trust-bottom-wave svg{display:block;width:100%;height:100%}
 .trust-wave-navy{fill:#061127}
 .trust-wave-green{fill:#073c33;opacity:.92}
 .trust-wave-gold{fill:none;stroke:#f2d373;stroke-width:9;stroke-linecap:round;filter:drop-shadow(0 0 8px rgba(245,215,115,.28))}
@@ -1571,7 +1571,7 @@ body{
   }
   .trust-section::before{left:4%;top:18%;font-size:16px}
   .trust-section::after{right:6%;top:12%;font-size:17px}
-  .trust-top-wave{height:84px}
+  
   .trust-wave-gold{stroke-width:5.5}
   .trust-inner{width:calc(100% - 34px);padding:92px 0 114px}
   .trust-heading-block{margin-bottom:23px}
@@ -2452,7 +2452,7 @@ body{
 
 .calm-to-proof-bridge{position:relative;padding:28px 22px;background:linear-gradient(180deg,#f7ead7 0%,#fffaf1 100%);color:#073c33}.calm-to-proof-inner{width:min(860px,100%);margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}.calm-to-proof-inner span{height:1px;background:linear-gradient(90deg,transparent,rgba(200,146,50,.78))}.calm-to-proof-inner span:last-child{background:linear-gradient(90deg,rgba(200,146,50,.78),transparent)}.calm-to-proof-inner p{margin:0;font-family:var(--serif);color:#073c33;font-size:clamp(20px,2vw,30px);line-height:1.1;text-align:center}.calm-to-proof-bridge .reveal-item{opacity:0;transform:translateY(24px)}.calm-to-proof-bridge.in-view .reveal-item{animation:trustReveal .78s ease forwards}
 
-.launch-score-board{position:relative}.launch-score-board::before,.launch-score-board::after{content:"✦";position:absolute;color:#c89232;font-size:18px;opacity:0;pointer-events:none}.launch-score-board::before{top:-18px;left:8%}.launch-score-board::after{top:-8px;right:9%}.launch-proof-section.in-view .launch-score-board::before,.launch-proof-section.in-view .launch-score-board::after{animation:proofSparkle 3.8s ease-in-out infinite}.launch-proof-section.in-view .launch-score-board::after{animation-delay:1.2s}@keyframes proofSparkle{0%,78%,100%{opacity:0;transform:scale(.7) rotate(0deg)}84%{opacity:.9;transform:scale(1.1) rotate(16deg)}90%{opacity:.35;transform:scale(.92) rotate(0deg)}}.launch-proof-images{grid-template-columns:1fr}.launch-proof-images figure:nth-child(n+2){display:none}.launch-proof-images img{height:280px}.launch-proof-evidence{grid-template-columns:.86fr 1.14fr}
+.launch-score-board{position:relative}.launch-score-board::before,.launch-score-board::after{content:"✦";position:absolute;color:#c89232;font-size:18px;opacity:0;pointer-events:none}.launch-score-board::before{top:-18px;left:8%}.launch-score-board::after{top:-8px;right:9%}.launch-proof-section.in-view .launch-score-board::before,.launch-proof-section.in-view .launch-score-board::after{animation:proofSparkle 3.8s ease-in-out infinite}.launch-proof-section.in-view .launch-score-board::after{animation-delay:1.2s}@keyframes proofSparkle{0%,78%,100%{opacity:0;transform:scale(.7) rotate(0deg)}84%{opacity:.9;transform:scale(1.1) rotate(16deg)}90%{opacity:.35;transform:scale(.92) rotate(0deg)}}.launch-proof-images{grid-template-columns:1fr}.launch-proof-images figure:nth-child(n/**/+2){display:none}.launch-proof-images img{height:280px}.launch-proof-evidence{grid-template-columns:.86fr 1.14fr}
 
 /* Built differently segment */
 .built-differently-section{position:relative;overflow:hidden;padding:clamp(76px,7vw,112px) 22px;color:#07142d;background:radial-gradient(circle at 16% 14%,rgba(217,120,139,.10),transparent 30%),radial-gradient(circle at 84% 10%,rgba(245,211,96,.15),transparent 32%),linear-gradient(180deg,#fffaf1 0%,#f8eddb 100%)}
@@ -8150,31 +8150,11 @@ body{
   text-align:center;
 }
 
-.story-eyebrow{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-  margin:0 auto 18px;
-  color:#c89232;
-  font-family:var(--display);
-  font-size:clamp(12px,.9vw,15px);
-  line-height:1;
-  font-weight:700;
-  letter-spacing:.30em;
-  text-transform:uppercase;
-}
 
-.story-eyebrow span{
-  width:clamp(44px,6vw,104px);
-  height:1px;
-  background:linear-gradient(90deg,transparent,#c89232,transparent);
-}
 
-.story-eyebrow b{
-  font-size:12px;
-  text-shadow:0 0 8px rgba(230,183,89,.32);
-}
+
+
+
 
 .story-section-heading h2{
   margin:0 auto 18px;
@@ -8648,15 +8628,9 @@ body{
     width:min(calc(100% - 36px),460px);
   }
 
-  .story-eyebrow{
-    gap:8px;
-    font-size:10.5px;
-    letter-spacing:.18em;
-  }
+  
 
-  .story-eyebrow span{
-    width:24px;
-  }
+  
 
   .story-section-heading h2{
     font-size:clamp(38px,11vw,54px);
@@ -9238,16 +9212,9 @@ body{
   margin-bottom:clamp(34px,3.8vw,56px)!important;
 }
 
-.visibility-count-heading .story-eyebrow{
-  color:#c89232!important;
-  font-size:clamp(11px,.78vw,13px)!important;
-  letter-spacing:.42em!important;
-}
 
-.visibility-count-heading .story-eyebrow span,
-.visibility-count-heading .story-eyebrow b{
-  display:none!important;
-}
+
+
 
 .visibility-count-heading h2{
   max-width:1180px!important;
@@ -9764,7 +9731,7 @@ body{
   border-top: 1px solid rgba(200,146,50,.32) !important;
 }
 .visibility-count-section::after{
-  content:'' !important;
+  content:"" !important;
   position:absolute !important;
   right:0 !important;
   top:0 !important;
@@ -11793,7 +11760,7 @@ body{
   background:radial-gradient(circle at 32% 20%,#176d5e,#073c33 72%) !important;
   box-shadow:0 12px 24px rgba(6,17,39,.16),inset 0 0 0 1px rgba(255,255,255,.08) !important;
   color:var(--gold-light) !important;
-  font-family:Georgia,'Times New Roman',serif !important;
+  font-family:Georgia,"Times New Roman",serif !important;
   font-size:31px !important;
   font-weight:500 !important;
   line-height:1 !important;
@@ -12042,40 +12009,13 @@ body{
   margin:0 auto clamp(42px,4vw,62px);
 }
 
-.novi-stages-eyebrow,
-.novi-weakstrong-eyebrow{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:14px;
-  margin:0 0 14px;
-  color:#b97821;
-  font-family:var(--display);
-  font-size:clamp(11px,.82vw,13px);
-  font-weight:600;
-  letter-spacing:.31em;
-  line-height:1;
-  text-transform:uppercase;
-}
 
-.novi-stages-eyebrow span,
-.novi-weakstrong-eyebrow span{
-  width:clamp(44px,5vw,94px);
-  height:1px;
-  background:linear-gradient(90deg,transparent,rgba(200,146,50,.72));
-}
 
-.novi-stages-eyebrow span:last-child,
-.novi-weakstrong-eyebrow span:last-child{
-  background:linear-gradient(90deg,rgba(200,146,50,.72),transparent);
-}
 
-.novi-stages-eyebrow b,
-.novi-weakstrong-eyebrow b{
-  color:#c89232;
-  font-size:13px;
-  font-weight:400;
-}
+
+
+
+
 
 .novi-stages-header h2,
 .novi-weakstrong-header h2{
@@ -12357,7 +12297,7 @@ body{
   width:min(360px,64vw);
   height:32px;
   margin:0 auto 12px;
-  background:url('../images/novi-gold-vine-growth-divider.webp') center / contain no-repeat;
+  background:url("../images/novi-gold-vine-growth-divider.webp") center / contain no-repeat;
   opacity:.82;
 }
 
@@ -12407,10 +12347,8 @@ body{
   .novi-weakstrong-section{padding:64px 16px 76px;}
   .novi-stages-header,
   .novi-weakstrong-header{margin-bottom:34px;}
-  .novi-stages-eyebrow,
-  .novi-weakstrong-eyebrow{gap:9px; letter-spacing:.22em; font-size:10.5px;}
-  .novi-stages-eyebrow span,
-  .novi-weakstrong-eyebrow span{width:34px;}
+  
+  
   .novi-stages-header h2,
   .novi-weakstrong-header h2{font-size:clamp(34px,9vw,46px); line-height:1.04;}
   .novi-stages-header p,
@@ -13546,9 +13484,7 @@ body{
     linear-gradient(180deg,#fffaf2 0%,#fbf6ed 58%,#fffaf3 100%) !important;
 }
 
-.trust-top-wave{
-  height:clamp(86px,7.4vw,116px) !important;
-}
+
 
 .trust-inner{
   width:min(calc(100% - 48px),1320px) !important;
@@ -13814,7 +13750,7 @@ body{
 
 @media (max-width:760px){
   .trust-section{margin-top:24px !important;}
-  .trust-top-wave{height:60px !important;}
+  
 
   .trust-inner{
     width:calc(100% - 12px) !important;
@@ -14291,104 +14227,19 @@ body{
   margin-top:78px !important;
 }
 
-.trust-section .trust-top-wave.trust-final-ribbon{
-  position:absolute !important;
-  left:0 !important;
-  top:0 !important;
-  z-index:3 !important;
-  width:100% !important;
-  height:clamp(84px,6.35vw,106px) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  background:transparent !important;
-  box-shadow:none !important;
-}
 
-.trust-section .trust-top-wave.trust-final-ribbon svg,
-.trust-section .trust-top-wave.trust-final-ribbon .trust-wave-band,
-.trust-section .trust-top-wave.trust-final-ribbon .trust-wave-edge,
-.trust-section .trust-top-wave.trust-final-ribbon .trust-wave-detail,
-.trust-section .trust-top-wave.trust-final-ribbon .trust-wave-navy,
-.trust-section .trust-top-wave.trust-final-ribbon .trust-wave-green,
-.trust-section .trust-top-wave.trust-final-ribbon .trust-wave-gold,
-.trust-section .trust-top-wave.trust-final-ribbon .trust-wave-gold-top,
-.trust-section .trust-top-wave.trust-final-ribbon .trust-wave-dash{display:none !important;}
 
-.segment-start-ribbon,
-.trust-section .trust-ribbon-label{
-  position:relative !important;
-  width:min(calc(100% - 96px),1210px) !important;
-  min-height:58px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(18px,2vw,30px) !important;
-  padding:14px clamp(30px,4.6vw,68px) !important;
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.085), transparent 56%),
-    linear-gradient(180deg,#082451 0%,#061a39 55%,#05152e 100%) !important;
-  border:1px solid rgba(232,201,125,.56) !important;
-  border-radius:0 !important;
-  clip-path:polygon(18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px), 0 18px) !important;
-  box-shadow:0 12px 24px rgba(6,17,39,.11), 0 0 16px rgba(232,201,125,.08) !important;
-}
 
-.segment-start-ribbon::before,
-.trust-section .trust-ribbon-label::before{
-  content:"" !important;
-  position:absolute !important;
-  inset:4px !important;
-  border:1px solid rgba(232,201,125,.16) !important;
-  clip-path:inherit !important;
-  pointer-events:none !important;
-}
 
-.segment-start-ribbon::after,
-.trust-section .trust-ribbon-label::after{
-  content:"" !important;
-  position:absolute !important;
-  left:clamp(26px,3.2vw,54px) !important;
-  right:clamp(26px,3.2vw,54px) !important;
-  top:6px !important;
-  height:1px !important;
-  background:linear-gradient(90deg,transparent,rgba(232,201,125,.35),transparent) !important;
-  pointer-events:none !important;
-}
 
-.segment-start-ribbon__text,
-.trust-section .trust-ribbon-text{
-  position:relative !important;
-  z-index:1 !important;
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(22px,1.55vw,30px) !important;
-  font-weight:600 !important;
-  line-height:1.04 !important;
-  letter-spacing:.18em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:0 1px 1px rgba(0,0,0,.3),0 0 10px rgba(232,201,125,.14) !important;
-}
 
-.segment-start-ribbon__star,
-.trust-section .trust-ribbon-star{
-  position:relative !important;
-  z-index:1 !important;
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  width:18px !important;
-  height:18px !important;
-  color:#e8c97d !important;
-  font-size:18px !important;
-  line-height:1 !important;
-  transform:translateY(-1px) !important;
-  text-shadow:0 0 8px rgba(232,201,125,.18),0 0 14px rgba(232,201,125,.08) !important;
-}
+
+
+
+
+
+
+
 
 .trust-section .trust-inner{
   padding-top:clamp(24px,2.2vw,30px) !important;
@@ -14416,30 +14267,11 @@ body{
 
 @media (max-width:760px){
   .trust-section{margin-top:42px !important;}
-  .trust-section .trust-top-wave.trust-final-ribbon{height:68px !important;}
-  .segment-start-ribbon,
-  .trust-section .trust-ribbon-label{
-    width:calc(100% - 28px) !important;
-    min-height:44px !important;
-    gap:10px !important;
-    padding:10px 14px !important;
-    clip-path:polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px) !important;
-    box-shadow:0 8px 15px rgba(6,17,39,.10),0 0 10px rgba(232,201,125,.06) !important;
-  }
-  .segment-start-ribbon::after,
-  .trust-section .trust-ribbon-label::after{left:14px !important;right:14px !important;top:5px !important;}
-  .segment-start-ribbon__text,
-  .trust-section .trust-ribbon-text{
-    font-size:clamp(13.4px,3.85vw,15.6px) !important;
-    letter-spacing:.105em !important;
-    line-height:1.06 !important;
-  }
-  .segment-start-ribbon__star,
-  .trust-section .trust-ribbon-star{
-    width:12px !important;
-    height:12px !important;
-    font-size:11.6px !important;
-  }
+  
+  
+  
+  
+  
   .trust-section .trust-inner{
     width:calc(100% - 30px) !important;
     max-width:430px !important;
@@ -14469,25 +14301,10 @@ body{
 
 @media (max-width:390px){
   .trust-section{margin-top:38px !important;}
-  .trust-section .trust-top-wave.trust-final-ribbon{height:64px !important;}
-  .segment-start-ribbon,
-  .trust-section .trust-ribbon-label{
-    width:calc(100% - 22px) !important;
-    min-height:42px !important;
-    gap:7px !important;
-    padding:9px 10px !important;
-  }
-  .segment-start-ribbon__text,
-  .trust-section .trust-ribbon-text{
-    font-size:12.4px !important;
-    letter-spacing:.095em !important;
-  }
-  .segment-start-ribbon__star,
-  .trust-section .trust-ribbon-star{
-    width:11px !important;
-    height:11px !important;
-    font-size:10.8px !important;
-  }
+  
+  
+  
+  
   .trust-section .trust-inner{
     width:calc(100% - 24px) !important;
     padding-top:16px !important;
@@ -14506,34 +14323,15 @@ body{
    - VANITY NUMBERS CAN LOOK IMPRESSIVE
    ========================================================== */
 
-.segment-inline-label.segment-start-ribbon{
-  margin:0 auto clamp(24px,2.6vw,38px) !important;
-  width:min(calc(100% - 96px),1120px) !important;
-  max-width:1120px !important;
-  min-height:56px !important;
-}
 
-.segment-inline-label .segment-start-ribbon__text{
-  font-size:clamp(19px,1.42vw,28px) !important;
-  letter-spacing:.16em !important;
-}
+
+
 
 /* Keep section labels visually connected to each section heading. */
-.first-stage-header .segment-inline-label,
-.familiar-intro .segment-inline-label,
-.novi-advice-header .segment-inline-label,
-.novi-stages-header .segment-inline-label,
-.novi-weakstrong-header .segment-inline-label,
-.story-section-heading .segment-inline-label{
-  margin-bottom:clamp(22px,2.3vw,34px) !important;
-}
+
 
 /* These older label systems should not add duplicate lines after conversion. */
-.segment-inline-label span:not(.segment-start-ribbon__star):not(.segment-start-ribbon__text),
-.segment-inline-label b:not(.segment-start-ribbon__text),
-.segment-inline-label i:not(.segment-start-ribbon__star){
-  display:none !important;
-}
+
 
 /* Slightly tighten the following headings where the new ribbon is used. */
 .first-stage-header .novi-ref-heading-v163,
@@ -14546,37 +14344,17 @@ body{
 }
 
 @media (max-width:760px){
-  .segment-inline-label.segment-start-ribbon{
-    width:calc(100% - 26px) !important;
-    max-width:430px !important;
-    min-height:44px !important;
-    margin-bottom:18px !important;
-  }
+  
 
-  .segment-inline-label .segment-start-ribbon__text{
-    font-size:clamp(12.4px,3.35vw,15px) !important;
-    letter-spacing:.095em !important;
-    white-space:normal !important;
-  }
+  
 
-  .segment-inline-label .segment-start-ribbon__star{
-    width:11px !important;
-    height:11px !important;
-    font-size:10.8px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  .segment-inline-label.segment-start-ribbon{
-    width:calc(100% - 22px) !important;
-    min-height:42px !important;
-    margin-bottom:16px !important;
-  }
+  
 
-  .segment-inline-label .segment-start-ribbon__text{
-    font-size:11.8px !important;
-    letter-spacing:.08em !important;
-  }
+  
 }
 
 /* ==========================================================
@@ -14597,22 +14375,7 @@ body{
   margin-top:50px !important;
 }
 
-.trust-section .trust-top-wave.trust-reference-image-band{
-  position:absolute !important;
-  left:50% !important;
-  top:0 !important;
-  transform:translateX(-50%) !important;
-  z-index:4 !important;
-  width:100vw !important;
-  height:clamp(158px,11.8vw,220px) !important;
-  display:block !important;
-  overflow:visible !important;
-  pointer-events:none !important;
-  background-image:url("../images/novi-why-you-can-trust-navy-gold-ribbon-desktop.webp") !important;
-  background-repeat:no-repeat !important;
-  background-position:center center !important;
-  background-size:100% 100% !important;
-}
+
 
 .trust-reference-image-band__sr{
   position:absolute !important;
@@ -14659,12 +14422,7 @@ body{
     margin-top:32px !important;
   }
 
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    height:118px !important;
-    background-image:url("../images/novi-why-you-can-trust-navy-gold-ribbon-mobile.webp") !important;
-    background-size:100% 100% !important;
-    background-position:center center !important;
-  }
+  
 
   .trust-section .trust-inner{
     width:calc(100% - 30px) !important;
@@ -14705,9 +14463,7 @@ body{
     margin-top:30px !important;
   }
 
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    height:110px !important;
-  }
+  
 
   .trust-section .trust-inner{
     width:calc(100% - 24px) !important;
@@ -14728,10 +14484,7 @@ body{
   margin-top:10px !important;
 }
 
-.trust-section .trust-top-wave.trust-reference-image-band{
-  top:8px !important;
-  height:clamp(150px,11.2vw,206px) !important;
-}
+
 
 .trust-section .trust-inner{
   padding-top:clamp(184px,13.8vw,236px) !important;
@@ -14751,11 +14504,7 @@ body{
     margin-top:6px !important;
   }
 
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    top:6px !important;
-    height:104px !important;
-    background-position:center center !important;
-  }
+  
 
   .trust-section .trust-inner{
     width:calc(100% - 24px) !important;
@@ -14796,10 +14545,7 @@ body{
     margin-top:4px !important;
   }
 
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    top:4px !important;
-    height:96px !important;
-  }
+  
 
   .trust-section .trust-inner{
     width:calc(100% - 20px) !important;
@@ -14839,10 +14585,7 @@ body{
   pointer-events:none !important;
 }
 
-.trust-section .trust-top-wave.trust-reference-image-band{
-  top:0 !important;
-  z-index:4 !important;
-}
+
 
 .trust-section .trust-inner{
   position:relative !important;
@@ -14897,11 +14640,7 @@ body{
   pointer-events:none !important;
 }
 
-.trust-section .trust-top-wave.trust-reference-image-band{
-  top:38px !important;
-  height:clamp(150px,11.2vw,206px) !important;
-  z-index:6 !important;
-}
+
 
 .trust-section .trust-inner{
   position:relative !important;
@@ -14927,11 +14666,7 @@ body{
     height:76px !important;
   }
 
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    top:22px !important;
-    height:104px !important;
-    background-position:center center !important;
-  }
+  
 
   .trust-section .trust-inner{
     width:calc(100% - 24px) !important;
@@ -14955,10 +14690,7 @@ body{
     height:70px !important;
   }
 
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    top:18px !important;
-    height:96px !important;
-  }
+  
 
   .trust-section .trust-inner{
     width:calc(100% - 20px) !important;
@@ -14989,19 +14721,7 @@ body{
   display:none !important;
 }
 
-.trust-section .trust-top-wave.trust-reference-image-band{
-  position:absolute !important;
-  left:50% !important;
-  transform:translateX(-50%) !important;
-  top:14px !important;
-  width:100vw !important;
-  height:153px !important;
-  background-image:url("../images/novi-why-you-can-trust-navy-gold-ribbon-desktop.webp") !important;
-  background-repeat:no-repeat !important;
-  background-position:center center !important;
-  background-size:100% 100% !important;
-  z-index:6 !important;
-}
+
 
 .trust-section .trust-inner{
   position:relative !important;
@@ -15023,12 +14743,7 @@ body{
     margin-top:0 !important;
   }
 
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    top:8px !important;
-    height:84px !important;
-    background-image:url("../images/novi-why-you-can-trust-navy-gold-ribbon-mobile.webp") !important;
-    background-size:100% 100% !important;
-  }
+  
 
   .trust-section .trust-inner{
     width:calc(100% - 24px) !important;
@@ -15048,10 +14763,7 @@ body{
 }
 
 @media (max-width:390px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    top:6px !important;
-    height:80px !important;
-  }
+  
 
   .trust-section .trust-inner{
     width:calc(100% - 20px) !important;
@@ -15068,18 +14780,7 @@ body{
    - responsive gold dimensional lettering replaces image text
    ========================================================== */
 
-.trust-section .trust-top-wave.trust-reference-image-band{
-  top:14px !important;
-  height:153px !important;
-  background-image:url("../images/novi-why-you-can-trust-navy-gold-ribbon-desktop.webp") !important;
-  background-repeat:no-repeat !important;
-  background-position:center center !important;
-  background-size:100% 100% !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-}
+
 
 .trust-reference-image-band__sr{
   position:absolute !important;
@@ -15131,12 +14832,7 @@ body{
 }
 
 @media (max-width:760px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    top:8px !important;
-    height:92px !important;
-    background-image:url("../images/novi-why-you-can-trust-navy-gold-ribbon-mobile.webp") !important;
-    background-size:100% 100% !important;
-  }
+  
 
   .trust-section .trust-inner{
     padding-top:100px !important;
@@ -15158,10 +14854,7 @@ body{
 }
 
 @media (max-width:390px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    top:6px !important;
-    height:86px !important;
-  }
+  
 
   .trust-section .trust-inner{
     padding-top:92px !important;
@@ -15180,38 +14873,9 @@ body{
    - removes old trust band assets from markup/CSS dependency
    - image remains decorative; heading label remains real HTML text
    ========================================================== */
-.trust-section .trust-top-wave.trust-reference-image-band{
-  top:10px !important;
-  height:clamp(96px,10.2vw,168px) !important;
-  background-image:none !important;
-  background:none !important;
-  position:absolute !important;
-  left:0 !important;
-  right:0 !important;
-  width:100% !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  pointer-events:none !important;
-  z-index:1 !important;
-}
-.trust-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  z-index:0 !important;
-  pointer-events:none !important;
-}
-.trust-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-}
+
+
+
 .trust-band-title{
   position:relative !important;
   z-index:2 !important;
@@ -15220,7 +14884,7 @@ body{
   padding:0 18px !important;
   box-sizing:border-box !important;
   text-align:center !important;
-  font-family:var(--display, Georgia, 'Times New Roman', serif) !important;
+  font-family:var(--display, Georgia, "Times New Roman", serif) !important;
   font-size:clamp(22px,2.65vw,43px) !important;
   line-height:1 !important;
   font-weight:700 !important;
@@ -15250,10 +14914,7 @@ body{
   padding-top:clamp(106px,11.4vw,174px) !important;
 }
 @media (max-width:760px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    top:8px !important;
-    height:clamp(76px,21vw,104px) !important;
-  }
+  
   .trust-section .trust-inner{
     width:calc(100% - 28px) !important;
     padding-top:clamp(92px,24vw,118px) !important;
@@ -15267,9 +14928,7 @@ body{
   }
 }
 @media (max-width:390px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    height:76px !important;
-  }
+  
   .trust-section .trust-inner{
     padding-top:88px !important;
   }
@@ -15287,82 +14946,12 @@ body{
    - renders title and stars in HTML/CSS, visually aligned
      with the shared "Does this feel familiar?" ribbon label
    ========================================================== */
-.trust-section .trust-top-wave.trust-reference-image-band{
-  position:relative !important;
-  top:auto !important;
-  left:auto !important;
-  right:auto !important;
-  width:100% !important;
-  height:auto !important;
-  aspect-ratio:2048 / 263 !important;
-  margin:0 auto clamp(18px,2.2vw,28px) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  pointer-events:none !important;
-  z-index:1 !important;
-  background:none !important;
-  background-image:none !important;
-}
-.trust-section .trust-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  z-index:0 !important;
-  pointer-events:none !important;
-}
-.trust-section .trust-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:contain !important;
-  object-position:center center !important;
-}
-.trust-section .trust-ribbon-label{
-  position:relative !important;
-  z-index:2 !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(16px,1.8vw,28px) !important;
-  width:min(calc(100% - 88px),1180px) !important;
-  margin:0 !important;
-  padding:0 18px !important;
-  box-sizing:border-box !important;
-  pointer-events:none !important;
-}
-.trust-section .trust-ribbon-text{
-  position:relative !important;
-  z-index:1 !important;
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(25px,2.25vw,42px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.18em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:0 1px 1px rgba(0,0,0,.32),0 0 10px rgba(232,201,125,.18) !important;
-}
-.trust-section .trust-ribbon-star{
-  position:relative !important;
-  z-index:1 !important;
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  width:20px !important;
-  height:20px !important;
-  color:#e8c97d !important;
-  font-size:20px !important;
-  line-height:1 !important;
-  transform:translateY(-1px) !important;
-  text-shadow:0 0 8px rgba(232,201,125,.22),0 0 14px rgba(232,201,125,.10) !important;
-}
+
+
+
+
+
+
 .trust-section .trust-band-title,
 .trust-section .trust-band-title::before,
 .trust-section .trust-band-title::after{
@@ -15373,25 +14962,10 @@ body{
   padding-top:0 !important;
 }
 @media (max-width:760px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    width:min(100vw,100%) !important;
-    margin:0 auto 18px !important;
-  }
-  .trust-section .trust-ribbon-label{
-    width:min(calc(100% - 32px),390px) !important;
-    gap:10px !important;
-    padding:0 10px !important;
-  }
-  .trust-section .trust-ribbon-text{
-    font-size:clamp(13.4px,3.85vw,15.6px) !important;
-    letter-spacing:.105em !important;
-    line-height:1.06 !important;
-  }
-  .trust-section .trust-ribbon-star{
-    width:12px !important;
-    height:12px !important;
-    font-size:11.6px !important;
-  }
+  
+  
+  
+  
   .trust-section .trust-inner{
     width:calc(100% - 30px) !important;
     max-width:430px !important;
@@ -15399,20 +14973,9 @@ body{
   }
 }
 @media (max-width:390px){
-  .trust-section .trust-ribbon-label{
-    width:min(calc(100% - 24px),360px) !important;
-    gap:7px !important;
-    padding:0 8px !important;
-  }
-  .trust-section .trust-ribbon-text{
-    font-size:12.4px !important;
-    letter-spacing:.095em !important;
-  }
-  .trust-section .trust-ribbon-star{
-    width:11px !important;
-    height:11px !important;
-    font-size:10.8px !important;
-  }
+  
+  
+  
 }
 
 
@@ -15428,115 +14991,21 @@ body{
   overflow-x:hidden !important;
 }
 
-.trust-section .trust-top-wave.trust-reference-image-band{
-  position:relative !important;
-  left:50% !important;
-  right:auto !important;
-  top:auto !important;
-  width:100vw !important;
-  max-width:none !important;
-  height:auto !important;
-  aspect-ratio:2048 / 263 !important;
-  margin:0 0 clamp(18px,2.2vw,28px) !important;
-  transform:translateX(-50%) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  pointer-events:none !important;
-  background:none !important;
-  background-image:none !important;
-  z-index:2 !important;
-}
 
-.trust-section .trust-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  max-width:none !important;
-  z-index:0 !important;
-  pointer-events:none !important;
-}
 
-.trust-section .trust-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  max-width:none !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-}
+
+
+
 
 /* IMPORTANT: no rectangle / box background here.
    The visible band comes only from the uploaded image. */
-.trust-section .trust-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  z-index:3 !important;
-  width:auto !important;
-  max-width:calc(100vw - 64px) !important;
-  min-height:0 !important;
-  margin:0 !important;
-  padding:0 !important;
-  transform:translate(-50%,-50%) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(16px,1.8vw,28px) !important;
-  white-space:nowrap !important;
-  pointer-events:none !important;
-  background:none !important;
-  background-color:transparent !important;
-  background-image:none !important;
-  border:0 !important;
-  border-radius:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-}
 
-.trust-section .trust-ribbon-label::before,
-.trust-section .trust-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-.trust-section .trust-ribbon-text{
-  position:relative !important;
-  z-index:1 !important;
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(24px,2.35vw,42px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.18em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:
-    0 1px 1px rgba(0,0,0,.32),
-    0 0 10px rgba(232,201,125,.18) !important;
-}
 
-.trust-section .trust-ribbon-star{
-  position:relative !important;
-  z-index:1 !important;
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  width:20px !important;
-  height:20px !important;
-  color:#e8c97d !important;
-  font-size:20px !important;
-  line-height:1 !important;
-  transform:translateY(-1px) !important;
-  text-shadow:
-    0 0 8px rgba(232,201,125,.22),
-    0 0 14px rgba(232,201,125,.10) !important;
-}
+
+
+
+
 
 /* Hide old paragraph-based label if any old CSS still targets it. */
 .trust-section .trust-band-title,
@@ -15551,49 +15020,23 @@ body{
 }
 
 @media (max-width:760px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    width:120vw !important;
-    margin-bottom:16px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-label{
-    max-width:calc(100vw - 24px) !important;
-    gap:9px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-text{
-    font-size:clamp(13.2px,3.75vw,16px) !important;
-    letter-spacing:.105em !important;
-    line-height:1.06 !important;
-  }
+  
 
-  .trust-section .trust-ribbon-star{
-    width:12px !important;
-    height:12px !important;
-    font-size:11.6px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    width:128vw !important;
-  }
+  
 
-  .trust-section .trust-ribbon-label{
-    max-width:calc(100vw - 18px) !important;
-    gap:7px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-text{
-    font-size:12.2px !important;
-    letter-spacing:.092em !important;
-  }
+  
 
-  .trust-section .trust-ribbon-star{
-    width:11px !important;
-    height:11px !important;
-    font-size:10.8px !important;
-  }
+  
 }
 
 
@@ -15614,9 +15057,7 @@ body{
 .hero-glow,
 .hero-orb,
 .hero::before,
-.hero::after,
-.trust-section .trust-band-art,
-.trust-section .trust-band-art img{
+.hero::after{
   pointer-events:none !important;
 }
 
@@ -15626,30 +15067,16 @@ body{
 .hero h1,
 .hero h1 *,
 .hero-line,
-.gold-word,
-.trust-section .trust-ribbon-label,
-.trust-section .trust-ribbon-label *,
-.trust-section .trust-ribbon-text{
+.gold-word{
   pointer-events:auto !important;
   -webkit-user-select:text !important;
   user-select:text !important;
 }
 
 /* Keep only the image as the band; no CSS rectangle behind the trust label. */
-.trust-section .trust-ribbon-label{
-  background:none !important;
-  background-color:transparent !important;
-  background-image:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-}
 
-.trust-section .trust-ribbon-label::before,
-.trust-section .trust-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
+
+
 
 
 /* ==========================================================
@@ -15670,115 +15097,20 @@ body{
 }
 
 /* Desktop: controlled premium width, not always 100vw */
-.trust-section .trust-top-wave.trust-reference-image-band{
-  position:relative !important;
-  left:auto !important;
-  right:auto !important;
-  top:auto !important;
-  width:min(calc(100% - 48px),1320px) !important;
-  max-width:1320px !important;
-  height:auto !important;
-  aspect-ratio:2048 / 263 !important;
-  margin:clamp(8px,1vw,14px) auto clamp(18px,2vw,28px) !important;
-  transform:none !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  pointer-events:none !important;
-  background:none !important;
-  background-image:none !important;
-  z-index:2 !important;
-}
 
-.trust-section .trust-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  max-width:none !important;
-  z-index:0 !important;
-  pointer-events:none !important;
-}
 
-.trust-section .trust-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  max-width:none !important;
-  object-fit:contain !important;
-  object-position:center center !important;
-  pointer-events:none !important;
-}
+
+
+
 
 /* HTML text overlay: transparent layer only */
-.trust-section .trust-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  z-index:3 !important;
-  width:auto !important;
-  max-width:calc(100% - 180px) !important;
-  min-height:0 !important;
-  margin:0 !important;
-  padding:0 !important;
-  transform:translate(-50%,-50%) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(14px,1.45vw,24px) !important;
-  white-space:nowrap !important;
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-  background:none !important;
-  background-color:transparent !important;
-  background-image:none !important;
-  border:0 !important;
-  border-radius:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-}
 
-.trust-section .trust-ribbon-label::before,
-.trust-section .trust-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-.trust-section .trust-ribbon-text{
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(19px,1.75vw,31px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.17em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-  text-shadow:
-    0 1px 1px rgba(0,0,0,.32),
-    0 0 10px rgba(232,201,125,.18) !important;
-}
 
-.trust-section .trust-ribbon-star{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  width:17px !important;
-  height:17px !important;
-  color:#e8c97d !important;
-  font-size:17px !important;
-  line-height:1 !important;
-  transform:translateY(-1px) !important;
-  text-shadow:
-    0 0 8px rgba(232,201,125,.22),
-    0 0 14px rgba(232,201,125,.10) !important;
-}
+
+
+
+
 
 /* Keep old paragraph label hidden if old CSS still exists. */
 .trust-section .trust-band-title,
@@ -15795,70 +15127,32 @@ body{
 
 /* Mid-size screens: shrink earlier instead of staying oversized */
 @media (max-width:1100px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    width:min(calc(100% - 32px),1040px) !important;
-  }
+  
 
-  .trust-section .trust-ribbon-label{
-    max-width:calc(100% - 120px) !important;
-  }
+  
 
-  .trust-section .trust-ribbon-text{
-    font-size:clamp(17px,2vw,24px) !important;
-    letter-spacing:.145em !important;
-  }
+  
 }
 
 /* Mobile: keep the ribbon visible but not stretched too aggressively */
 @media (max-width:760px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    width:calc(100% + 34px) !important;
-    max-width:none !important;
-    margin-left:-17px !important;
-    margin-right:-17px !important;
-    margin-bottom:16px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-label{
-    max-width:calc(100% - 48px) !important;
-    gap:8px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-text{
-    font-size:clamp(12.8px,3.55vw,15.4px) !important;
-    letter-spacing:.092em !important;
-    line-height:1.06 !important;
-  }
+  
 
-  .trust-section .trust-ribbon-star{
-    width:11px !important;
-    height:11px !important;
-    font-size:10.8px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    width:calc(100% + 44px) !important;
-    margin-left:-22px !important;
-    margin-right:-22px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-label{
-    max-width:calc(100% - 42px) !important;
-    gap:6px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-text{
-    font-size:clamp(11.6px,3.35vw,13.2px) !important;
-    letter-spacing:.078em !important;
-  }
+  
 
-  .trust-section .trust-ribbon-star{
-    width:10px !important;
-    height:10px !important;
-    font-size:9.8px !important;
-  }
+  
 }
 
 
@@ -15878,119 +15172,20 @@ body{
 /* v221-like band behavior:
    Full section width, not a boxed max-width element.
    Controlled height so desktop does not become oversized. */
-.trust-section .trust-top-wave.trust-reference-image-band{
-  position:relative !important;
-  left:50% !important;
-  right:auto !important;
-  top:auto !important;
-  width:100vw !important;
-  max-width:none !important;
-  height:clamp(96px,8.8vw,150px) !important;
-  aspect-ratio:auto !important;
-  margin:clamp(8px,1vw,14px) 0 clamp(34px,3.2vw,54px) !important;
-  transform:translateX(-50%) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  pointer-events:none !important;
-  background:none !important;
-  background-image:none !important;
-  z-index:2 !important;
-}
 
-.trust-section .trust-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  max-width:none !important;
-  z-index:0 !important;
-  pointer-events:none !important;
-}
 
-.trust-section .trust-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  max-width:none !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-  pointer-events:none !important;
-}
+
+
+
 
 /* HTML text overlay only. No rectangle / CSS ribbon background. */
-.trust-section .trust-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  z-index:3 !important;
-  width:auto !important;
-  max-width:min(940px, calc(100vw - 120px)) !important;
-  min-height:0 !important;
-  margin:0 !important;
-  padding:0 !important;
-  transform:translate(-50%,-50%) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(12px,1.25vw,22px) !important;
-  white-space:nowrap !important;
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-  background:none !important;
-  background-color:transparent !important;
-  background-image:none !important;
-  border:0 !important;
-  border-radius:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-}
 
-.trust-section .trust-ribbon-label::before,
-.trust-section .trust-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-.trust-section .trust-ribbon-text{
-  position:relative !important;
-  z-index:1 !important;
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.55vw,30px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.165em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-  text-shadow:
-    0 1px 1px rgba(0,0,0,.32),
-    0 0 10px rgba(232,201,125,.18) !important;
-}
 
-.trust-section .trust-ribbon-star{
-  position:relative !important;
-  z-index:1 !important;
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  width:15px !important;
-  height:15px !important;
-  color:#e8c97d !important;
-  font-size:15px !important;
-  line-height:1 !important;
-  transform:translateY(-1px) !important;
-  text-shadow:
-    0 0 8px rgba(232,201,125,.22),
-    0 0 14px rgba(232,201,125,.10) !important;
-}
+
+
+
+
 
 /* Keep legacy paragraph label hidden if previous CSS still targets it. */
 .trust-section .trust-band-title,
@@ -16007,77 +15202,34 @@ body{
 
 /* Tablet: preserve full-band look but reduce label earlier. */
 @media (max-width:1100px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    height:clamp(82px,9.6vw,124px) !important;
-    margin-bottom:clamp(28px,3vw,44px) !important;
-  }
+  
 
-  .trust-section .trust-ribbon-label{
-    max-width:calc(100vw - 72px) !important;
-    gap:10px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-text{
-    font-size:clamp(15px,1.9vw,22px) !important;
-    letter-spacing:.13em !important;
-  }
+  
 
-  .trust-section .trust-ribbon-star{
-    width:13px !important;
-    height:13px !important;
-    font-size:12.6px !important;
-  }
+  
 }
 
 /* Mobile: match v221's visible, slim band. */
 @media (max-width:760px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    width:100% !important;
-    left:0 !important;
-    transform:none !important;
-    height:clamp(46px,12.8vw,58px) !important;
-    margin:0 auto clamp(28px,7vw,42px) !important;
-  }
+  
 
-  .trust-section .trust-ribbon-label{
-    max-width:calc(100% - 42px) !important;
-    gap:6px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-text{
-    font-size:clamp(10.2px,2.85vw,12px) !important;
-    letter-spacing:.07em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  .trust-section .trust-ribbon-star{
-    width:8px !important;
-    height:8px !important;
-    font-size:8px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    height:44px !important;
-    margin-bottom:30px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
+  
 
-  .trust-section .trust-ribbon-text{
-    font-size:10px !important;
-    letter-spacing:.058em !important;
-  }
+  
 
-  .trust-section .trust-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 }
 
 
@@ -16090,20 +15242,14 @@ body{
    - Use this as the baseline rhythm for future important segment starts.
    ========================================================== */
 
-.trust-section .trust-top-wave.trust-reference-image-band{
-  margin-bottom:clamp(26px,2.5vw,42px) !important;
-}
+
 
 @media (max-width:760px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    margin-bottom:clamp(22px,5.5vw,34px) !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    margin-bottom:24px !important;
-  }
+  
 }
 
 /* Future segment rhythm note:
@@ -16119,9 +15265,7 @@ body{
    heading spacing too. This version tightens the real visual gap.
    ========================================================== */
 
-.trust-section .trust-top-wave.trust-reference-image-band{
-  margin-bottom:clamp(12px,1.35vw,24px) !important;
-}
+
 
 .trust-section .trust-heading-block{
   margin-top:0 !important;
@@ -16137,9 +15281,7 @@ body{
 }
 
 @media (max-width:760px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    margin-bottom:clamp(14px,4.2vw,24px) !important;
-  }
+  
 
   .trust-section .trust-heading-block{
     margin-top:0 !important;
@@ -16152,9 +15294,7 @@ body{
 }
 
 @media (max-width:390px){
-  .trust-section .trust-top-wave.trust-reference-image-band{
-    margin-bottom:16px !important;
-  }
+  
 }
 
 
@@ -16169,9 +15309,7 @@ body{
      trust-section spacing rules.
    ========================================================== */
 
-#trust.trust-section .trust-top-wave.trust-reference-image-band{
-  margin-bottom:0 !important;
-}
+
 
 #trust.trust-section .trust-inner{
   padding-top:0 !important;
@@ -16187,37 +15325,16 @@ body{
 }
 
 /* Keep text selectable and keep ribbon label transparent. */
-#trust.trust-section .trust-ribbon-label,
-#trust.trust-section .trust-ribbon-label *{
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-#trust.trust-section .trust-ribbon-label{
-  background:none !important;
-  background-color:transparent !important;
-  background-image:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-}
 
-#trust.trust-section .trust-ribbon-label::before,
-#trust.trust-section .trust-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-#trust.trust-section .trust-band-art,
-#trust.trust-section .trust-band-art img{
-  pointer-events:none !important;
-}
+
+
+
+
 
 @media (max-width:760px){
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    margin-bottom:0 !important;
-  }
+  
 
   #trust.trust-section .trust-heading-block{
     margin-top:-6px !important;
@@ -16241,9 +15358,7 @@ body{
      band and the main Trust heading.
    ========================================================== */
 
-#trust.trust-section .trust-top-wave.trust-reference-image-band{
-  margin-bottom:8px !important;
-}
+
 
 #trust.trust-section .trust-heading-block{
   margin-top:-6px !important;
@@ -16259,37 +15374,16 @@ body{
 }
 
 /* Keep the label transparent and selectable. */
-#trust.trust-section .trust-ribbon-label,
-#trust.trust-section .trust-ribbon-label *{
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-#trust.trust-section .trust-ribbon-label{
-  background:none !important;
-  background-color:transparent !important;
-  background-image:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-}
 
-#trust.trust-section .trust-ribbon-label::before,
-#trust.trust-section .trust-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-#trust.trust-section .trust-band-art,
-#trust.trust-section .trust-band-art img{
-  pointer-events:none !important;
-}
+
+
+
+
 
 @media (max-width:760px){
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    margin-bottom:6px !important;
-  }
+  
 
   #trust.trust-section .trust-heading-block{
     margin-top:0 !important;
@@ -16297,9 +15391,7 @@ body{
 }
 
 @media (max-width:390px){
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    margin-bottom:6px !important;
-  }
+  
 
   #trust.trust-section .trust-heading-block{
     margin-top:0 !important;
@@ -16336,8 +15428,7 @@ body{
 }
 
 /* Prevent the old familiar ribbon style from affecting this segment */
-.first-stage-header .stage-kicker,
-.first-stage-header .segment-start-ribbon{
+.first-stage-header .stage-kicker{
   display:none !important;
 }
 
@@ -16357,85 +15448,17 @@ body{
   z-index:2 !important;
 }
 
-.familiar-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
 
-.familiar-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-  pointer-events:none !important;
-}
 
-.familiar-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  transform:translate(-50%,-50%) !important;
-  z-index:3 !important;
-  margin:0 !important;
-  padding:0 !important;
-  max-width:min(930px, calc(100vw - 118px)) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(12px,1.25vw,22px) !important;
-  white-space:nowrap !important;
-  background:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-.familiar-ribbon-label::before,
-.familiar-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-.familiar-ribbon-text{
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.55vw,30px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.165em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:
-    0 1px 1px rgba(0,0,0,.32),
-    0 0 10px rgba(232,201,125,.18) !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-.familiar-ribbon-star{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  width:15px !important;
-  height:15px !important;
-  color:#e8c97d !important;
-  font-size:15px !important;
-  line-height:1 !important;
-  transform:translateY(-1px) !important;
-  text-shadow:
-    0 0 8px rgba(232,201,125,.22),
-    0 0 14px rgba(232,201,125,.10) !important;
-}
+
+
+
+
+
+
 
 /* Match the approved Trust rhythm: a little breathing room after the band */
 .first-stage-header .familiar-band-block + h2#first-stage-title,
@@ -16449,21 +15472,11 @@ body{
     margin-bottom:8px !important;
   }
 
-  .familiar-ribbon-label{
-    max-width:calc(100vw - 78px) !important;
-    gap:10px !important;
-  }
+  
 
-  .familiar-ribbon-text{
-    font-size:clamp(15px,1.9vw,22px) !important;
-    letter-spacing:.13em !important;
-  }
+  
 
-  .familiar-ribbon-star{
-    width:13px !important;
-    height:13px !important;
-    font-size:12.6px !important;
-  }
+  
 }
 
 @media (max-width:760px){
@@ -16483,22 +15496,11 @@ body{
     margin:0 auto 6px !important;
   }
 
-  .familiar-ribbon-label{
-    max-width:calc(100% - 42px) !important;
-    gap:6px !important;
-  }
+  
 
-  .familiar-ribbon-text{
-    font-size:clamp(10.2px,2.85vw,12px) !important;
-    letter-spacing:.07em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  .familiar-ribbon-star{
-    width:8px !important;
-    height:8px !important;
-    font-size:8px !important;
-  }
+  
 
   .first-stage-header .familiar-band-block + h2#first-stage-title,
   .first-stage-header h2#first-stage-title{
@@ -16512,21 +15514,11 @@ body{
     margin-bottom:6px !important;
   }
 
-  .familiar-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
+  
 
-  .familiar-ribbon-text{
-    font-size:10px !important;
-    letter-spacing:.058em !important;
-  }
+  
 
-  .familiar-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 }
 
 
@@ -16543,97 +15535,19 @@ body{
 }
 
 /* External familiar band between segments */
-.familiar-top-band{
-  position:relative !important;
-  width:100% !important;
-  height:clamp(92px, 7.9vw, 126px) !important;
-  margin:0 0 8px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  background:none !important;
-  z-index:2 !important;
-  isolation:isolate !important;
-}
 
-.familiar-top-band .familiar-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
 
-.familiar-top-band .familiar-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-  pointer-events:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  transform:translate(-50%,-50%) !important;
-  z-index:3 !important;
-  margin:0 !important;
-  padding:0 !important;
-  max-width:min(980px, calc(100vw - 120px)) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(12px,1.2vw,22px) !important;
-  white-space:nowrap !important;
-  background:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-.familiar-top-band .familiar-ribbon-label::before,
-.familiar-top-band .familiar-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-text{
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.45vw,29px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.165em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:
-    0 1px 1px rgba(0,0,0,.32),
-    0 0 10px rgba(232,201,125,.18) !important;
-}
 
-.familiar-top-band .familiar-ribbon-star{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  width:15px !important;
-  height:15px !important;
-  color:#e8c97d !important;
-  font-size:15px !important;
-  line-height:1 !important;
-  transform:translateY(-1px) !important;
-  text-shadow:
-    0 0 8px rgba(232,201,125,.22),
-    0 0 14px rgba(232,201,125,.10) !important;
-}
+
+
+
+
+
+
+
 
 /* Remove old in-card band styling from layout flow */
 .familiar-band-block{
@@ -16660,27 +15574,13 @@ body{
 }
 
 @media (max-width:760px){
-  .familiar-top-band{
-    height:clamp(40px,11.2vw,52px) !important;
-    margin:0 auto 6px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-text{
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
   .first-stage-section{
     padding-top:clamp(18px,4.2vw,26px) !important;
@@ -16806,10 +15706,7 @@ body{
    ========================================================== */
 
 /* Pull the green ribbon closer to the previous segment */
-.trust-section + .familiar-top-band{
-  margin-top:clamp(-26px, -2.4vw, -14px) !important;
-  margin-bottom:clamp(4px, .55vw, 8px) !important;
-}
+
 
 /* Reduce the space from the ribbon down into the familiar card */
 .first-stage-section{
@@ -16877,10 +15774,7 @@ body{
 }
 
 @media (max-width:760px){
-  .trust-section + .familiar-top-band{
-    margin-top:-10px !important;
-    margin-bottom:2px !important;
-  }
+  
 
   .first-stage-section{
     padding-top:8px !important;
@@ -16953,104 +15847,23 @@ body{
 }
 
 /* 3. Familiar green title band: use image only; no CSS rectangle */
-.trust-section + .familiar-top-band,
-.familiar-top-band{
-  position:relative !important;
-  width:100% !important;
-  height:clamp(92px,7.9vw,126px) !important;
-  margin:0 0 8px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  background:none !important;
-  z-index:2 !important;
-  isolation:isolate !important;
-}
 
-.familiar-top-band .familiar-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
 
-.familiar-top-band .familiar-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-  pointer-events:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  transform:translate(-50%,-50%) !important;
-  z-index:3 !important;
-  margin:0 !important;
-  padding:0 !important;
-  max-width:min(980px, calc(100vw - 120px)) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(12px,1.2vw,22px) !important;
-  white-space:nowrap !important;
-  background:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-.familiar-top-band .familiar-ribbon-label::before,
-.familiar-top-band .familiar-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-text{
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.45vw,29px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.165em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:
-    0 1px 1px rgba(0,0,0,.32),
-    0 0 10px rgba(232,201,125,.18) !important;
-}
 
-.familiar-top-band .familiar-ribbon-star{
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  width:15px !important;
-  height:15px !important;
-  color:#e8c97d !important;
-  font-size:15px !important;
-  line-height:1 !important;
-  transform:translateY(-1px) !important;
-  text-shadow:
-    0 0 8px rgba(232,201,125,.22),
-    0 0 14px rgba(232,201,125,.10) !important;
-}
+
+
+
+
+
+
+
 
 /* Hide any older in-card band / old blue ribbon dependency */
 .familiar-band-block,
-.first-stage-header .stage-kicker,
-.first-stage-header .segment-start-ribbon{
+.first-stage-header .stage-kicker{
   display:none !important;
 }
 
@@ -17172,27 +15985,13 @@ body{
     padding-bottom:16px !important;
   }
 
-  .familiar-top-band{
-    height:clamp(40px,11.2vw,52px) !important;
-    margin:0 auto 6px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-text{
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
   .first-stage-section{
     padding-top:8px !important;
@@ -17258,8 +16057,7 @@ body{
 
 .novi-first-stage-bridge.v39-trust-bridge,
 .familiar-band-block,
-.first-stage-header .stage-kicker,
-.first-stage-header .segment-start-ribbon{
+.first-stage-header .stage-kicker{
   display:none !important;
 }
 
@@ -17276,88 +16074,19 @@ body{
 }
 
 /* Top ribbon */
-.trust-section + .familiar-top-band,
-.familiar-top-band{
-  position:relative !important;
-  width:100% !important;
-  height:clamp(92px,7.9vw,126px) !important;
-  margin:0 0 8px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  background:none !important;
-  z-index:2 !important;
-  isolation:isolate !important;
-}
 
-.familiar-top-band .familiar-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
 
-.familiar-top-band .familiar-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-  pointer-events:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  transform:translate(-50%,-50%) !important;
-  z-index:3 !important;
-  margin:0 !important;
-  padding:0 !important;
-  max-width:min(980px, calc(100vw - 120px)) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(12px,1.2vw,22px) !important;
-  white-space:nowrap !important;
-  background:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-.familiar-top-band .familiar-ribbon-label::before,
-.familiar-top-band .familiar-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-text{
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.45vw,29px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.165em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:0 1px 1px rgba(0,0,0,.32),0 0 10px rgba(232,201,125,.18) !important;
-}
 
-.familiar-top-band .familiar-ribbon-star{
-  color:#e8c97d !important;
-  font-size:15px !important;
-  line-height:1 !important;
-  text-shadow:0 0 8px rgba(232,201,125,.22),0 0 14px rgba(232,201,125,.10) !important;
-}
+
+
+
+
+
+
+
 
 /* Section shell */
 .familiar-final-section{
@@ -17716,27 +16445,13 @@ body{
     padding-bottom:16px !important;
   }
 
-  .familiar-top-band{
-    height:clamp(40px,11.2vw,52px) !important;
-    margin:0 auto 6px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-text{
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
   .familiar-final-section{
     padding-top:8px !important;
@@ -17891,7 +16606,6 @@ body{
 .novi-first-stage-bridge.v39-trust-bridge,
 .familiar-band-block,
 .first-stage-header .stage-kicker,
-.first-stage-header .segment-start-ribbon,
 .familiar-final-visual,
 .familiar-final-actions,
 .familiar-reassurance-card{
@@ -17911,87 +16625,19 @@ body{
 }
 
 /* Top ribbon */
-.trust-section + .familiar-top-band,
-.familiar-top-band{
-  position:relative !important;
-  width:100% !important;
-  height:clamp(92px,7.9vw,126px) !important;
-  margin:0 0 8px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  background:none !important;
-  z-index:2 !important;
-  isolation:isolate !important;
-}
 
-.familiar-top-band .familiar-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
 
-.familiar-top-band .familiar-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-  pointer-events:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  transform:translate(-50%,-50%) !important;
-  z-index:3 !important;
-  margin:0 !important;
-  padding:0 !important;
-  max-width:min(980px, calc(100vw - 120px)) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(12px,1.2vw,22px) !important;
-  white-space:nowrap !important;
-  background:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-.familiar-top-band .familiar-ribbon-label::before,
-.familiar-top-band .familiar-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-text{
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.45vw,29px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.165em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:0 1px 1px rgba(0,0,0,.32),0 0 10px rgba(232,201,125,.18) !important;
-}
 
-.familiar-top-band .familiar-ribbon-star{
-  color:#e8c97d !important;
-  font-size:15px !important;
-  line-height:1 !important;
-}
+
+
+
+
+
+
+
 
 /* Section */
 .familiar-story-card-section{
@@ -18355,27 +17001,13 @@ body{
     padding-bottom:16px !important;
   }
 
-  .familiar-top-band{
-    height:clamp(40px,11.2vw,52px) !important;
-    margin:0 auto 6px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-text{
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
   .familiar-story-card-section{
     padding-top:8px !important;
@@ -18560,7 +17192,6 @@ body{
 .novi-first-stage-bridge.v39-trust-bridge,
 .familiar-band-block,
 .first-stage-header .stage-kicker,
-.first-stage-header .segment-start-ribbon,
 .familiar-final-visual,
 .familiar-final-actions,
 .familiar-reassurance-card,
@@ -18583,87 +17214,19 @@ body{
 }
 
 /* Ribbon */
-.trust-section + .familiar-top-band,
-.familiar-top-band{
-  position:relative !important;
-  width:100% !important;
-  height:clamp(92px,7.9vw,126px) !important;
-  margin:0 0 8px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  background:none !important;
-  z-index:2 !important;
-  isolation:isolate !important;
-}
 
-.familiar-top-band .familiar-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
 
-.familiar-top-band .familiar-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-  pointer-events:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  transform:translate(-50%,-50%) !important;
-  z-index:3 !important;
-  margin:0 !important;
-  padding:0 !important;
-  max-width:min(980px, calc(100vw - 120px)) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(12px,1.2vw,22px) !important;
-  white-space:nowrap !important;
-  background:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-.familiar-top-band .familiar-ribbon-label::before,
-.familiar-top-band .familiar-ribbon-label::after{
-  content:none !important;
-  display:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-text{
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.45vw,29px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.165em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:0 1px 1px rgba(0,0,0,.32),0 0 10px rgba(232,201,125,.18) !important;
-}
 
-.familiar-top-band .familiar-ribbon-star{
-  color:#e8c97d !important;
-  font-size:15px !important;
-  line-height:1 !important;
-}
+
+
+
+
+
+
+
 
 /* Section shell */
 .familiar-scene-section{
@@ -19115,27 +17678,13 @@ body{
     padding-bottom:16px !important;
   }
 
-  .familiar-top-band{
-    height:clamp(40px,11.2vw,52px) !important;
-    margin:0 auto 6px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-text{
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
   .familiar-scene-section{
     padding-top:8px !important;
@@ -19329,7 +17878,6 @@ body{
 .novi-first-stage-bridge.v39-trust-bridge,
 .familiar-band-block,
 .first-stage-header .stage-kicker,
-.first-stage-header .segment-start-ribbon,
 .familiar-final-visual,
 .familiar-final-actions,
 .familiar-reassurance-card,
@@ -19346,80 +17894,19 @@ body{
 #trust.trust-section .trust-closing{ margin-bottom:0 !important; }
 
 /* Ribbon */
-.trust-section + .familiar-top-band,
-.familiar-top-band{
-  position:relative !important;
-  width:100% !important;
-  height:clamp(92px,7.9vw,126px) !important;
-  margin:0 0 8px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  background:none !important;
-  z-index:2 !important;
-  isolation:isolate !important;
-}
 
-.familiar-top-band .familiar-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
 
-.familiar-top-band .familiar-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-  pointer-events:none !important;
-}
 
-.familiar-top-band .familiar-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  transform:translate(-50%,-50%) !important;
-  z-index:3 !important;
-  margin:0 !important;
-  padding:0 !important;
-  max-width:min(980px, calc(100vw - 120px)) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(12px,1.2vw,22px) !important;
-  white-space:nowrap !important;
-  background:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-.familiar-top-band .familiar-ribbon-label::before,
-.familiar-top-band .familiar-ribbon-label::after{ content:none !important; display:none !important; }
 
-.familiar-top-band .familiar-ribbon-text{
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.45vw,29px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.165em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:0 1px 1px rgba(0,0,0,.32),0 0 10px rgba(232,201,125,.18) !important;
-}
 
-.familiar-top-band .familiar-ribbon-star{ color:#e8c97d !important; font-size:15px !important; line-height:1 !important; }
+
+
+
+
+
+
+
 
 /* Main section */
 .familiar-fe-section{
@@ -19790,24 +18277,10 @@ body{
   #trust.trust-section{ padding-bottom:18px !important; }
   #trust.trust-section .trust-inner{ padding-bottom:16px !important; }
 
-  .familiar-top-band{
-    height:clamp(40px,11.2vw,52px) !important;
-    margin:0 auto 6px !important;
-  }
-  .familiar-top-band .familiar-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
-  .familiar-top-band .familiar-ribbon-text{
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
-  .familiar-top-band .familiar-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
+  
+  
+  
 
   .familiar-fe-section{ padding-top:8px !important; }
 
@@ -19974,7 +18447,6 @@ body{
 .novi-first-stage-bridge.v39-trust-bridge,
 .familiar-band-block,
 .first-stage-header .stage-kicker,
-.first-stage-header .segment-start-ribbon,
 .familiar-final-visual,
 .familiar-final-actions,
 .familiar-reassurance-card,
@@ -19996,81 +18468,19 @@ body{
 #trust.trust-section .trust-closing{ margin-bottom:0 !important; }
 
 /* Ribbon */
-.familiar-top-band{
-  position:relative !important;
-  width:100% !important;
-  height:clamp(92px,7.9vw,126px) !important;
-  margin:0 0 8px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  background:none !important;
-  z-index:2 !important;
-  isolation:isolate !important;
-}
 
-.familiar-top-band .familiar-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
 
-.familiar-top-band .familiar-band-art img{
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-}
 
-.familiar-top-band .familiar-ribbon-label{
-  position:absolute !important;
-  left:50% !important;
-  top:50% !important;
-  transform:translate(-50%,-50%) !important;
-  z-index:3 !important;
-  margin:0 !important;
-  padding:0 !important;
-  max-width:min(980px, calc(100vw - 120px)) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(12px,1.2vw,22px) !important;
-  white-space:nowrap !important;
-  background:none !important;
-  border:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-  pointer-events:auto !important;
-  -webkit-user-select:text !important;
-  user-select:text !important;
-}
 
-.familiar-top-band .familiar-ribbon-label::before,
-.familiar-top-band .familiar-ribbon-label::after{ content:none !important; display:none !important; }
 
-.familiar-top-band .familiar-ribbon-text{
-  color:#e8c97d !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.45vw,29px) !important;
-  font-weight:600 !important;
-  line-height:1.02 !important;
-  letter-spacing:.165em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  text-shadow:0 1px 1px rgba(0,0,0,.32),0 0 10px rgba(232,201,125,.18) !important;
-}
 
-.familiar-top-band .familiar-ribbon-star{
-  color:#e8c97d !important;
-  font-size:15px !important;
-  line-height:1 !important;
-}
+
+
+
+
+
+
+
 
 /* Section shell */
 .familiar-polish-section{
@@ -20524,24 +18934,10 @@ body{
   #trust.trust-section{ padding-bottom:18px !important; }
   #trust.trust-section .trust-inner{ padding-bottom:16px !important; }
 
-  .familiar-top-band{
-    height:clamp(40px,11.2vw,52px) !important;
-    margin:0 auto 6px !important;
-  }
-  .familiar-top-band .familiar-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
-  .familiar-top-band .familiar-ribbon-text{
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
-  .familiar-top-band .familiar-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
+  
+  
+  
 
   .familiar-polish-section{ padding-top:8px !important; }
 
@@ -23499,96 +21895,28 @@ body{
    Text remains real HTML/CSS for SEO and accessibility.
    The ribbon image is decoration only and contains no text.
    ========================================================== */
-#calm-build .segment-inline-label.segment-start-ribbon{
-  position:relative !important;
-  width:min(calc(100% - 88px), 1040px) !important;
-  max-width:1040px !important;
-  min-height:104px !important;
-  margin:0 auto 34px !important;
-  padding:24px clamp(58px,5vw,98px) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(12px,1.2vw,18px) !important;
-  background:transparent !important;
-  border:0 !important;
-  border-radius:0 !important;
-  clip-path:none !important;
-  box-shadow:none !important;
-  overflow:visible !important;
-  isolation:isolate !important;
-}
 
-#calm-build .segment-inline-label.segment-start-ribbon::before{
-  content:"" !important;
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  background:url("../images/novi-pink-gold-ribbon-empty.svg") center center / 100% 100% no-repeat !important;
-  z-index:-1 !important;
-  pointer-events:none !important;
-}
 
-#calm-build .segment-inline-label.segment-start-ribbon::after{
-  content:none !important;
-  display:none !important;
-}
 
-#calm-build .segment-inline-label .segment-start-ribbon__text{
-  color:#fff3c9 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(19px,1.42vw,25px) !important;
-  font-weight:600 !important;
-  letter-spacing:.14em !important;
-  line-height:1.08 !important;
-  text-transform:uppercase !important;
-  text-shadow:
-    0 1px 1px rgba(75,32,46,.25),
-    0 0 12px rgba(255,236,176,.18) !important;
-  white-space:nowrap !important;
-}
 
-#calm-build .segment-inline-label .segment-start-ribbon__star{
-  color:#fff1bd !important;
-  width:14px !important;
-  height:14px !important;
-  font-size:13px !important;
-  filter:drop-shadow(0 0 6px rgba(255,236,176,.32)) !important;
-  flex:0 0 auto !important;
-}
+
+
+
+
+
 
 @media (max-width: 900px){
-  #calm-build .segment-inline-label.segment-start-ribbon{
-    width:calc(100% - 38px) !important;
-    min-height:78px !important;
-    margin-bottom:28px !important;
-    padding:17px 38px !important;
-  }
+  
 
-  #calm-build .segment-inline-label .segment-start-ribbon__text{
-    font-size:clamp(13px,2.7vw,18px) !important;
-    letter-spacing:.105em !important;
-  }
+  
 }
 
 @media (max-width: 520px){
-  #calm-build .segment-inline-label.segment-start-ribbon{
-    width:calc(100% + 18px) !important;
-    margin-left:-9px !important;
-    min-height:58px !important;
-    padding:12px 22px !important;
-  }
+  
 
-  #calm-build .segment-inline-label .segment-start-ribbon__text{
-    font-size:clamp(10.8px,3.05vw,13px) !important;
-    letter-spacing:.07em !important;
-  }
+  
 
-  #calm-build .segment-inline-label .segment-start-ribbon__star{
-    width:10px !important;
-    height:10px !important;
-    font-size:9px !important;
-  }
+  
 }
 
 
@@ -23597,134 +21925,30 @@ body{
    Uses the same structural rules as the previous segment ribbons.
    No ribbon text image. Text remains real HTML/CSS.
    ========================================================== */
-#calm-build .segment-inline-label.segment-start-ribbon{
-  position:relative !important;
-  width:min(calc(100% - 96px),1120px) !important;
-  max-width:1120px !important;
-  min-height:58px !important;
-  margin:0 auto clamp(24px,2.6vw,38px) !important;
-  padding:14px clamp(30px,4.6vw,68px) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(18px,2vw,30px) !important;
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.18), transparent 56%),
-    linear-gradient(180deg,#e58aa4 0%,#d36a8d 48%,#bd4f78 100%) !important;
-  border:1px solid rgba(232,201,125,.66) !important;
-  border-radius:0 !important;
-  clip-path:polygon(18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px), 0 18px) !important;
-  box-shadow:0 12px 24px rgba(92,35,57,.13), 0 0 16px rgba(232,201,125,.10) !important;
-  overflow:hidden !important;
-  isolation:isolate !important;
-}
 
-#calm-build .segment-inline-label.segment-start-ribbon::before{
-  content:"" !important;
-  position:absolute !important;
-  inset:4px !important;
-  display:block !important;
-  border:1px solid rgba(255,236,184,.22) !important;
-  clip-path:inherit !important;
-  background:
-    linear-gradient(90deg, transparent, rgba(255,241,194,.16), transparent),
-    radial-gradient(ellipse at 50% 50%, rgba(255,239,187,.13), transparent 46%) !important;
-  z-index:0 !important;
-  pointer-events:none !important;
-}
 
-#calm-build .segment-inline-label.segment-start-ribbon::after{
-  content:"" !important;
-  position:absolute !important;
-  left:clamp(26px,3.2vw,54px) !important;
-  right:clamp(26px,3.2vw,54px) !important;
-  top:6px !important;
-  height:1px !important;
-  display:block !important;
-  background:linear-gradient(90deg,transparent,rgba(255,241,194,.48),transparent) !important;
-  z-index:0 !important;
-  pointer-events:none !important;
-}
 
-#calm-build .segment-inline-label .segment-start-ribbon__text{
-  position:relative !important;
-  z-index:2 !important;
-  color:#fff1c2 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(19px,1.42vw,28px) !important;
-  font-weight:600 !important;
-  line-height:1.04 !important;
-  letter-spacing:.16em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:
-    0 1px 1px rgba(80,31,48,.33),
-    0 0 10px rgba(255,241,194,.16) !important;
-}
 
-#calm-build .segment-inline-label .segment-start-ribbon__star{
-  position:relative !important;
-  z-index:2 !important;
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  width:18px !important;
-  height:18px !important;
-  color:#fff1c2 !important;
-  font-size:18px !important;
-  line-height:1 !important;
-  transform:translateY(-1px) !important;
-  text-shadow:0 0 8px rgba(255,241,194,.22),0 0 14px rgba(255,241,194,.10) !important;
-  filter:none !important;
-}
+
+
+
+
+
 
 @media (max-width:760px){
-  #calm-build .segment-inline-label.segment-start-ribbon{
-    width:calc(100% - 26px) !important;
-    max-width:430px !important;
-    min-height:44px !important;
-    margin:0 auto 18px !important;
-    gap:10px !important;
-    padding:10px 14px !important;
-    clip-path:polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px) !important;
-    box-shadow:0 8px 15px rgba(92,35,57,.11),0 0 10px rgba(232,201,125,.08) !important;
-  }
+  
 
-  #calm-build .segment-inline-label.segment-start-ribbon::after{
-    left:14px !important;
-    right:14px !important;
-    top:5px !important;
-  }
+  
 
-  #calm-build .segment-inline-label .segment-start-ribbon__text{
-    font-size:clamp(12.4px,3.35vw,15px) !important;
-    letter-spacing:.095em !important;
-    white-space:normal !important;
-    line-height:1.08 !important;
-  }
+  
 
-  #calm-build .segment-inline-label .segment-start-ribbon__star{
-    width:11px !important;
-    height:11px !important;
-    font-size:10.8px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  #calm-build .segment-inline-label.segment-start-ribbon{
-    width:calc(100% - 22px) !important;
-    min-height:42px !important;
-    margin-bottom:16px !important;
-    gap:7px !important;
-    padding:9px 10px !important;
-  }
+  
 
-  #calm-build .segment-inline-label .segment-start-ribbon__text{
-    font-size:11.8px !important;
-    letter-spacing:.08em !important;
-  }
+  
 }
 
 
@@ -23738,105 +21962,18 @@ body{
    ========================================================== */
 
 /* Hide old shared ribbon label only inside the calm-build section if any old markup remains. */
-#calm-build .novi-added-eyebrow.segment-start-ribbon,
-#calm-build .familiar-eyebrow.segment-start-ribbon,
-#calm-build .segment-inline-label.segment-start-ribbon{
-  display:none !important;
-}
+
 
 /* NOVI pink ribbon, CSS-only background + real HTML text. */
-#calm-build .calmer-v258-band{
-  position:relative !important;
-  width:min(calc(100% - 96px),1120px) !important;
-  max-width:1120px !important;
-  min-height:58px !important;
-  margin:0 auto clamp(24px,2.6vw,38px) !important;
-  padding:14px clamp(30px,4.6vw,68px) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(18px,2vw,30px) !important;
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.20), transparent 56%),
-    linear-gradient(180deg,#e995ad 0%,#d9789a 46%,#bd4f78 100%) !important;
-  border:1px solid rgba(232,201,125,.68) !important;
-  border-radius:0 !important;
-  clip-path:polygon(18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px), 0 18px) !important;
-  box-shadow:0 12px 24px rgba(92,35,57,.13), 0 0 16px rgba(232,201,125,.10) !important;
-  overflow:hidden !important;
-  isolation:isolate !important;
-  pointer-events:auto !important;
-  user-select:text !important;
-  -webkit-user-select:text !important;
-}
 
-#calm-build .calmer-v258-band::before{
-  content:"" !important;
-  position:absolute !important;
-  inset:4px !important;
-  display:block !important;
-  border:1px solid rgba(255,236,184,.24) !important;
-  clip-path:inherit !important;
-  background:
-    linear-gradient(90deg, transparent, rgba(255,241,194,.18), transparent),
-    radial-gradient(ellipse at 50% 50%, rgba(255,239,187,.12), transparent 46%) !important;
-  z-index:0 !important;
-  pointer-events:none !important;
-}
 
-#calm-build .calmer-v258-band::after{
-  content:"" !important;
-  position:absolute !important;
-  left:clamp(26px,3.2vw,54px) !important;
-  right:clamp(26px,3.2vw,54px) !important;
-  top:6px !important;
-  height:1px !important;
-  display:block !important;
-  background:linear-gradient(90deg,transparent,rgba(255,241,194,.50),transparent) !important;
-  z-index:0 !important;
-  pointer-events:none !important;
-}
 
-#calm-build .calmer-v258-band__label{
-  position:relative !important;
-  z-index:1 !important;
-  margin:0 !important;
-  padding:0 !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(18px,2vw,30px) !important;
-  color:#fff1c6 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(19px,1.42vw,28px) !important;
-  font-weight:600 !important;
-  line-height:1.04 !important;
-  letter-spacing:.16em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:0 1px 1px rgba(96,35,58,.30),0 0 10px rgba(255,241,194,.15) !important;
-  pointer-events:auto !important;
-  user-select:text !important;
-  -webkit-user-select:text !important;
-  cursor:text !important;
-}
 
-#calm-build .calmer-v258-band__star{
-  position:relative !important;
-  z-index:1 !important;
-  width:12px !important;
-  height:12px !important;
-  display:inline-grid !important;
-  place-items:center !important;
-  color:#f4d577 !important;
-  font-size:12px !important;
-  line-height:1 !important;
-  text-shadow:0 0 12px rgba(255,230,155,.24) !important;
-  pointer-events:none !important;
-  user-select:none !important;
-  -webkit-user-select:none !important;
-}
+
+
+
+
+
 
 /* Keep the previous segment headline on one line. */
 #first-stage.v249-fe-inspired-relayout .v249-reflection-card .v249-reflection-head h3.v258-confidence-one-line{
@@ -23872,18 +22009,9 @@ body{
 }
 
 @media (max-width:760px){
-  #calm-build .calmer-v258-band{
-    width:calc(100% - 38px) !important;
-    min-height:78px !important;
-    margin-bottom:28px !important;
-    padding:17px 26px !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    font-size:clamp(13px,2.7vw,18px) !important;
-    letter-spacing:.105em !important;
-    gap:12px !important;
-  }
+  
 
   #first-stage.v249-fe-inspired-relayout .v249-reflection-card{
     padding-left:18px !important;
@@ -23906,24 +22034,11 @@ body{
 }
 
 @media (max-width:520px){
-  #calm-build .calmer-v258-band{
-    width:calc(100% + 18px) !important;
-    margin-left:-9px !important;
-    min-height:58px !important;
-    padding:12px 20px !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    font-size:clamp(10.8px,3.05vw,13px) !important;
-    letter-spacing:.07em !important;
-    gap:8px !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__star{
-    width:10px !important;
-    height:10px !important;
-    font-size:9px !important;
-  }
+  
 
   #first-stage.v249-fe-inspired-relayout .v249-reflection-card .v249-reflection-head h3.v258-confidence-one-line{
     font-size:clamp(18.5px,5.05vw,22px) !important;
@@ -23953,79 +22068,15 @@ body{
    - Decorative stars are aria-hidden.
    ========================================================== */
 
-#calm-build .novi-added-eyebrow.segment-start-ribbon,
-#calm-build .familiar-eyebrow.segment-start-ribbon,
-#calm-build .segment-inline-label.segment-start-ribbon{
-  display:none !important;
-}
 
-#calm-build .calmer-v258-band{
-  position:relative !important;
-  width:min(calc(100% - 56px), 1520px) !important;
-  max-width:1520px !important;
-  min-height:118px !important;
-  margin:0 auto clamp(24px,2.6vw,38px) !important;
-  padding:0 34px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  background:url("../images/novi-calmer-pink-ribbon-normalized-desktop-v272.webp") center center / 100% 100% no-repeat !important;
-  border:0 !important;
-  border-radius:0 !important;
-  box-shadow:none !important;
-  overflow:visible !important;
-  isolation:isolate !important;
-  pointer-events:auto !important;
-  user-select:text !important;
-  -webkit-user-select:text !important;
-}
 
-#calm-build .calmer-v258-band::before,
-#calm-build .calmer-v258-band::after{
-  content:none !important;
-  display:none !important;
-}
 
-#calm-build .calmer-v258-band__label{
-  position:relative !important;
-  z-index:1 !important;
-  margin:0 !important;
-  padding:0 !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(16px,1.6vw,24px) !important;
-  color:#fff2c8 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.28vw,26px) !important;
-  font-weight:600 !important;
-  line-height:1.06 !important;
-  letter-spacing:.15em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:0 1px 1px rgba(120,42,70,.20), 0 0 10px rgba(255,237,185,.12) !important;
-  pointer-events:auto !important;
-  user-select:text !important;
-  -webkit-user-select:text !important;
-  cursor:text !important;
-}
 
-#calm-build .calmer-v258-band__star{
-  position:relative !important;
-  z-index:1 !important;
-  width:12px !important;
-  height:12px !important;
-  display:inline-grid !important;
-  place-items:center !important;
-  color:#ffe19a !important;
-  font-size:12px !important;
-  line-height:1 !important;
-  text-shadow:0 0 10px rgba(255,225,154,.20) !important;
-  pointer-events:none !important;
-  user-select:none !important;
-  -webkit-user-select:none !important;
-}
+
+
+
+
+
 
 /* Keep the previous segment headline on one line. */
 #first-stage.v249-fe-inspired-relayout .v249-reflection-card .v249-reflection-head h3.v258-confidence-one-line{
@@ -24061,20 +22112,9 @@ body{
 }
 
 @media (max-width:760px){
-  #calm-build .calmer-v258-band{
-    width:calc(100% - 12px) !important;
-    max-width:none !important;
-    min-height:78px !important;
-    margin:0 auto 24px !important;
-    padding:0 18px !important;
-    background-image:url("../images/novi-calmer-pink-ribbon-normalized-mobile-v272.webp") !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    font-size:clamp(13px,2.7vw,17px) !important;
-    letter-spacing:.105em !important;
-    gap:10px !important;
-  }
+  
 
   #first-stage.v249-fe-inspired-relayout .v249-reflection-card{
     padding-left:18px !important;
@@ -24097,24 +22137,11 @@ body{
 }
 
 @media (max-width:520px){
-  #calm-build .calmer-v258-band{
-    width:calc(100% + 18px) !important;
-    margin-left:-9px !important;
-    min-height:60px !important;
-    padding:0 10px !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    font-size:clamp(10.8px,3.05vw,12.8px) !important;
-    letter-spacing:.07em !important;
-    gap:7px !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__star{
-    width:10px !important;
-    height:10px !important;
-    font-size:10px !important;
-  }
+  
 }
 
 
@@ -24126,111 +22153,28 @@ body{
    - The old CSS-only pink band remains overridden.
    ========================================================== */
 
-#calm-build .calmer-v258-band{
-  position:relative !important;
-  left:50% !important;
-  transform:translateX(-50%) !important;
-  width:100vw !important;
-  max-width:none !important;
-  min-height:128px !important;
-  margin:0 0 clamp(28px,3vw,44px) !important;
-  padding:0 !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  background-image:url("../images/novi-calmer-pink-ribbon-normalized-desktop-v272.webp") !important;
-  background-repeat:no-repeat !important;
-  background-position:center center !important;
-  background-size:100% 100% !important;
-  border:0 !important;
-  border-radius:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-}
 
-#calm-build .calmer-v258-band::before,
-#calm-build .calmer-v258-band::after{
-  content:none !important;
-  display:none !important;
-}
 
-#calm-build .calmer-v258-band__label{
-  position:relative !important;
-  z-index:1 !important;
-  width:min(calc(100% - 64px),1120px) !important;
-  margin:0 auto !important;
-  padding:0 24px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(16px,1.6vw,24px) !important;
-  color:#fff2c8 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(19px,1.42vw,28px) !important;
-  font-weight:600 !important;
-  line-height:1.05 !important;
-  letter-spacing:.16em !important;
-  text-transform:uppercase !important;
-  white-space:nowrap !important;
-  text-align:center !important;
-  text-shadow:0 1px 1px rgba(120,42,70,.20),0 0 10px rgba(255,237,185,.12) !important;
-  pointer-events:auto !important;
-  user-select:text !important;
-  -webkit-user-select:text !important;
-}
 
-#calm-build .calmer-v258-band__star{
-  flex:0 0 auto !important;
-  color:#ffe19a !important;
-  font-size:12px !important;
-  line-height:1 !important;
-  text-shadow:0 0 10px rgba(255,225,154,.20) !important;
-}
+
+
+
+
 
 @media (max-width:760px){
-  #calm-build .calmer-v258-band{
-    left:50% !important;
-    transform:translateX(-50%) !important;
-    width:100vw !important;
-    max-width:none !important;
-    min-height:86px !important;
-    margin:0 0 24px !important;
-    padding:0 !important;
-    background-image:url("../images/novi-calmer-pink-ribbon-normalized-mobile-v272.webp") !important;
-    background-size:100% 100% !important;
-    background-position:center center !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    width:min(calc(100% - 28px),430px) !important;
-    padding:0 10px !important;
-    gap:9px !important;
-    font-size:clamp(12px,3.15vw,15px) !important;
-    letter-spacing:.085em !important;
-    line-height:1.08 !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__star{
-    font-size:9.5px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  #calm-build .calmer-v258-band{
-    min-height:78px !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    width:calc(100% - 18px) !important;
-    gap:6px !important;
-    font-size:11px !important;
-    letter-spacing:.055em !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__star{
-    font-size:8.5px !important;
-  }
+  
 }
 
 
@@ -24243,67 +22187,13 @@ body{
    ========================================================== */
 
 /* Pink ribbon: full width, slimmer, transparent image background */
-#calm-build .calmer-v258-band{
-  position:relative !important;
-  left:50% !important;
-  transform:translateX(-50%) !important;
-  width:100vw !important;
-  max-width:none !important;
-  min-height:108px !important;
-  margin:0 0 clamp(30px,3.2vw,48px) !important;
-  padding:0 !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:visible !important;
-  background-image:url("../images/novi-calmer-pink-ribbon-normalized-desktop-v272.webp") !important;
-  background-repeat:no-repeat !important;
-  background-position:center center !important;
-  background-size:100% auto !important;
-  border:0 !important;
-  border-radius:0 !important;
-  box-shadow:none !important;
-  clip-path:none !important;
-}
 
-#calm-build .calmer-v258-band::before,
-#calm-build .calmer-v258-band::after{
-  content:none !important;
-  display:none !important;
-}
 
-#calm-build .calmer-v258-band__label{
-  position:relative !important;
-  z-index:1 !important;
-  width:min(calc(100% - 72px),1120px) !important;
-  margin:0 auto !important;
-  padding:0 24px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(16px,1.6vw,24px) !important;
-  color:#fff2c8 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.35vw,27px) !important;
-  font-weight:600 !important;
-  line-height:1.05 !important;
-  letter-spacing:.16em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:0 1px 1px rgba(120,42,70,.20),0 0 10px rgba(255,237,185,.12) !important;
-  pointer-events:auto !important;
-  user-select:text !important;
-  -webkit-user-select:text !important;
-}
 
-#calm-build .calmer-v258-band__star{
-  flex:0 0 auto !important;
-  color:#ffe19a !important;
-  font-size:12px !important;
-  line-height:1 !important;
-  text-shadow:0 0 10px rgba(255,225,154,.20) !important;
-}
+
+
+
+
 
 /* Move the whole calm-build segment inward on desktop */
 #calm-build.familiar-section{
@@ -24391,27 +22281,11 @@ body{
     padding-right:18px !important;
   }
 
-  #calm-build .calmer-v258-band{
-    width:100vw !important;
-    min-height:76px !important;
-    margin:0 0 22px !important;
-    background-image:url("../images/novi-calmer-pink-ribbon-normalized-mobile-v272.webp") !important;
-    background-size:100% auto !important;
-    background-position:center center !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    width:min(calc(100% - 30px),430px) !important;
-    padding:0 10px !important;
-    gap:8px !important;
-    font-size:clamp(11.4px,3vw,14.5px) !important;
-    letter-spacing:.075em !important;
-    line-height:1.08 !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__star{
-    font-size:9px !important;
-  }
+  
 
   #calm-build .familiar-inner{
     width:100% !important;
@@ -24475,16 +22349,9 @@ body{
     padding-right:14px !important;
   }
 
-  #calm-build .calmer-v258-band{
-    min-height:70px !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    width:calc(100% - 20px) !important;
-    gap:6px !important;
-    font-size:10.6px !important;
-    letter-spacing:.05em !important;
-  }
+  
 
   #calm-build .familiar-message h3{
     font-size:43px !important;
@@ -24782,31 +22649,14 @@ body{
   }
 
   /* Pink ribbon: same visual thickness family as the green ribbon */
-  #calm-build .calmer-v258-band{
-    min-height:50px !important;
-    margin:0 0 16px !important;
-    background-size:100% 100% !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    width:min(calc(100% - 24px),420px) !important;
-    padding:0 10px !important;
-    gap:6px !important;
-    font-size:clamp(10.6px,2.9vw,12.2px) !important;
-    letter-spacing:.07em !important;
-    line-height:1.02 !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__star{
-    font-size:7px !important;
-  }
+  
 
   /* Navy ribbon: match the slim mobile rhythm too */
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    top:2px !important;
-    height:50px !important;
-    background-size:100% 100% !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     width:calc(100% - 24px) !important;
@@ -24815,39 +22665,19 @@ body{
     padding-bottom:58px !important;
   }
 
-  #trust.trust-section .trust-ribbon-label{
-    max-width:calc(100% - 26px) !important;
-    gap:6px !important;
-  }
+  
 
-  #trust.trust-section .trust-ribbon-text{
-    font-size:clamp(10.6px,2.9vw,12.2px) !important;
-    letter-spacing:.07em !important;
-    line-height:1.02 !important;
-  }
+  
 
-  #trust.trust-section .trust-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  #calm-build .calmer-v258-band{
-    min-height:46px !important;
-    margin-bottom:14px !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label,
-  #trust.trust-section .trust-ribbon-text{
-    font-size:10px !important;
-    letter-spacing:.055em !important;
-  }
+  
 
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    height:46px !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:52px !important;
@@ -24862,51 +22692,26 @@ body{
    ========================================================== */
 @media (max-width:760px){
   /* Pink ribbon thicker on mobile */
-  #calm-build .calmer-v258-band{
-    min-height:64px !important;
-    margin:0 0 18px !important;
-    background-size:100% 100% !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    width:min(calc(100% - 22px),420px) !important;
-    padding:0 12px !important;
-    font-size:clamp(11.2px,3vw,12.8px) !important;
-    letter-spacing:.075em !important;
-  }
+  
 
   /* Navy ribbon thicker on mobile */
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    top:0 !important;
-    height:64px !important;
-    background-size:100% 100% !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:68px !important;
   }
 
-  #trust.trust-section .trust-ribbon-text{
-    font-size:clamp(11.2px,3vw,12.8px) !important;
-    letter-spacing:.075em !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  #calm-build .calmer-v258-band{
-    min-height:60px !important;
-    margin-bottom:16px !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label,
-  #trust.trust-section .trust-ribbon-text{
-    font-size:10.4px !important;
-    letter-spacing:.06em !important;
-  }
+  
 
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    height:60px !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:64px !important;
@@ -24929,54 +22734,24 @@ body{
 
 @media (max-width:760px){
   /* Pink band: crop transparent top/bottom visually so it reads thicker */
-  #calm-build .calmer-v258-band{
-    min-height:54px !important;
-    margin:0 0 16px !important;
-    background-size:100% 150% !important;
-    background-position:center 50% !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    width:min(calc(100% - 18px),420px) !important;
-    padding:0 10px !important;
-    gap:6px !important;
-    font-size:clamp(10.5px,2.85vw,12.2px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.02 !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__star{
-    font-size:7px !important;
-  }
+  
 
   /* Navy band: same cropping approach as pink */
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    top:0 !important;
-    height:54px !important;
-    background-size:100% 150% !important;
-    background-position:center 50% !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:58px !important;
   }
 
-  #trust.trust-section .trust-ribbon-label{
-    max-width:calc(100% - 18px) !important;
-    gap:6px !important;
-  }
+  
 
-  #trust.trust-section .trust-ribbon-text{
-    font-size:clamp(10.5px,2.85vw,12.2px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.02 !important;
-  }
+  
 
-  #trust.trust-section .trust-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
   /* Gold icon for the framed No fear / No jargon / No pressure heading */
   #calm-build .familiar-message h3{
@@ -24998,15 +22773,9 @@ body{
 }
 
 @media (max-width:390px){
-  #calm-build .calmer-v258-band{
-    min-height:52px !important;
-    background-size:100% 155% !important;
-  }
+  
 
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    height:52px !important;
-    background-size:100% 155% !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:56px !important;
@@ -25051,17 +22820,9 @@ body{
    ========================================================== */
 
 /* Pink band label should match the other segment ribbon typography */
-#calm-build .calmer-v258-band__label{
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-weight:600 !important;
-  letter-spacing:.165em !important;
-  line-height:1.02 !important;
-  text-transform:uppercase !important;
-}
 
-#calm-build .calmer-v258-band__label > span:not(.calmer-v258-band__star){
-  font-size:inherit !important;
-}
+
+
 
 /* Default checkmark treatment for the No fear / No jargon / No pressure heading */
 #calm-build .familiar-message h3 span{
@@ -25089,71 +22850,26 @@ body{
 
 @media (max-width:760px){
   /* Navy band: actually thicken the visible ribbon by cropping the <img> */
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    width:100% !important;
-    left:0 !important;
-    transform:none !important;
-    height:clamp(40px,11.2vw,52px) !important;
-    margin:0 auto 16px !important;
-    overflow:hidden !important;
-    background:none !important;
-  }
+  
 
-  #trust.trust-section .trust-band-art{
-    position:absolute !important;
-    inset:0 !important;
-    display:block !important;
-    width:100% !important;
-    height:100% !important;
-    overflow:hidden !important;
-    pointer-events:none !important;
-  }
+  
 
-  #trust.trust-section .trust-band-art img{
-    position:absolute !important;
-    left:50% !important;
-    top:50% !important;
-    width:100% !important;
-    height:152% !important;
-    object-fit:fill !important;
-    object-position:center center !important;
-    transform:translate(-50%,-50%) !important;
-    max-width:none !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:56px !important;
   }
 
-  #trust.trust-section .trust-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
+  
 
-  #trust.trust-section .trust-ribbon-text{
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  #trust.trust-section .trust-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
   /* Calm band text should match other segment band sizing on mobile */
-  #calm-build .calmer-v258-band__label{
-    width:min(calc(100% - 34px),420px) !important;
-    gap:5px !important;
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__star{
-    font-size:7px !important;
-  }
+  
 
   /* No fear heading: left aligned on mobile */
   #calm-build .familiar-message{
@@ -25185,13 +22901,9 @@ body{
 }
 
 @media (max-width:390px){
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    height:40px !important;
-  }
+  
 
-  #trust.trust-section .trust-band-art img{
-    height:158% !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:52px !important;
@@ -25354,30 +23066,14 @@ body{
    ========================================================== */
 @media (max-width:760px){
   /* PINK: make the visible ribbon body thicker on mobile */
-  #calm-build .calmer-v258-band{
-    min-height:48px !important;
-    padding:10px 14px !important;
-    margin:0 auto 14px !important;
-    background-size:100% 205% !important;
-    background-position:center 50% !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    width:min(calc(100% - 34px),420px) !important;
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
   /* NAVY: crop the ribbon image more aggressively so it matches green thickness */
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    height:48px !important;
-    margin:0 auto 8px !important;
-  }
+  
 
-  #trust.trust-section .trust-band-art img{
-    height:190% !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:56px !important;
@@ -25385,18 +23081,11 @@ body{
 }
 
 @media (max-width:390px){
-  #calm-build .calmer-v258-band{
-    min-height:46px !important;
-    background-size:100% 215% !important;
-  }
+  
 
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    height:46px !important;
-  }
+  
 
-  #trust.trust-section .trust-band-art img{
-    height:198% !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:54px !important;
@@ -25428,117 +23117,37 @@ body{
 @media (max-width:760px){
 
   /* GREEN reference */
-  .familiar-top-band{
-    height:clamp(40px, 11.2vw, 52px) !important;
-    min-height:0 !important;
-    margin:0 auto 6px !important;
-    overflow:visible !important;
-  }
+  
 
-  .familiar-top-band .familiar-band-art,
-  .familiar-top-band .familiar-band-art img{
-    width:100% !important;
-    height:100% !important;
-  }
+  
 
-  .familiar-top-band .familiar-band-art img{
-    object-fit:fill !important;
-    object-position:center center !important;
-    transform:none !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-text{
-    font-size:clamp(9.8px, 2.8vw, 11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  .familiar-top-band .familiar-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
   /* PINK: same dimensions and same rendering rule as GREEN */
-  #calm-build .calmer-v258-band{
-    height:clamp(40px, 11.2vw, 52px) !important;
-    min-height:0 !important;
-    padding:0 !important;
-    margin:0 auto 6px !important;
-    overflow:visible !important;
-    background-image:url("../images/novi-calmer-pink-ribbon-normalized-mobile-v272.webp") !important;
-    background-repeat:no-repeat !important;
-    background-position:center center !important;
-    background-size:100% 100% !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label{
-    width:min(calc(100% - 34px), 420px) !important;
-    max-width:calc(100% - 34px) !important;
-    padding:0 !important;
-    gap:5px !important;
-    font-size:clamp(9.8px, 2.8vw, 11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
   /* NAVY: same dimensions and same rendering rule as GREEN */
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    height:clamp(40px, 11.2vw, 52px) !important;
-    min-height:0 !important;
-    margin:0 auto 6px !important;
-    overflow:visible !important;
-    background:none !important;
-  }
+  
 
-  #trust.trust-section .trust-band-art{
-    position:absolute !important;
-    inset:0 !important;
-    display:block !important;
-    width:100% !important;
-    height:100% !important;
-    overflow:visible !important;
-  }
+  
 
-  #trust.trust-section .trust-band-art img{
-    position:absolute !important;
-    left:0 !important;
-    top:0 !important;
-    width:100% !important;
-    height:100% !important;
-    max-width:none !important;
-    object-fit:fill !important;
-    object-position:center center !important;
-    transform:none !important;
-  }
+  
 
-  #trust.trust-section .trust-ribbon-label{
-    max-width:calc(100% - 34px) !important;
-    gap:5px !important;
-  }
+  
 
-  #trust.trust-section .trust-ribbon-text{
-    font-size:clamp(9.8px, 2.8vw, 11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  #trust.trust-section .trust-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:56px !important;
@@ -25546,25 +23155,13 @@ body{
 }
 
 @media (min-width:761px){
-  #calm-build .calmer-v258-band{
-    background-image:url("../images/novi-calmer-pink-ribbon-normalized-desktop-v272.webp") !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  .familiar-top-band,
-  #calm-build .calmer-v258-band,
-  #trust.trust-section .trust-top-wave.trust-reference-image-band{
-    height:46px !important;
-    min-height:46px !important;
-  }
+  
 
-  #calm-build .calmer-v258-band__label,
-  #trust.trust-section .trust-ribbon-text,
-  .familiar-top-band .familiar-ribbon-text{
-    font-size:10px !important;
-    letter-spacing:.055em !important;
-  }
+  
 
   #trust.trust-section .trust-inner{
     padding-top:52px !important;
@@ -25602,9 +23199,7 @@ body{
 }
 
 /* Bring the pink band a little closer to the heading */
-#calm-build .calmer-v258-band{
-  margin:0 0 clamp(14px,1.7vw,22px) !important;
-}
+
 
 #calm-build .familiar-intro{
   margin:0 auto clamp(24px,2.8vw,34px) !important;
@@ -25615,9 +23210,7 @@ body{
 }
 
 /* Bring the green familiar ribbon closer to the heading below */
-.familiar-top-band{
-  margin:0 auto 2px !important;
-}
+
 
 .first-stage-section.novi-pieces-section{
   padding-top:clamp(8px,1.2vw,14px) !important;
@@ -25665,9 +23258,7 @@ body{
     padding-top:46px !important;
   }
 
-  #calm-build .calmer-v258-band{
-    margin:0 0 12px !important;
-  }
+  
 }
 
 @media (max-width:760px){
@@ -25683,9 +23274,7 @@ body{
     margin-bottom:20px !important;
   }
 
-  .familiar-top-band{
-    margin:0 auto 0 !important;
-  }
+  
 
   .first-stage-section{
     padding-top:2px !important;
@@ -25733,113 +23322,36 @@ body{
    It keeps the NOVI pink/gold language while reducing visual rank.
    ========================================================== */
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-  position:relative !important;
-  width:min(calc(100% - 72px), 820px) !important;
-  max-width:820px !important;
-  min-height:42px !important;
-  margin:0 auto clamp(14px,1.6vw,22px) !important;
-  padding:9px clamp(18px,2.4vw,34px) 10px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:clamp(8px,1vw,14px) !important;
-  border:1px solid rgba(204,161,70,.54) !important;
-  border-radius:999px !important;
-  background:
-    linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,0) 48%),
-    linear-gradient(90deg,rgba(226,122,148,.10),rgba(226,122,148,.30) 18%,rgba(226,122,148,.42) 50%,rgba(226,122,148,.30) 82%,rgba(226,122,148,.10)) !important;
-  box-shadow:
-    0 14px 30px rgba(7,20,45,.045),
-    0 1px 0 rgba(255,250,242,.78) inset !important;
-  color:#7b2945 !important;
-  overflow:hidden !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::before,
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::after{
-  content:"" !important;
-  position:absolute !important;
-  left:clamp(24px,3vw,44px) !important;
-  right:clamp(24px,3vw,44px) !important;
-  height:1px !important;
-  background:linear-gradient(90deg,transparent,rgba(204,161,70,.58),transparent) !important;
-  opacity:.78 !important;
-  display:block !important;
-  pointer-events:none !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::before{top:6px !important;}
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::after{bottom:6px !important;}
 
-.novi-advice-header .segment-sub-ribbon .segment-start-ribbon__text{
-  position:relative !important;
-  z-index:1 !important;
-  color:#7b2945 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(13px,1.05vw,17px) !important;
-  line-height:1.12 !important;
-  font-weight:600 !important;
-  letter-spacing:.105em !important;
-  text-transform:none !important;
-  white-space:normal !important;
-  text-align:center !important;
-  text-shadow:0 1px 0 rgba(255,250,242,.72) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon .segment-start-ribbon__star{
-  position:relative !important;
-  z-index:1 !important;
-  flex:0 0 auto !important;
-  width:9px !important;
-  height:9px !important;
-  color:#cca146 !important;
-  font-size:9px !important;
-  line-height:1 !important;
-  text-shadow:0 0 8px rgba(204,161,70,.20) !important;
-}
+
+
+
+
+
+
 
 .novi-advice-header .segment-sub-ribbon + .novi-advice-title{
   margin-top:0 !important;
 }
 
 @media (max-width:760px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:min(calc(100% - 28px), 430px) !important;
-    min-height:38px !important;
-    margin-bottom:12px !important;
-    padding:8px 14px 9px !important;
-    gap:6px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon .segment-start-ribbon__text{
-    font-size:clamp(11.2px,3vw,13px) !important;
-    letter-spacing:.06em !important;
-    line-height:1.12 !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon .segment-start-ribbon__star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon::before{top:5px !important;}
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon::after{bottom:5px !important;}
+  
+  
 }
 
 @media (max-width:390px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:calc(100% - 22px) !important;
-    min-height:36px !important;
-    padding-left:10px !important;
-    padding-right:10px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon .segment-start-ribbon__text{
-    font-size:10.8px !important;
-    letter-spacing:.045em !important;
-  }
+  
 }
 
 
@@ -25928,71 +23440,17 @@ body{
 }
 
 /* Projection sub-band */
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-  position:relative !important;
-  width:fit-content !important;
-  max-width:min(calc(100% - 44px), 780px) !important;
-  min-height:50px !important;
-  margin:0 auto 18px !important;
-  padding:12px 28px 13px !important;
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:12px !important;
-  border:1px solid rgba(204,161,70,.78) !important;
-  border-radius:0 !important;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0) 46%),
-    linear-gradient(90deg, #0b2a67 0%, #081f57 36%, #061642 100%) !important;
-  box-shadow:
-    0 12px 26px rgba(7,20,45,.08),
-    0 1px 0 rgba(255,244,215,.12) inset,
-    0 -8px 16px rgba(0,0,0,.12) inset !important;
-  color:#f0cf73 !important;
-  clip-path:polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px) !important;
-  overflow:visible !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::before,
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::after{
-  content:none !important;
-  display:none !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-  color:#f0cf73 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(13px,1.05vw,16px) !important;
-  line-height:1.08 !important;
-  font-weight:600 !important;
-  letter-spacing:.14em !important;
-  text-transform:uppercase !important;
-  white-space:normal !important;
-  text-align:center !important;
-  text-shadow:0 0 8px rgba(240,207,115,.06) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-  width:auto !important;
-  height:auto !important;
-  color:#f0cf73 !important;
-  font-size:12px !important;
-  line-height:1 !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon + .novi-advice-title{
-  margin-top:0 !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon + .novi-advice-title::before{
-  content:"" !important;
-  display:block !important;
-  width:34px !important;
-  height:2px !important;
-  margin:0 auto 18px !important;
-  border-radius:999px !important;
-  background:linear-gradient(90deg, rgba(204,161,70,0), rgba(204,161,70,.9), rgba(204,161,70,0)) !important;
-}
+
+
+
+
+
+
 
 @media (max-width:760px){
   #calm-build .familiar-tagline{
@@ -26020,29 +23478,13 @@ body{
     min-width:1.35em !important;
   }
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:auto !important;
-    max-width:min(calc(100% - 22px), 420px) !important;
-    min-height:42px !important;
-    margin-bottom:14px !important;
-    padding:10px 16px 11px !important;
-    gap:8px !important;
-    clip-path:polygon(11px 0, calc(100% - 11px) 0, 100% 11px, 100% calc(100% - 11px), calc(100% - 11px) 100%, 11px 100%, 0 calc(100% - 11px), 0 11px) !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(10.8px,2.9vw,12px) !important;
-    letter-spacing:.085em !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-    font-size:9px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon + .novi-advice-title::before{
-    width:26px !important;
-    margin-bottom:14px !important;
-  }
+  
 }
 
 @media (max-width:390px){
@@ -26056,16 +23498,9 @@ body{
     letter-spacing:.09em !important;
   }
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    max-width:calc(100% - 16px) !important;
-    padding-left:12px !important;
-    padding-right:12px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:10.4px !important;
-    letter-spacing:.065em !important;
-  }
+  
 }
 
 
@@ -26102,50 +23537,15 @@ body{
 }
 
 /* Projection band: longer and with stars at both ends */
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-  position:relative !important;
-  width:min(calc(100% - 44px), 560px) !important;
-  max-width:560px !important;
-  min-height:52px !important;
-  margin:0 auto 18px !important;
-  padding:12px 54px 13px !important;
-  justify-content:center !important;
-  gap:0 !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-  display:block !important;
-  width:100% !important;
-  color:#f0cf73 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(13px,1vw,15px) !important;
-  line-height:1.05 !important;
-  font-weight:600 !important;
-  letter-spacing:.125em !important;
-  text-transform:uppercase !important;
-  white-space:nowrap !important;
-  text-align:center !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-  position:absolute !important;
-  top:50% !important;
-  transform:translateY(-50%) !important;
-  width:auto !important;
-  height:auto !important;
-  color:#f0cf73 !important;
-  font-size:12px !important;
-  line-height:1 !important;
-  text-shadow:0 0 8px rgba(240,207,115,.08) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-  left:18px !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-  right:18px !important;
-}
+
+
+
+
+
 
 @media (max-width:760px){
   #calm-build .familiar-tagline{
@@ -26168,31 +23568,15 @@ body{
     min-width:1.1em !important;
   }
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:min(calc(100% - 24px), 430px) !important;
-    max-width:430px !important;
-    min-height:44px !important;
-    padding:10px 36px 11px !important;
-    margin-bottom:14px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(10.9px,2.8vw,12px) !important;
-    letter-spacing:.07em !important;
-    white-space:nowrap !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-    font-size:9px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-    left:12px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-    right:12px !important;
-  }
+  
 }
 
 @media (max-width:390px){
@@ -26206,25 +23590,13 @@ body{
     max-width:12ch !important;
   }
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:calc(100% - 16px) !important;
-    max-width:calc(100% - 16px) !important;
-    padding-left:30px !important;
-    padding-right:30px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:10.4px !important;
-    letter-spacing:.05em !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-    left:10px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-    right:10px !important;
-  }
+  
 }
 
 
@@ -26234,92 +23606,36 @@ body{
    - improve width / height / text / star proportion
    ========================================================== */
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-  width:auto !important;
-  min-width:520px !important;
-  max-width:min(calc(100% - 54px), 620px) !important;
-  min-height:46px !important;
-  margin:0 auto 20px !important;
-  padding:10px 48px 11px !important;
-  gap:0 !important;
-  box-shadow:
-    0 10px 22px rgba(7,20,45,.07),
-    0 1px 0 rgba(255,244,215,.10) inset,
-    0 -6px 14px rgba(0,0,0,.10) inset !important;
-  clip-path:polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-  width:auto !important;
-  font-size:clamp(12.5px, .95vw, 14px) !important;
-  line-height:1.05 !important;
-  letter-spacing:.10em !important;
-  white-space:nowrap !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-  font-size:11px !important;
-  opacity:.96 !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-  left:16px !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-  right:16px !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon + .novi-advice-title::before{
-  width:24px !important;
-  margin:0 auto 16px !important;
-}
+
+
+
+
+
+
 
 @media (max-width:760px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:auto !important;
-    min-width:0 !important;
-    max-width:min(calc(100% - 26px), 420px) !important;
-    min-height:40px !important;
-    margin-bottom:14px !important;
-    padding:9px 32px 10px !important;
-    clip-path:polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px) !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(10.2px, 2.7vw, 11.6px) !important;
-    letter-spacing:.06em !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-    font-size:8px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-    left:11px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-    right:11px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon + .novi-advice-title::before{
-    width:20px !important;
-    margin-bottom:12px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    max-width:calc(100% - 18px) !important;
-    padding-left:28px !important;
-    padding-right:28px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:9.9px !important;
-    letter-spacing:.045em !important;
-  }
+  
 }
 
 
@@ -26329,37 +23645,14 @@ body{
    - use uploaded navy tone (#0C2342 family)
    ========================================================== */
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-  min-width:700px !important;
-  width:min(calc(100% - 56px), 840px) !important;
-  max-width:840px !important;
-  padding:10px 54px 11px !important;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0) 44%),
-    linear-gradient(90deg, #14325f 0%, #0c2342 18%, #0b2140 50%, #0c2342 82%, #14325f 100%) !important;
-  box-shadow:
-    0 10px 22px rgba(7,20,45,.07),
-    0 1px 0 rgba(255,244,215,.09) inset,
-    0 -6px 14px rgba(0,0,0,.12) inset !important;
-}
+
 
 @media (max-width:980px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    min-width:0 !important;
-    width:min(calc(100% - 40px), 700px) !important;
-    max-width:700px !important;
-  }
+  
 }
 
 @media (max-width:760px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:min(calc(100% - 24px), 430px) !important;
-    max-width:430px !important;
-    min-width:0 !important;
-    background:
-      linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0) 44%),
-      linear-gradient(90deg, #13315d 0%, #0c2342 22%, #0b2140 50%, #0c2342 78%, #13315d 100%) !important;
-  }
+  
 }
 
 
@@ -26371,52 +23664,15 @@ body{
    ========================================================== */
 
 /* Projection band: longer, pink, larger type, calmer balance */
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-  width:min(calc(100% - 48px), 920px) !important;
-  max-width:920px !important;
-  min-width:760px !important;
-  min-height:54px !important;
-  margin:0 auto 20px !important;
-  padding:12px 62px 13px !important;
-  border:1px solid rgba(204,161,70,.74) !important;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 42%),
-    linear-gradient(90deg, #d97592 0%, #e27a94 18%, #e489a3 50%, #e27a94 82%, #d97592 100%) !important;
-  box-shadow:
-    0 10px 22px rgba(7,20,45,.06),
-    0 1px 0 rgba(255,248,238,.34) inset,
-    0 -6px 14px rgba(120,42,70,.10) inset !important;
-  clip-path:polygon(13px 0, calc(100% - 13px) 0, 100% 13px, 100% calc(100% - 13px), calc(100% - 13px) 100%, 13px 100%, 0 calc(100% - 13px), 0 13px) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-  width:auto !important;
-  color:#fff1c6 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(16px, 1.22vw, 19px) !important;
-  line-height:1.06 !important;
-  font-weight:600 !important;
-  letter-spacing:.12em !important;
-  text-transform:uppercase !important;
-  white-space:nowrap !important;
-  text-align:center !important;
-  text-shadow:0 1px 0 rgba(120,42,70,.16), 0 0 10px rgba(255,241,198,.08) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-  color:#fff1c6 !important;
-  font-size:13px !important;
-  opacity:1 !important;
-  text-shadow:0 0 10px rgba(255,241,198,.12) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-  left:18px !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-  right:18px !important;
-}
+
+
+
+
+
 
 /* No fear box: centered gold star on the left vertical line */
 #calm-build .familiar-message h3{
@@ -26443,46 +23699,21 @@ body{
 }
 
 @media (max-width:1100px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    min-width:0 !important;
-    width:min(calc(100% - 40px), 820px) !important;
-    max-width:820px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(14px, 1.4vw, 17px) !important;
-  }
+  
 }
 
 @media (max-width:760px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:min(calc(100% - 22px), 470px) !important;
-    max-width:470px !important;
-    min-width:0 !important;
-    min-height:44px !important;
-    padding:10px 36px 11px !important;
-    background:
-      linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0) 42%),
-      linear-gradient(90deg, #d97592 0%, #e27a94 20%, #e489a3 50%, #e27a94 80%, #d97592 100%) !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(11.2px, 3vw, 12.8px) !important;
-    letter-spacing:.075em !important;
-    white-space:nowrap !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-    font-size:9px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-    left:12px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-    right:12px !important;
-  }
+  
 
   #calm-build .familiar-message h3::before{
     left:8px !important;
@@ -26493,17 +23724,9 @@ body{
 }
 
 @media (max-width:390px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:calc(100% - 14px) !important;
-    max-width:calc(100% - 14px) !important;
-    padding-left:30px !important;
-    padding-right:30px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:10.6px !important;
-    letter-spacing:.055em !important;
-  }
+  
 }
 
 
@@ -26544,82 +23767,24 @@ body{
 }
 
 /* Projection band: pink, wavy, wider */
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-  position:relative !important;
-  width:min(calc(100% - 28px), 1020px) !important;
-  max-width:1020px !important;
-  min-width:760px !important;
-  min-height:72px !important;
-  margin:0 auto 18px !important;
-  padding:0 74px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  background-image:url("../images/novi-calmer-pink-ribbon-normalized-desktop-v272.webp") !important;
-  background-repeat:no-repeat !important;
-  background-position:center center !important;
-  background-size:100% 100% !important;
-  border:0 !important;
-  border-radius:0 !important;
-  clip-path:none !important;
-  box-shadow:none !important;
-  overflow:visible !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::before,
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::after{
-  content:none !important;
-  display:none !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-  display:block !important;
-  width:100% !important;
-  color:#7b2945 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(18px,1.25vw,22px) !important;
-  line-height:1.04 !important;
-  font-weight:700 !important;
-  letter-spacing:.045em !important;
-  text-transform:none !important;
-  white-space:nowrap !important;
-  text-align:center !important;
-  text-shadow:0 1px 0 rgba(255,244,238,.55) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-  position:absolute !important;
-  top:50% !important;
-  transform:translateY(-50%) !important;
-  color:#fff0c7 !important;
-  font-size:15px !important;
-  line-height:1 !important;
-  text-shadow:0 0 10px rgba(255,240,199,.15) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-  left:34px !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-  right:34px !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon + .novi-advice-title::before{
-  width:24px !important;
-  margin:0 auto 14px !important;
-}
+
+
+
+
+
+
+
 
 @media (max-width:1100px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    min-width:0 !important;
-    width:min(calc(100% - 24px), 900px) !important;
-    max-width:900px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(16px,1.55vw,20px) !important;
-  }
+  
 }
 
 @media (max-width:760px){
@@ -26646,48 +23811,21 @@ body{
         rgba(212,171,87,.28) 100%) !important;
   }
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:min(calc(100% - 8px), 520px) !important;
-    max-width:520px !important;
-    min-width:0 !important;
-    min-height:52px !important;
-    padding:0 32px !important;
-    background-image:url("../images/novi-calmer-pink-ribbon-normalized-mobile-v272.webp") !important;
-    background-size:100% 100% !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(12.2px,3.15vw,14px) !important;
-    letter-spacing:.03em !important;
-    white-space:nowrap !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-    font-size:10px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-    left:14px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-    right:14px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:calc(100% + 2px) !important;
-    max-width:calc(100% + 2px) !important;
-    margin-left:-1px !important;
-    margin-right:-1px !important;
-    padding:0 26px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:11px !important;
-    letter-spacing:.02em !important;
-  }
+  
 }
 
 
@@ -26698,101 +23836,37 @@ body{
    - keep text color and type size as before
    ========================================================== */
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-  width:min(calc(100% - 12px), 1080px) !important;
-  max-width:1080px !important;
-  min-width:820px !important;
-  min-height:90px !important;
-  margin:0 auto 18px !important;
-  padding:0 84px !important;
-  background-image:url("../images/novi-calmer-pink-ribbon-normalized-desktop-v272.webp") !important;
-  background-repeat:no-repeat !important;
-  background-position:center center !important;
-  background-size:100% 112% !important;
-}
+
 
 /* keep the text treatment from the previous version, but center it cleanly */
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-  width:100% !important;
-  color:#7b2945 !important;
-  font-size:clamp(18px,1.25vw,22px) !important;
-  line-height:1.04 !important;
-  font-weight:700 !important;
-  letter-spacing:.045em !important;
-  text-align:center !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-  color:#fff0c7 !important;
-  font-size:15px !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-  left:38px !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-  right:38px !important;
-}
+
+
+
+
 
 @media (max-width:1100px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    min-width:0 !important;
-    width:min(calc(100% - 10px), 960px) !important;
-    max-width:960px !important;
-    min-height:82px !important;
-    padding:0 68px !important;
-    background-size:100% 110% !important;
-  }
+  
 }
 
 @media (max-width:760px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:min(calc(100% + 6px), 560px) !important;
-    max-width:560px !important;
-    min-width:0 !important;
-    min-height:64px !important;
-    margin-left:-3px !important;
-    margin-right:-3px !important;
-    padding:0 40px !important;
-    background-image:url("../images/novi-calmer-pink-ribbon-normalized-mobile-v272.webp") !important;
-    background-position:center center !important;
-    background-size:100% 112% !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(12.2px,3.15vw,14px) !important;
-    letter-spacing:.03em !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-    font-size:10px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-    left:16px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-    right:16px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:calc(100% + 8px) !important;
-    max-width:calc(100% + 8px) !important;
-    min-height:58px !important;
-    margin-left:-4px !important;
-    margin-right:-4px !important;
-    padding:0 30px !important;
-    background-size:100% 114% !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:11px !important;
-    letter-spacing:.02em !important;
-  }
+  
 }
 
 
@@ -26802,229 +23876,64 @@ body{
    - restore stronger centered title text styling
    ========================================================== */
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-  position:relative !important;
-  width:min(calc(100% - 12px), 1100px) !important;
-  max-width:1100px !important;
-  min-width:820px !important;
-  min-height:86px !important;
-  margin:0 auto 18px !important;
-  padding:0 84px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201600%20120%22%20preserveAspectRatio%3D%22none%22%3E%0A%3Cdefs%3E%0A%20%20%3ClinearGradient%20id%3D%22fill%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%220%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23d96f8f%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%220.20%22%20stop-color%3D%22%23e27a94%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%220.50%22%20stop-color%3D%22%23e88aa3%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%220.80%22%20stop-color%3D%22%23e27a94%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23d96f8f%22/%3E%0A%20%20%3C/linearGradient%3E%0A%20%20%3ClinearGradient%20id%3D%22shine%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.22%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%220.42%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.05%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22/%3E%0A%20%20%3C/linearGradient%3E%0A%20%20%3ClinearGradient%20id%3D%22gold%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%220%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23c3912f%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%220.22%22%20stop-color%3D%22%23f3d78b%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%220.5%22%20stop-color%3D%22%23fff0bf%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%220.78%22%20stop-color%3D%22%23e0b75a%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a26a1b%22/%3E%0A%20%20%3C/linearGradient%3E%0A%3C/defs%3E%0A%3Cpath%20d%3D%22M0%2028%20C95%2028%20130%2052%20210%2056%20C420%2064%201180%2064%201390%2056%20C1470%2052%201505%2028%201600%2028%20L1600%2092%20C1505%2092%201470%2068%201390%2064%20C1180%2056%20420%2056%20210%2064%20C130%2068%2095%2092%200%2092%20Z%22%20fill%3D%22url%28%23fill%29%22%20stroke%3D%22url%28%23gold%29%22%20stroke-width%3D%225%22/%3E%0A%3Cpath%20d%3D%22M0%2028%20C95%2028%20130%2052%20210%2056%20C420%2064%201180%2064%201390%2056%20C1470%2052%201505%2028%201600%2028%22%20fill%3D%22none%22%20stroke%3D%22url%28%23gold%29%22%20stroke-width%3D%222.2%22%20opacity%3D%220.95%22/%3E%0A%3Cpath%20d%3D%22M0%2092%20C95%2092%20130%2068%20210%2064%20C420%2056%201180%2056%201390%2064%20C1470%2068%201505%2092%201600%2092%22%20fill%3D%22none%22%20stroke%3D%22url%28%23gold%29%22%20stroke-width%3D%222.2%22%20opacity%3D%220.95%22/%3E%0A%3Cpath%20d%3D%22M24%2042%20C110%2042%20145%2059%20220%2062%20C430%2068%201170%2068%201380%2062%20C1455%2059%201490%2042%201576%2042%22%20fill%3D%22none%22%20stroke%3D%22url%28%23gold%29%22%20stroke-width%3D%221.8%22%20opacity%3D%220.78%22/%3E%0A%3Cpath%20d%3D%22M24%2078%20C110%2078%20145%2061%20220%2058%20C430%2052%201170%2052%201380%2058%20C1455%2061%201490%2078%201576%2078%22%20fill%3D%22none%22%20stroke%3D%22url%28%23gold%29%22%20stroke-width%3D%221.8%22%20opacity%3D%220.78%22/%3E%0A%3Cpath%20d%3D%22M6%2030%20C100%2030%20132%2053%20210%2056%20C420%2064%201180%2064%201390%2056%20C1468%2053%201500%2030%201594%2030%20L1594%2048%20C1498%2048%201464%2064%201388%2066%20C1178%2072%20422%2072%20212%2066%20C136%2064%20102%2048%206%2048%20Z%22%20fill%3D%22url%28%23shine%29%22%20opacity%3D%220.55%22/%3E%0A%3C/svg%3E") !important;
-  background-repeat:no-repeat !important;
-  background-position:center center !important;
-  background-size:100% 100% !important;
-  border:0 !important;
-  border-radius:0 !important;
-  clip-path:none !important;
-  box-shadow:none !important;
-  overflow:visible !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::before,
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::after{
-  content:none !important;
-  display:none !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-  display:block !important;
-  width:100% !important;
-  color:#7b2945 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(19px,1.28vw,23px) !important;
-  line-height:1.02 !important;
-  font-weight:700 !important;
-  letter-spacing:.035em !important;
-  text-transform:none !important;
-  white-space:nowrap !important;
-  text-align:center !important;
-  text-shadow:0 1px 0 rgba(255,244,238,.75) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-  position:absolute !important;
-  top:50% !important;
-  transform:translateY(-50%) !important;
-  color:#fff1ca !important;
-  font-size:16px !important;
-  line-height:1 !important;
-  text-shadow:0 0 10px rgba(255,241,202,.16) !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-  left:34px !important;
-}
 
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-  right:34px !important;
-}
+
+
+
+
+
+
 
 @media (max-width:1100px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    min-width:0 !important;
-    width:min(calc(100% - 10px), 960px) !important;
-    max-width:960px !important;
-    min-height:78px !important;
-    padding:0 70px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(16px,1.55vw,20px) !important;
-  }
+  
 }
 
 @media (max-width:760px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:min(calc(100% + 2px), 560px) !important;
-    max-width:560px !important;
-    min-width:0 !important;
-    min-height:60px !important;
-    margin-left:-1px !important;
-    margin-right:-1px !important;
-    padding:0 38px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(12.6px,3.15vw,14.4px) !important;
-    letter-spacing:.028em !important;
-    line-height:1.04 !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-    font-size:11px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{
-    left:15px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{
-    right:15px !important;
-  }
+  
 }
 
 @media (max-width:390px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:calc(100% + 8px) !important;
-    max-width:calc(100% + 8px) !important;
-    min-height:56px !important;
-    margin-left:-4px !important;
-    margin-right:-4px !important;
-    padding:0 28px !important;
-  }
+  
 
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:11.2px !important;
-    letter-spacing:.018em !important;
-  }
+  
 }
 
 /* V283 projection band: back to the established navy/gold sub-band */
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-  position:relative !important;
-  width:min(calc(100% - 48px), 860px) !important;
-  max-width:860px !important;
-  min-width:680px !important;
-  min-height:52px !important;
-  margin:0 auto 18px !important;
-  padding:12px 58px 13px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  gap:0 !important;
-  border:1px solid rgba(204,161,70,.78) !important;
-  border-radius:0 !important;
-  background-image:none !important;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,0) 46%),
-    linear-gradient(90deg, #14325f 0%, #0c2342 18%, #0b2140 50%, #0c2342 82%, #14325f 100%) !important;
-  box-shadow:0 12px 26px rgba(7,20,45,.075),0 1px 0 rgba(255,244,215,.12) inset,0 -8px 16px rgba(0,0,0,.12) inset !important;
-  clip-path:polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px) !important;
-  overflow:visible !important;
-}
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::before,
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon::after{content:none !important;display:none !important;}
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-  display:block !important;
-  width:100% !important;
-  color:#f0cf73 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(15px,1.08vw,18px) !important;
-  line-height:1.06 !important;
-  font-weight:600 !important;
-  letter-spacing:.105em !important;
-  text-transform:uppercase !important;
-  white-space:nowrap !important;
-  text-align:center !important;
-  text-shadow:0 0 8px rgba(240,207,115,.06) !important;
-}
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{
-  position:absolute !important;
-  top:50% !important;
-  transform:translateY(-50%) !important;
-  width:auto !important;
-  height:auto !important;
-  color:#f0cf73 !important;
-  font-size:12px !important;
-  line-height:1 !important;
-  opacity:.98 !important;
-  text-shadow:0 0 8px rgba(240,207,115,.12) !important;
-}
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{left:18px !important;}
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{right:18px !important;}
-.novi-advice-header .segment-sub-ribbon.segment-start-ribbon + .novi-advice-title::before{
-  content:"" !important;
-  display:block !important;
-  width:28px !important;
-  height:2px !important;
-  margin:0 auto 16px !important;
-  border-radius:999px !important;
-  background:linear-gradient(90deg, rgba(204,161,70,0), rgba(204,161,70,.9), rgba(204,161,70,0)) !important;
-}
+
+
+
+
+
+
+
 @media (max-width:980px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    min-width:0 !important;
-    width:min(calc(100% - 34px), 720px) !important;
-    max-width:720px !important;
-  }
+  
 }
 @media (max-width:760px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:min(calc(100% - 22px), 430px) !important;
-    max-width:430px !important;
-    min-width:0 !important;
-    min-height:42px !important;
-    margin-bottom:14px !important;
-    padding:10px 34px 11px !important;
-    clip-path:polygon(11px 0, calc(100% - 11px) 0, 100% 11px, 100% calc(100% - 11px), calc(100% - 11px) 100%, 11px 100%, 0 calc(100% - 11px), 0 11px) !important;
-  }
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:clamp(10.6px,2.8vw,12px) !important;
-    letter-spacing:.065em !important;
-  }
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star{font-size:9px !important;}
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:first-child{left:11px !important;}
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__star:last-child{right:11px !important;}
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon + .novi-advice-title::before{
-    width:22px !important;
-    margin-bottom:12px !important;
-  }
+  
+  
+  
+  
+  
+  
 }
 @media (max-width:390px){
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon{
-    width:calc(100% - 14px) !important;
-    max-width:calc(100% - 14px) !important;
-    padding-left:28px !important;
-    padding-right:28px !important;
-  }
-  .novi-advice-header .segment-sub-ribbon.segment-start-ribbon .segment-start-ribbon__text{
-    font-size:10px !important;
-    letter-spacing:.045em !important;
-  }
+  
+  
 }
 
 
@@ -27043,26 +23952,9 @@ body{
   background:none !important;
 }
 
-.projection-trust-band .trust-band-art{
-  position:absolute !important;
-  inset:0 !important;
-  display:block !important;
-  width:100% !important;
-  height:100% !important;
-  overflow:visible !important;
-}
 
-.projection-trust-band .trust-band-art img{
-  position:absolute !important;
-  left:0 !important;
-  top:0 !important;
-  width:100% !important;
-  height:100% !important;
-  max-width:none !important;
-  object-fit:fill !important;
-  object-position:center center !important;
-  transform:none !important;
-}
+
+
 
 .projection-trust-band .projection-trust-ribbon-label{
   position:relative !important;
@@ -27079,28 +23971,9 @@ body{
   border:0 !important;
 }
 
-.projection-trust-band .trust-ribbon-text{
-  color:#f0cf73 !important;
-  font-family:var(--display), "Cinzel", Georgia, serif !important;
-  font-size:clamp(14px,1.05vw,17px) !important;
-  line-height:1.05 !important;
-  font-weight:600 !important;
-  letter-spacing:.12em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  white-space:nowrap !important;
-  text-shadow:0 0 8px rgba(240,207,115,.06) !important;
-}
 
-.projection-trust-band .trust-ribbon-star{
-  flex:0 0 auto !important;
-  width:10px !important;
-  height:10px !important;
-  color:#f0cf73 !important;
-  font-size:10px !important;
-  line-height:1 !important;
-  text-shadow:0 0 8px rgba(240,207,115,.12) !important;
-}
+
+
 
 @media (max-width:980px){
   .projection-trust-band{
@@ -27113,10 +23986,7 @@ body{
     width:min(calc(100% - 72px), 760px) !important;
   }
 
-  .projection-trust-band .trust-ribbon-text{
-    font-size:clamp(12.4px,1.4vw,15px) !important;
-    letter-spacing:.095em !important;
-  }
+  
 }
 
 @media (max-width:760px){
@@ -27132,17 +24002,9 @@ body{
     gap:5px !important;
   }
 
-  .projection-trust-band .trust-ribbon-text{
-    font-size:clamp(9.8px,2.8vw,11.6px) !important;
-    letter-spacing:.065em !important;
-    line-height:1.05 !important;
-  }
+  
 
-  .projection-trust-band .trust-ribbon-star{
-    width:7px !important;
-    height:7px !important;
-    font-size:7px !important;
-  }
+  
 }
 
 

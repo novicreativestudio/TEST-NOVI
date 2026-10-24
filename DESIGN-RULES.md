@@ -44,3 +44,31 @@
 - HTML見出し階層・CSS参照・ローカルリソースの整合性を静的検査。
 - Headless Chromium はローカルHTTP/FILE直接表示が制限されているため、CSSと画像をデータとして埋め込んだオフライン表示テストを実施。320 / 360 / 390 / 430 / 480 / 600 / 768 / 900 / 1024 / 1200 / 1440 / 1920px を確認。
 - 実Google Fontsの読み込み、実機ブラウザ、タッチ挙動までは再現していません。実機表示の無欠陥保証はしていません。
+
+
+## Ribbon system update (v2)
+
+### Goal
+Unify all ribbon-like section labels with one HTML structure and one CSS component system.
+
+### HTML rules
+- Large illustrated ribbons use: `.novi-ribbon .novi-ribbon--image`
+- Small label ribbons use: `.novi-ribbon .novi-ribbon--tag`
+- Shared text nodes:
+  - `.novi-ribbon__label`
+  - `.novi-ribbon__star`
+  - `.novi-ribbon__text`
+
+### Visual rules
+- Ribbon text must be larger and bolder than normal labels.
+- Image ribbons should use centered overlay text.
+- Small ribbons should use pill-style containers with uppercase label text.
+- Mobile and desktop should use the same ribbon image where possible; CSS handles scaling.
+
+### Applied sections
+- Why you can trust NOVI
+- Does this feel familiar?
+- A calmer way to build online
+- The stages of business growth
+- Why the foundation comes first
+- Vanity numbers can look impressive
