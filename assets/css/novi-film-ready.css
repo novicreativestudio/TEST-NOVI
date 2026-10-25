@@ -1,0 +1,43 @@
+/* NOVI film-ready section: designed to stand independently until an MP4 is supplied. */
+#included .novi-film-section{max-width:1160px;margin:clamp(64px,8vw,110px) auto 0;padding:0 22px;color:#11283e}
+#included .novi-film-heading{text-align:center;max-width:820px;margin:0 auto 33px}
+#included .novi-film-eyebrow{display:block;color:#936e37;font-size:12px;font-weight:700;letter-spacing:.17em;margin-bottom:13px}
+#included .novi-film-heading h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(40px,5.2vw,70px);line-height:1.04;letter-spacing:-.02em;font-weight:600;margin:0 0 18px;color:#10283f}
+#included .novi-film-heading h3 em{color:#174d3d;font-weight:500;font-style:italic;white-space:normal}
+#included .novi-film-heading p{font-size:clamp(17px,1.9vw,20px);line-height:1.65;color:#42534f;max-width:680px;margin:0 auto}
+#included .novi-film-frame{position:relative;aspect-ratio:16/8.3;min-height:390px;border-radius:19px;overflow:hidden;background:#122b39;isolation:isolate;border:1px solid #c29d66;box-shadow:0 22px 48px #092b2a22}
+#included .novi-film-cover{position:absolute;inset:0;overflow:hidden;color:#fff9ed}
+#included .novi-film-art{position:absolute;inset:0;background:linear-gradient(90deg,#071a30b8 0%,#0b283b80 39%,transparent 83%),url('../images/novi-creative-studio-hero-desktop.webp') center 45%/cover no-repeat;transform:scale(1.015)}
+#included .novi-film-cover-shade{position:absolute;inset:0;background:linear-gradient(0deg,#092a31c7,transparent 23%),linear-gradient(90deg,#071a2e83,transparent 78%)}
+#included .novi-film-cover-content{position:absolute;left:clamp(27px,6vw,78px);top:50%;transform:translateY(-50%);max-width:58%;z-index:2}
+#included .novi-film-label{display:block;color:#edcd8c;font-size:12px;letter-spacing:.18em;font-weight:700;margin-bottom:19px}
+#included .novi-film-cover-title{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(40px,5.35vw,78px);line-height:1.03;font-weight:600;letter-spacing:-.015em;text-shadow:0 3px 16px #001d2870}
+#included .novi-film-cover-title em{color:#f0c986;font-weight:500}
+#included .novi-film-cover-description{display:block;margin-top:22px;font-size:clamp(14px,1.4vw,18px);line-height:1.5;max-width:370px;color:#fff5e6}
+#included .novi-film-stamp{position:absolute;right:clamp(18px,3.8vw,56px);top:28px;z-index:2;display:flex;align-items:center;gap:12px;color:#fff4db;text-align:left;letter-spacing:.09em;font-size:11px;font-weight:700;line-height:1.45}
+#included .novi-film-stamp>span:first-child{border:1px solid #ecc6898c;background:#09283b99;border-radius:50%;height:45px;width:45px;display:grid;place-items:center;font-size:16px;line-height:1;padding-left:3px}
+#included .novi-film-stamp small{color:#f0cf95;font-size:10px;letter-spacing:.09em}
+#included .novi-film-bottomline{position:absolute;bottom:19px;left:clamp(27px,6vw,78px);right:clamp(27px,6vw,78px);display:flex;align-items:center;gap:17px;font-size:10px;letter-spacing:.2em;color:#efdaad;z-index:2}
+#included .novi-film-gold-stroke{height:1px;background:linear-gradient(90deg,#e5b77380,#e5b77316);flex:1}
+#included .novi-film-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #e2d6be;gap:0;margin:23px 0 0;padding:0 0 27px}
+#included .novi-film-pillars>div{position:relative;padding:10px clamp(12px,2.4vw,30px) 8px;display:flex;flex-direction:column;gap:8px;border-right:1px solid #e4d5b9;text-align:left}
+#included .novi-film-pillars>div:first-child{padding-left:0}
+#included .novi-film-pillars>div:last-child{border-right:0;padding-right:0}
+#included .novi-film-pillars-index{color:#ad864b;font:600 13px Georgia,serif}
+#included .novi-film-pillars strong{font-size:clamp(16px,1.7vw,20px);line-height:1.25;color:#153f37;font-weight:700}
+#included .novi-film-pillars small{color:#4b5a56;font-size:14px;line-height:1.5}
+#included .novi-film-footnote{text-align:center;color:#53615d;font-size:14px;line-height:1.6;margin:19px auto 0!important}
+#included .novi-film-video{display:block;width:100%;height:100%;object-fit:cover;background:#08253a}
+#included .novi-film-video[hidden]{display:none}
+#included .novi-film-frame:has(.novi-film-video:not([hidden])){aspect-ratio:16/9;min-height:0}
+@media(max-width:760px){#included .novi-film-section{margin-top:55px;padding:0 12px}#included .novi-film-heading{margin-bottom:25px}#included .novi-film-frame{min-height:430px;aspect-ratio:4/5}#included .novi-film-art{background:linear-gradient(0deg,#061b30ea 0%,#072334ac 41%,transparent 100%),url('../images/novi-creative-studio-hero-mobile-optimized.webp') 63% center/cover no-repeat}#included .novi-film-cover-shade{background:linear-gradient(0deg,#071d2ce0,#071d2b00 62%)}#included .novi-film-cover-content{left:26px;right:24px;top:auto;bottom:73px;max-width:none;transform:none}#included .novi-film-cover-title{font-size:clamp(42px,9vw,58px)}#included .novi-film-cover-description{margin-top:13px;font-size:15px}#included .novi-film-label{font-size:10px;margin-bottom:10px}#included .novi-film-stamp{top:17px;right:18px;font-size:9px;gap:8px}#included .novi-film-stamp>span:first-child{height:35px;width:35px;font-size:12px}#included .novi-film-bottomline{bottom:16px;left:25px;right:25px;font-size:8px;gap:9px}#included .novi-film-pillars{grid-template-columns:1fr;padding-bottom:10px}#included .novi-film-pillars>div,#included .novi-film-pillars>div:first-child,#included .novi-film-pillars>div:last-child{border-right:0;border-bottom:1px solid #e8dcc6;padding:14px 5px;gap:4px}#included .novi-film-pillars>div:last-child{border:0}#included .novi-film-footnote{font-size:13px!important}#included .novi-film-frame:has(.novi-film-video:not([hidden])){aspect-ratio:16/9}}
+@media(prefers-reduced-motion:reduce){#included .novi-film-art{transform:none}}
+
+/* Playback-enhancement: loaded strictly on click; the accessible play control is not part of the poster bitmap. */
+#included .novi-film-play{position:absolute;z-index:5;top:50%;left:50%;transform:translate(-50%,-50%);width:76px;height:76px;border:1px solid #f0d49e;background:rgba(5,28,43,.79);color:#fff7eb;border-radius:50%;font-size:30px;line-height:1;display:grid;place-items:center;padding:0 0 0 5px;cursor:pointer;box-shadow:0 6px 28px rgba(0,0,0,.3);transition:background .2s ease,scale .2s ease}
+#included .novi-film-play:hover{background:#14483b;scale:1.07}
+#included .novi-film-play:focus-visible{outline:3px solid #f8d58d;outline-offset:4px}
+#included .novi-film-frame.novi-film-is-playing{aspect-ratio:16/9;min-height:0}
+#included .novi-film-frame.novi-film-is-playing .novi-film-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#05192a}
+#included .novi-film-frame.novi-film-is-playing .novi-film-cover,#included .novi-film-frame.novi-film-is-playing .novi-film-play{display:none}
+@media(max-width:760px){#included .novi-film-play{width:61px;height:61px;font-size:25px}#included .novi-film-frame.novi-film-is-playing{aspect-ratio:16/9;min-height:0}}
