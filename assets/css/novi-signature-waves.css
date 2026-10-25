@@ -1,0 +1,26 @@
+/* NOVI Signature Wave System: intentionally limited to 3 transitions, no ribbons touched. */
+:root { --novi-wave-clearance: clamp(40px,6vw,82px); }
+#why-start-less,#contact,.novi-footer-refined {position:relative;isolation:isolate;}
+.novi-wave-edge {position:absolute;pointer-events:none;z-index:2;left:0;right:0;top:-1px;width:100%;height:clamp(37px,5.2vw,69px);overflow:hidden;line-height:0;}
+.novi-wave-edge svg {display:block;width:100%;height:100%;}
+/* Reserve vertical breathing space so the wave cannot overlap first copy. */
+#why-start-less {padding-top:max(90px,calc(var(--novi-wave-clearance) + 36px))!important;}
+#contact {padding-top:max(100px,calc(var(--novi-wave-clearance) + 39px))!important;}
+#why-start-less .novi-wave-why {filter:drop-shadow(0 3px 6px rgba(13,54,45,.08));}
+#contact .novi-wave-contact {filter:drop-shadow(0 3px 6px rgba(13,54,45,.08));}
+#why-start-less::before {background: radial-gradient(ellipse 35% 41% at 84% 14%,rgba(255,229,160,.19),transparent 74%),radial-gradient(ellipse 50% 43% at 4% 87%,rgba(132,189,152,.12),transparent 84%),linear-gradient(112deg,rgba(255,255,255,.055),transparent 49%,rgba(240,193,103,.055))!important;}
+#contact {background:radial-gradient(ellipse 48% 45% at 84% 15%,rgba(255,227,169,.16),transparent 86%),linear-gradient(118deg,#154c3f,#0e3c35 58%,#152d3d)!important;}
+/* Proof and plan chapters stay bright, to avoid the heavy stripe effect. */
+#launch-check,#choose-foundation {background-blend-mode:normal!important;}
+/* Footer's navy wave is the actual section top, replacing old linear border. */
+.novi-footer-refined{margin-top:0!important; background:radial-gradient(ellipse 64% 46% at 92% 2%,rgba(234,200,142,.16),transparent 72%),linear-gradient(132deg,#10243d,#163d40 68%,#0e3836)!important;}
+.novi-footer-refined>.novi-wave-footer{height:clamp(40px,5.7vw,78px);z-index:3;}
+.novi-footer-refined .novi-footer-shell{padding-top:clamp(94px,9vw,130px)!important;}
+.novi-footer-refined::after{content:'';position:absolute;z-index:0;left:-8%;bottom:17%;width:70%;height:22%;pointer-events:none;background:radial-gradient(ellipse at center,rgba(237,202,143,.065),transparent 72%);transform:rotate(-7deg);}
+/* Use gold as meaning: short inline emphasis in footer, not extra straight rules. */
+.novi-footer-refined .novi-footer-tagline em {text-decoration: underline;text-decoration-color:rgba(239,202,135,.52);text-decoration-thickness:1.5px;text-underline-offset:7px;}
+/* Smaller motion for accessibility; subtle hovered light only. */
+.novi-footer-refined .novi-footer-cta{background-size:175% 100%;transition:background-position .38s ease,transform .22s ease,box-shadow .22s ease;}
+.novi-footer-refined .novi-footer-cta:hover{background-position:100% 0;}
+@media(max-width:600px){.novi-wave-edge{height:38px;}#why-start-less{padding-top:82px!important;}#contact{padding-top:88px!important;}.novi-footer-refined .novi-footer-shell{padding-top:92px!important;}}
+@media(prefers-reduced-motion:reduce){.novi-footer-refined .novi-footer-cta{transition:none!important;}}

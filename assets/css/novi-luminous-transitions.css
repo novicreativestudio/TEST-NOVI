@@ -1,0 +1,50 @@
+/* NOVI | luminous editorial transitions & footer | intentionally scoped */
+:root{--novi-light-ivory:#fffaf2;--novi-gold:#c9a061;--novi-ink:#10243c;--novi-deep:#103f35}
+/* Avoid dense opaque strips: a bright, soft reflection sits behind editorial transitions. */
+#included {background:radial-gradient(ellipse 46% 38% at 10% 96%,rgba(235,198,144,.17),transparent 100%),linear-gradient(180deg,#fff9f1 0%,#fffdf9 68%,#fff8ee 100%)!important;}
+#why-start-less {position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(127deg,#113c34 0%,#174e40 45%,#0b382f 100%)!important;}
+#why-start-less::before {content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 48% 65% at 85% 4%,rgba(241,212,154,.15),transparent 72%),radial-gradient(ellipse 30% 38% at 3% 92%,rgba(243,225,182,.10),transparent 90%),linear-gradient(130deg,transparent 28%,rgba(255,247,212,.045) 46%,transparent 65%);}
+#why-start-less::after {content:"";position:absolute;pointer-events:none;width:min(52vw,620px);height:min(52vw,620px);right:-18%;top:-66%;border:1px solid rgba(236,206,149,.21);border-radius:50%;box-shadow:0 0 0 22px rgba(243,223,177,.025),0 0 0 56px rgba(243,223,177,.018)}
+#why-start-less .novi-why-less__inner {position:relative;z-index:1}
+/* A soft gold glow is a transitional cue, never a literal extra divider line. */
+#about {background:radial-gradient(ellipse 48% 36% at 100% 90%,rgba(234,195,137,.16),transparent 85%),linear-gradient(180deg,#fff8ed,#fffaf3)!important;}
+#launch-check {background:radial-gradient(ellipse 46% 50% at 50% 2%,rgba(242,203,151,.17),transparent 100%),linear-gradient(180deg,#fffaf3,#fffdf8)!important;}
+#choose-foundation {background:radial-gradient(ellipse 43% 30% at 0% 0%,rgba(224,190,138,.15),transparent 100%),radial-gradient(ellipse 43% 30% at 98% 95%,rgba(239,194,206,.11),transparent 100%),#fffbf3!important;}
+#process {background:linear-gradient(180deg,#fffaf3 0%,#fffdf9 55%,#fcf8f2 100%)!important;}
+#faq {background:linear-gradient(180deg,#fcf8f2,#fffaf3)!important;}
+#contact {isolation:isolate;position:relative;overflow:hidden;background:radial-gradient(ellipse 40% 85% at 90% 0%,rgba(237,203,142,.17),transparent 92%),linear-gradient(127deg,#164b3d 0%,#0b3e35 56%,#102b3c 100%)!important;}
+#contact::after{content:"";position:absolute;z-index:-1;width:520px;height:520px;right:-250px;bottom:-320px;border-radius:50%;border:1px solid rgba(241,210,150,.2);box-shadow:0 0 0 34px rgba(243,220,175,.025),0 0 0 80px rgba(243,220,175,.018);pointer-events:none}
+/* Keep ribbons, hero, and image sections unchanged. Invisible fade just for meaningful gold accents. */
+.novi-footer-refined{color:#fff8eb!important;background:linear-gradient(135deg,#10253c 0%,#142d3e 54%,#0a3536 100%)!important;position:relative;overflow:hidden;border-top:0!important;font-family:inherit}
+.novi-footer-refined::before{content:"";position:absolute;right:-190px;top:-280px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(222,186,125,.11),transparent 67%);pointer-events:none}
+.novi-footer-refined .novi-footer-lightline{height:3px;width:100%;background:linear-gradient(90deg,transparent,#b58c51 14%,#f4deab 48%,#b98b4e 85%,transparent);box-shadow:0 1px 16px rgba(230,190,122,.22)}
+.novi-footer-refined .novi-footer-shell{position:relative;max-width:1220px;margin:auto;padding:clamp(48px,5vw,82px) clamp(22px,4vw,52px) 22px}
+.novi-footer-refined .novi-footer-main{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(160px,.75fr) minmax(230px,1fr);gap:clamp(24px,5vw,76px);align-items:start}
+.novi-footer-refined .novi-footer-logo{display:inline-flex;gap:14px;align-items:center;color:#fff9ef;text-decoration:none}
+.novi-footer-refined .novi-footer-logo img{width:60px;height:60px;object-fit:contain;filter:drop-shadow(0 4px 9px rgba(237,202,137,.22))}
+.novi-footer-refined .novi-footer-logo strong{display:block;letter-spacing:.13em;font-size:clamp(24px,2.4vw,34px);line-height:1.1;color:#fffaf0;font-family:Georgia,serif}
+.novi-footer-refined .novi-footer-logo small{display:block;margin-top:4px;letter-spacing:.22em;color:#f0d7a9;font-size:10px}
+.novi-footer-refined .novi-footer-tagline{font-family:Georgia,serif;font-weight:500;font-size:clamp(20px,2.1vw,27px);line-height:1.35;color:#fffaf0;margin:26px 0 12px}
+.novi-footer-refined .novi-footer-tagline em{font-style:italic;color:#f1ce90}
+.novi-footer-refined .novi-footer-desc{max-width:390px;font-size:14px;line-height:1.85;color:#d5e3dc;margin:0}
+.novi-footer-refined h2{font-size:11px!important;font-weight:600!important;line-height:1.4!important;letter-spacing:.15em;color:#f2d198!important;margin:0 0 20px!important;text-transform:uppercase}
+.novi-footer-refined .novi-footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:11px}
+.novi-footer-refined .novi-footer-links h2{margin-bottom:9px!important}
+.novi-footer-refined .novi-footer-links a,.novi-footer-refined .novi-footer-email,.novi-footer-refined .novi-footer-bottom a{color:#f4f3ed;text-decoration:none;transition:color .2s ease;overflow-wrap:anywhere}
+.novi-footer-refined .novi-footer-links a{font-size:14px;line-height:1.6}
+.novi-footer-refined a:hover{color:#f1d49c!important}
+.novi-footer-refined .novi-footer-reach p{font-size:14px;color:#dce7df;line-height:1.8;margin:0 0 21px;max-width:305px}
+.novi-footer-refined .novi-footer-cta{display:inline-flex;justify-content:center;align-items:center;gap:16px;background:linear-gradient(120deg,#f6e0b8 0%,#cda66b 42%,#f3d7a3 72%,#b98b4e 100%);border:1px solid #fff0c9;color:#112b34!important;border-radius:999px;padding:13px 24px;font-weight:700;box-shadow:0 7px 20px rgba(0,0,0,.22),inset 0 1px 1px rgba(255,255,255,.8);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+.novi-footer-refined .novi-footer-cta:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.2),0 0 18px rgba(241,212,152,.2);color:#112b34!important}
+.novi-footer-refined .novi-footer-email{display:block;margin-top:20px;font-size:13px}
+.novi-footer-refined .novi-footer-location{display:block;margin-top:9px;font-size:12px;color:#b7cac0}
+.novi-footer-refined .novi-footer-promise{display:flex;justify-content:center;gap:12px;align-items:center;flex-wrap:wrap;margin:clamp(30px,4vw,52px) 0 0;padding:20px;border-top:1px solid rgba(241,208,152,.22);border-bottom:1px solid rgba(241,208,152,.22);font-size:14px}
+.novi-footer-refined .novi-footer-promise>span:first-child{color:#edce91;font-size:22px}
+.novi-footer-refined .novi-footer-promise strong{color:#fff6e9;letter-spacing:.025em}
+.novi-footer-refined .novi-footer-promise-tail{color:#f0d3a1;font-style:italic}
+.novi-footer-refined .novi-footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:15px;padding-top:22px;color:#b9c9c5;font-size:12px}
+.novi-footer-refined .novi-footer-bottom a{font-size:12px;color:#eecb91}
+.novi-footer-refined a:focus-visible{outline:2px solid #f2cd91;outline-offset:4px}
+@media(max-width:760px){.novi-footer-refined .novi-footer-main{grid-template-columns:1fr 1fr;gap:34px 22px}.novi-footer-refined .novi-footer-brand{grid-column:1/-1}.novi-footer-refined .novi-footer-promise{justify-content:flex-start}}
+@media(max-width:470px){.novi-footer-refined .novi-footer-main{grid-template-columns:1fr;gap:31px}.novi-footer-refined .novi-footer-brand{grid-column:auto}.novi-footer-refined .novi-footer-bottom{flex-direction:column;align-items:flex-start}.novi-footer-refined .novi-footer-promise{gap:6px 10px}.novi-footer-refined .novi-footer-promise-tail{width:100%;padding-left:25px}#why-start-less::after{width:330px;height:330px;right:-200px;top:-170px}}
+@media(prefers-reduced-motion:reduce){.novi-footer-refined a{transition:none!important}}
