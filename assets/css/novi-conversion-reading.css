@@ -1,0 +1,43 @@
+/* NOVI conversion + reading pass. Scoped to phones. Preserve editorial brand/artwork. */
+@media (max-width: 767px) {
+  :root { -webkit-text-size-adjust: 100%; }
+  /* Comfortable text column, not edge-to-edge on small phones. */
+  #included .included-inner,
+  #first-stage .novi-story-familiar__inner,
+  #why-start-less .novi-why-less__inner,
+  #launch-check .launch-proof-inner,
+  #choose-foundation .novi-levels__inner,
+  #contact .final-cta-inner { box-sizing: border-box; max-width: 100%; padding-left: max(22px, env(safe-area-inset-left)) !important; padding-right: max(22px, env(safe-area-inset-right)) !important; }
+  /* Serif headlines remain expressive; body text becomes quieter and easier to scan. */
+  #included .included-head > p:last-child,
+  #first-stage .novi-story-deck,
+  #why-start-less .novi-why-less__lead,
+  #launch-check .novi-realproof-heading > p:last-child,
+  #choose-foundation .novi-levels__head > p:last-child,
+  #contact .final-cta-inner > p:not(.final-cta-eyebrow) {
+    max-width: 38ch !important;
+    font-size: clamp(18px, 4.6vw, 20px) !important;
+    line-height: 1.63 !important;
+    letter-spacing: 0 !important;
+    margin-left: auto !important; margin-right: auto !important;
+    text-wrap: pretty;
+  }
+  #first-stage .novi-story-portrait__words p:not(.novi-story-portrait__stage),
+  #included .included-grid article p,
+  #choose-foundation .novi-level li,
+  #launch-check .novi-realproof-detail p {
+    font-size: clamp(17px, 4.45vw, 19px) !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0 !important;
+  }
+  /* Readable, high-contrast small labels without overpowering the message. */
+  #included .included-grid article,
+  #choose-foundation .novi-level { min-width: 0; }
+  #included .included-grid article h3,
+  #first-stage .novi-story-portrait__words h3,
+  #choose-foundation .novi-level h3 { line-height: 1.22 !important; text-wrap: balance; }
+  #contact h2, #contact p, #contact a { overflow-wrap: anywhere; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #included .reveal-item, #launch-check .reveal-item { transition: none !important; animation: none !important; }
+}
