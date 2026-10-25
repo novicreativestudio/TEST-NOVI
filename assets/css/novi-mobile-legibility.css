@@ -1,0 +1,19 @@
+/* Mobile-specific legibility and clean inline icons. Desktop unchanged. */
+#included .novi-film-play{font-size:0!important;padding:0!important;display:grid;place-items:center}
+#included .novi-film-play::before{content:"";display:block;width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #fff9ed;transform:translateX(2px)}
+/* Remove inconsistent text arrows from links; preserve full clickable link areas. */
+.novi-footer-cta > span[aria-hidden],.novi-mid-cta a > span[aria-hidden],.novi-why-less__link > span[aria-hidden],.foundation-button > span[aria-hidden],.novi-calm-inbox__arrow{display:none!important}
+.final-cta-button > span{display:none!important}
+@media(max-width:767px){
+  html,body{max-width:100%;overflow-x:clip}
+  .novi-footer-refined,.novi-footer-refined .novi-footer-shell,.novi-footer-refined .novi-footer-reach,.final-cta-section,.final-cta-inner{min-width:0!important;max-width:100%!important;box-sizing:border-box!important}
+  .novi-footer-refined .novi-footer-reach{width:100%!important;padding-inline:18px!important;overflow-wrap:anywhere}
+  .novi-footer-refined .novi-footer-reach h2,.novi-footer-refined .novi-footer-reach p,.final-cta-inner h2,.final-cta-inner p{max-width:100%!important;min-width:0!important;white-space:normal!important;overflow-wrap:break-word!important}
+  .novi-footer-refined .novi-footer-reach p{font-size:clamp(17px,4.3vw,20px)!important;line-height:1.55!important;letter-spacing:normal!important}
+  .novi-footer-refined .novi-footer-email{display:block!important;max-width:100%!important;width:100%!important;box-sizing:border-box!important;font-size:clamp(15px,4vw,19px)!important;line-height:1.45!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important}
+  .novi-footer-refined .novi-footer-reach h2{font-size:clamp(24px,7vw,36px)!important;line-height:1.12!important}
+  .novi-footer-refined .novi-footer-cta{font-size:clamp(18px,5.2vw,23px)!important;max-width:100%!important}
+  .final-cta-inner h2{font-size:clamp(28px,7.5vw,42px)!important;line-height:1.16!important}
+  .final-cta-inner p,.novi-film-copy p,.novi-film-highlights p{font-size:clamp(16px,4.2vw,18px)!important;line-height:1.6!important}
+  #included .novi-film-play::before{border-top-width:9px;border-bottom-width:9px;border-left-width:15px}
+}
