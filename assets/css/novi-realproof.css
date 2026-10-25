@@ -1,0 +1,34 @@
+/* NOVI real project proof — scoped, no fixed scores promised */
+#launch-check.launch-proof-section {padding:clamp(55px,5.4vw,84px) 20px;background:linear-gradient(155deg,#fffbf4 0%,#fbf1e5 100%)}
+#launch-check .novi-realproof {width:min(1140px,100%);margin:auto}
+#launch-check .novi-realproof-heading {text-align:center;max-width:860px;margin:0 auto 27px}
+#launch-check .novi-realproof-eyebrow {font-size:clamp(15px,1.85vw,23px);font-weight:700;letter-spacing:.095em;color:#b5833a;margin:0 0 12px;line-height:1.4}
+#launch-check .novi-realproof-eyebrow span {color:#0d503f}
+#launch-check .novi-realproof-heading h2 {font-family:var(--serif,Georgia,serif);font-size:clamp(34px,4vw,56px);line-height:1.08;color:#101f39;margin:0;letter-spacing:-.025em}
+#launch-check .novi-realproof-heading h2 em {color:#ba7842;font-weight:400;white-space:nowrap}
+#launch-check .novi-realproof-heading > p:last-child{margin:12px auto 0;color:#465951;font-size:clamp(16px,1.2vw,18px);line-height:1.52}
+#launch-check .novi-realproof-layout{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:24px;align-items:stretch}
+#launch-check .novi-realproof-screenshot {min-width:0;margin:0;padding:12px;background:#fffdfa;border:1px solid #dbbf8b;border-radius:20px;box-shadow:0 22px 40px rgba(11,38,32,.11),0 4px 12px rgba(11,38,32,.06);overflow:hidden}
+#launch-check .novi-realproof-screenshot img{width:100%;height:310px;object-fit:contain;object-position:center center;display:block;border-radius:10px;background:#fff}
+#launch-check .novi-realproof-screenshot figcaption {display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 14px;padding:11px 5px 2px;color:#3b594f;font-size:12px}
+#launch-check .novi-realproof-screenshot figcaption strong {color:#104737;font-size:13px}
+#launch-check .novi-realproof-detail{padding:22px 23px;border:1px solid #dbbd89;border-radius:20px;background:linear-gradient(150deg,#fffefb 0%,#fbf4ea 100%);box-shadow:0 15px 29px rgba(17,39,32,.06)}
+#launch-check .novi-realproof-overline{color:#976e37;font-size:12px;font-weight:750;letter-spacing:.1em;text-transform:uppercase;margin:0 0 15px}
+#launch-check .novi-realproof-scores{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+#launch-check .novi-realproof-score{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0;text-align:center}
+#launch-check .novi-realproof-score strong{display:grid;place-items:center;width:clamp(45px,4.4vw,60px);height:clamp(45px,4.4vw,60px);border-radius:50%;border:4px solid #09b868;color:#0a583a;background:#fff;font-size:20px;font-family:var(--serif,Georgia,serif);box-shadow:0 2px 9px #16513c12;position:relative}
+#launch-check.in-view .novi-realproof-score strong::after{content:'';position:absolute;inset:-4px;border-radius:50%;background:linear-gradient(110deg,transparent 30%,#ffffffb5 46%,transparent 58%);background-size:210% 100%;animation:noviProofShine 1.45s ease-out 1 both;pointer-events:none}
+#launch-check.in-view .novi-realproof-score:nth-child(2) strong::after{animation-delay:.18s}
+#launch-check.in-view .novi-realproof-score:nth-child(3) strong::after{animation-delay:.36s}
+#launch-check.in-view .novi-realproof-score:nth-child(4) strong::after{animation-delay:.54s}
+@keyframes noviProofShine{0%{background-position:180% 0;opacity:0}25%{opacity:1}100%{background-position:-80% 0;opacity:0}}
+#launch-check .novi-realproof-score span{font-size:10px;font-weight:700;color:#16392f;line-height:1.2;overflow-wrap:anywhere}
+#launch-check .novi-realproof-agentic{display:flex;align-items:center;gap:9px;margin:16px 0;border-top:1px solid #e6d7bf;border-bottom:1px solid #e6d7bf;padding:9px 0;color:#153e34;font-size:13px}
+#launch-check .novi-realproof-agentic strong{border-radius:16px;padding:3px 9px;background:#d7f5e2;color:#0b633e}
+#launch-check .novi-realproof-agentic span{color:#617469;font-size:11px}
+#launch-check .novi-realproof-promise{font-family:var(--serif,Georgia,serif);font-size:clamp(18px,1.55vw,22px);line-height:1.27;color:#10253b;margin:0 0 12px}
+#launch-check .novi-realproof-promise em{color:#a67838;font-weight:600;text-decoration:underline;text-decoration-color:#cb9c4c;text-underline-offset:4px}
+#launch-check .novi-realproof-disclaimer{font-size:12px;line-height:1.5;color:#637069;margin:0}
+@media(max-width:850px){#launch-check .novi-realproof-layout{grid-template-columns:1fr}#launch-check .novi-realproof-screenshot img{height:auto;max-height:420px}#launch-check .novi-realproof-detail{padding:18px}#launch-check .novi-realproof-score strong{width:58px;height:58px}}
+@media(max-width:420px){#launch-check.launch-proof-section{padding:52px 14px}#launch-check .novi-realproof-score strong{width:49px;height:49px;font-size:17px}#launch-check .novi-realproof-scores{gap:4px}#launch-check .novi-realproof-score span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){#launch-check.in-view .novi-realproof-score strong::after{animation:none}}

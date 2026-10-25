@@ -25856,3 +25856,6 @@ body{
     right:14px !important;
   }
 }
+
+/* Remove only thin decorative wave above growth stages; keep the main green ribbon */
+#growth-stages::before{content:none!important;display:none!important;background:none!important}

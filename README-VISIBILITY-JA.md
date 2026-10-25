@@ -1,0 +1,1 @@
+Visibility比較・PROOF見出し調整。緑の余計な水平線はvisibilityセクション疑似要素とheader::afterを無効化。NOTの強調、左カードの明確な優位表現、比較ボックスの再調整。FV等は維持。

@@ -1,0 +1,25 @@
+/* NOVI | Growth stages finishing layer — intentionally scoped */
+#growth-stages .novi-stages-inner{max-width:1480px;margin-inline:auto}
+#growth-stages .novi-stages-track{align-items:stretch;gap:clamp(13px,1.4vw,23px);isolation:isolate}
+#growth-stages .novi-stage-card{min-width:0;height:100%;min-height:405px;box-sizing:border-box;padding:29px clamp(11px,1.2vw,17px) 29px;background:linear-gradient(147deg,#fffefa 0%,#fffaf1 60%,#fffdf8 100%);border:1px solid rgba(192,143,69,.38);box-shadow:0 20px 32px rgba(16,36,62,.085),0 5px 10px rgba(107,68,27,.035),inset 0 1px 0 #fff;border-radius:23px;transition:box-shadow .36s ease,transform .36s ease}
+#growth-stages .novi-stage-card:before{content:"";pointer-events:none;position:absolute;inset:1px 1px auto;height:43%;border-radius:22px 22px 70% 70%;background:linear-gradient(160deg,rgba(255,255,255,.85),rgba(255,255,255,0));z-index:-1}
+#growth-stages .novi-stage-card:hover{transform:translateY(-4px);box-shadow:0 27px 40px rgba(16,36,62,.125),0 7px 12px rgba(107,68,27,.045),inset 0 1px 0 #fff}
+#growth-stages .novi-stage-card h3{font-size:clamp(19px,1.55vw,26px);line-height:1.18;min-height:2.37em;display:flex;align-items:center;justify-content:center;margin:0 0 12px;max-width:100%}
+#growth-stages .novi-stage-card p{font-size:clamp(13px,.98vw,15.5px);line-height:1.52;max-width:24ch;margin-inline:auto}
+#growth-stages .novi-stage-visual{flex:none;width:clamp(108px,8.2vw,142px);height:clamp(108px,8.2vw,142px);margin:16px auto 21px;background:#fff9ef;border-color:rgba(197,151,78,.28);box-shadow:0 3px 12px rgba(104,76,39,.055),inset 0 0 0 5px rgba(255,255,255,.7)}
+#growth-stages .novi-stage-visual img{object-fit:cover}
+#growth-stages .novi-stage-number{z-index:3;box-shadow:0 7px 15px rgba(86,59,28,.09),inset 0 1px 0 #fff}
+#growth-stages .novi-stages-vine{top:-20px;left:5%;right:5%;height:20px;z-index:0;opacity:.66}
+#growth-stages .novi-stages-vine path{stroke:#c69d60;stroke-width:1.2;stroke-dasharray:4 11;stroke-dashoffset:0;stroke-linecap:round}
+#growth-stages .novi-stage-glint{pointer-events:none;position:absolute;z-index:4;top:3px;left:calc(50% + 17px);font-size:14px;color:#c29243;opacity:0;transform:scale(.55) rotate(-18deg);text-shadow:0 0 10px rgba(255,221,145,.8)}
+@keyframes noviStageCardEnter{from{opacity:.3;translate:0 12px}to{opacity:1;translate:0 0}}
+@keyframes noviStageSparkle{0%,100%{opacity:0;transform:scale(.45) rotate(-12deg)}40%{opacity:1;transform:scale(1.1) rotate(12deg)}72%{opacity:.7;transform:scale(.83) rotate(22deg)}}
+@keyframes noviStageLineDraw{from{stroke-dashoffset:130}to{stroke-dashoffset:0}}
+#growth-stages.novi-stages-play .novi-stage-card{animation:noviStageCardEnter .62s both cubic-bezier(.2,.7,.2,1);animation-delay:calc(var(--stage-index)*135ms)}
+#growth-stages.novi-stages-play .novi-stage-glint{animation:noviStageSparkle .95s ease both;animation-delay:calc(520ms + var(--stage-index)*135ms)}
+#growth-stages.novi-stages-play .novi-stages-vine path{animation:noviStageLineDraw 1.55s ease both}
+@media(min-width:1181px){#growth-stages .novi-stages-track{padding-top:5px}}
+@media(max-width:1180px){#growth-stages .novi-stage-card{min-height:365px}#growth-stages .novi-stages-vine{display:none}#growth-stages .novi-stage-visual{width:130px;height:130px}}
+@media(max-width:760px){#growth-stages .novi-stages-track{gap:35px 17px}#growth-stages .novi-stage-card{min-height:360px;padding-inline:12px}#growth-stages .novi-stage-card h3{font-size:clamp(20px,3.6vw,24px)}}
+@media(max-width:500px){#growth-stages .novi-stages-track{width:min(350px,100%);gap:39px}#growth-stages .novi-stage-card{height:auto;min-height:0;padding:32px 22px 29px}#growth-stages .novi-stage-card h3{min-height:0;max-width:260px}#growth-stages .novi-stage-card p{max-width:31ch}}
+@media(prefers-reduced-motion:reduce){#growth-stages .novi-stage-card,#growth-stages .novi-stage-glint,#growth-stages .novi-stages-vine path{animation:none!important;transition:none!important;translate:none!important}#growth-stages .novi-stage-glint{opacity:.55;transform:none}#growth-stages .novi-stage-card:hover{transform:none}}

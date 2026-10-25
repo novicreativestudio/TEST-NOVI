@@ -1,0 +1,184 @@
+[
+  {
+    "viewport": 320,
+    "start": "1",
+    "after_1s": "2",
+    "end": "5",
+    "replay": "1",
+    "errors": [],
+    "inner": 258,
+    "inbox": 258,
+    "section": 320,
+    "offenders": [],
+    "promiseOverlaps": [
+      [
+        48,
+        98
+      ],
+      [
+        126,
+        194
+      ],
+      [
+        207,
+        287
+      ]
+    ]
+  },
+  {
+    "viewport": 375,
+    "start": "1",
+    "after_1s": "2",
+    "end": "5",
+    "replay": "1",
+    "errors": [],
+    "inner": 313,
+    "inbox": 313,
+    "section": 375,
+    "offenders": [],
+    "promiseOverlaps": [
+      [
+        56,
+        109
+      ],
+      [
+        151,
+        224
+      ],
+      [
+        250,
+        335
+      ]
+    ]
+  },
+  {
+    "viewport": 390,
+    "start": "1",
+    "after_1s": "2",
+    "end": "5",
+    "replay": "1",
+    "errors": [],
+    "inner": 328,
+    "inbox": 328,
+    "section": 390,
+    "offenders": [],
+    "promiseOverlaps": [
+      [
+        57,
+        112
+      ],
+      [
+        157,
+        233
+      ],
+      [
+        261,
+        350
+      ]
+    ]
+  },
+  {
+    "viewport": 447,
+    "start": "1",
+    "after_1s": "2",
+    "end": "5",
+    "replay": "1",
+    "errors": [],
+    "inner": 385,
+    "inbox": 385,
+    "section": 447,
+    "offenders": [],
+    "promiseOverlaps": [
+      [
+        64,
+        124
+      ],
+      [
+        183,
+        264
+      ],
+      [
+        305,
+        401
+      ]
+    ]
+  },
+  {
+    "viewport": 768,
+    "start": "1",
+    "after_1s": "2",
+    "end": "5",
+    "replay": "1",
+    "errors": [],
+    "inner": 720,
+    "inbox": 720,
+    "section": 768,
+    "offenders": [],
+    "promiseOverlaps": [
+      [
+        115,
+        196
+      ],
+      [
+        329,
+        439
+      ],
+      [
+        548,
+        677
+      ]
+    ]
+  },
+  {
+    "viewport": 1024,
+    "start": "1",
+    "after_1s": "2",
+    "end": "5",
+    "replay": "1",
+    "errors": [],
+    "inner": 976,
+    "inbox": 976,
+    "section": 1024,
+    "offenders": [],
+    "promiseOverlaps": [
+      [
+        192,
+        278
+      ],
+      [
+        454,
+        570
+      ],
+      [
+        720,
+        857
+      ]
+    ]
+  },
+  {
+    "viewport": 1440,
+    "start": "1",
+    "after_1s": "2",
+    "end": "5",
+    "replay": "1",
+    "errors": [],
+    "inner": 1170,
+    "inbox": 1120,
+    "section": 1440,
+    "offenders": [],
+    "promiseOverlaps": [
+      [
+        385,
+        502
+      ],
+      [
+        640,
+        800
+      ],
+      [
+        903,
+        1090
+      ]
+    ]
+  }
+]
