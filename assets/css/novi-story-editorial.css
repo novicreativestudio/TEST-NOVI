@@ -55,3 +55,9 @@
 /* 2026-10-24: only the three supplied concerned-owner portraits. Do not crop expressions. */
 #first-stage .novi-story-portrait__image{background:#fffbf4!important;overflow:hidden}
 #first-stage .novi-story-portrait__image img{object-fit:contain!important;object-position:center bottom!important;background:#fffbf4;filter:none!important}
+
+/* Photographic owner portraits — balanced editorial presentation (2026-10-25). */
+#first-stage .novi-story-portrait__image{background:#10283a!important;overflow:hidden;border-radius:12px 12px 4px 4px;box-shadow:0 8px 18px rgba(29,39,40,.09);}
+#first-stage .novi-story-portrait__image img{object-fit:cover!important;object-position:center 40%!important;background:transparent!important;mix-blend-mode:normal!important;filter:saturate(.94) contrast(1.02)!important;}
+#first-stage .novi-story-portrait:nth-child(2) .novi-story-portrait__image img{object-position:center 43%!important;}
+@media(max-width:700px){#first-stage .novi-story-portrait__image{border-radius:10px;}#first-stage .novi-story-portrait__image img{object-position:center 45%!important;}}

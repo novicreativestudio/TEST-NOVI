@@ -1,0 +1,40 @@
+/* Hero only: improve composition at unusually wide CSS viewports (including browser zoom-out).
+   Ordinary desktop/tablet/mobile layouts are intentionally unchanged. */
+@media (min-width: 1800px) and (pointer: fine) {
+  .hero-visual.novi-segment--hero {
+    height: clamp(475px, 28vw, 640px);
+    min-height: 475px;
+    background: #071b2b;
+  }
+  .hero-visual .hero-picture {
+    width: min(100%, 2300px);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  .hero-visual .hero-picture img {
+    object-position: 53% 39%;
+  }
+  .hero-visual .hero-copy {
+    left: max(calc((100% - 2100px) / 2 + 240px), 15%);
+    top: 27%;
+    width: min(42%, 750px);
+  }
+  .hero-visual .hero-copy h1 {
+    font-size: clamp(60px, 3vw, 91px);
+    line-height: 1.05;
+  }
+}
+
+/* Extra-wide only (roughly 50% browser zoom at desktop window sizes):
+   Preserve the approved 75% composition, blending the edges of the
+   centred photograph into the same dark navy rather than exposing seams. */
+@media (min-width: 2500px) and (pointer: fine) {
+  .hero-visual.novi-segment--hero {
+    background: linear-gradient(90deg, #06192a 0%, #0a2032 50%, #071928 100%);
+  }
+  .hero-visual.novi-segment--hero .hero-picture {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 13%, #000 87%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 13%, #000 87%, transparent 100%);
+  }
+}
